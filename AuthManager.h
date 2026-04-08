@@ -1,21 +1,56 @@
-#ifndef AUTH_MANAGER_H
-#define AUTH_MANAGER_H
+#ifndef AUTHMANAGER_H
+#define AUTHMANAGER_H
 
-#include <string>
-#include <memory>
-#include <pqxx/pqxx>
+#include <QSqlDatabase>
+#include <QString>
+#include <QSqlQuery>
+#include <QSqlError>
+#include <QDebug>
+#include <QSettings>
+#include <QMutex>
+
+enum class AuthResult {
+    Success,
+    UserAlreadyExists,
+    InvalidCredentials,
+    WeakPassword,
+    InvalidUsername,
+    DatabaseError,
+    ConnectionError
+};
 
 class AuthManager {
 public:
-    // Конструктор сам подцепится к БД
-    AuthManager();
+    static AuthManager& getInstance();
 
-    bool registerUser(const std::string& username, const std::string& password);
-    bool authenticate(const std::string& username, const std::string& password);
-    bool deleteUser(const std::string& username);
+    AuthManager(const AuthManager&) = delete;
+    AuthManager& operator=(const AuthManager&) = delete;
+
+    AuthResult registerUser(const QString& username, const QString& password, QString* errorMsg = nullptr);
+    AuthResult authenticate(const QString& username, const QString& password);
+    
+    bool isConnected() const;
+    QString getLastError() const;
 
 private:
-    std::unique_ptr<pqxx::connection> conn;
+    AuthManager();
+    ~AuthManager();
+
+    void initDatabase();
+    bool loadDatabaseConfig();
+    bool validateUsername(const QString& username, QString* errorMsg = nullptr);
+    bool validatePassword(const QString& password, QString* errorMsg = nullptr);
+    bool userExists(const QString& username);
+    
+    QSqlDatabase db;
+    QString lastError;
+    QMutex dbMutex;  // Для потокобезопасности
+    
+    // Константы валидации
+    static constexpr int MIN_USERNAME_LENGTH = 3;
+    static constexpr int MAX_USERNAME_LENGTH = 50;
+    static constexpr int MIN_PASSWORD_LENGTH = 8;
+    static constexpr int MAX_PASSWORD_LENGTH = 128;
 };
 
-#endif
+#endif // AUTHMANAGER_H
