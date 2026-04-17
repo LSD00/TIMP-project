@@ -1,56 +1,85 @@
 #ifndef AUTHMANAGER_H
 #define AUTHMANAGER_H
 
-#include <QSqlDatabase>
 #include <QString>
-#include <QSqlQuery>
-#include <QSqlError>
-#include <QDebug>
-#include <QSettings>
+#include <QSqlDatabase>
 #include <QMutex>
+#include <QMap>
+#include <QDateTime>
+#include <QTimer>
+#include <QNetworkAccessManager>
 
 enum class AuthResult {
     Success,
-    UserAlreadyExists,
-    InvalidCredentials,
+    ConnectionError,
+    InvalidEmail,
     WeakPassword,
-    InvalidUsername,
+    UserAlreadyExists,
+    UserNotFound,
     DatabaseError,
-    ConnectionError
+    InvalidCredentials,
+    CodeExpired,
+    InvalidCode,
+    TooManyAttempts,
+    CodeNotVerified
 };
 
-class AuthManager {
+struct VerificationContext {
+    QString code;
+    QDateTime expiresAt;
+    int attempts = 0;
+    bool isVerified = false;
+};
+
+class AuthManager : public QObject {
+    Q_OBJECT
 public:
     static AuthManager& getInstance();
 
     AuthManager(const AuthManager&) = delete;
     AuthManager& operator=(const AuthManager&) = delete;
 
-    AuthResult registerUser(const QString& username, const QString& password, QString* errorMsg = nullptr);
-    AuthResult authenticate(const QString& username, const QString& password);
-    
-    bool isConnected() const;
+    AuthResult requestRegistrationCode(const QString& email, QString* errorMsg = nullptr);
+    AuthResult verifyRegistrationCode(const QString& email, const QString& code, QString* errorMsg = nullptr);
+    AuthResult finalizeRegistration(const QString& email, const QString& password, QString* errorMsg = nullptr);
+
+    AuthResult authenticate(const QString& email, const QString& password);
+
+    AuthResult requestPasswordReset(const QString& email, QString* errorMsg = nullptr);
+    AuthResult verifyResetCode(const QString& email, const QString& code, QString* errorMsg = nullptr);
+    AuthResult resetPassword(const QString& email, const QString& password, const QString& passwordConfirm, QString* errorMsg = nullptr);
+
+    void cancelRegistration(const QString& email);
     QString getLastError() const;
+
+    bool validateEmail(const QString& email);
+    bool validatePassword(const QString& password, QString* errorMsg = nullptr);
+
+
+private slots:
+    void cleanExpiredCodes();
 
 private:
     AuthManager();
     ~AuthManager();
 
     void initDatabase();
-    bool loadDatabaseConfig();
-    bool validateUsername(const QString& username, QString* errorMsg = nullptr);
-    bool validatePassword(const QString& password, QString* errorMsg = nullptr);
-    bool userExists(const QString& username);
-    
+    bool sendEmailToUser(const QString& email, const QString& code);
+    bool userExists(const QString& email);
+
+
     QSqlDatabase db;
+    mutable QMutex dbMutex;
+    mutable QMutex codesMutex;
+
     QString lastError;
-    QMutex dbMutex;  // Для потокобезопасности
-    
-    // Константы валидации
-    static constexpr int MIN_USERNAME_LENGTH = 3;
-    static constexpr int MAX_USERNAME_LENGTH = 50;
-    static constexpr int MIN_PASSWORD_LENGTH = 8;
-    static constexpr int MAX_PASSWORD_LENGTH = 128;
+    QTimer* gcTimer;
+
+    QMap<QString, VerificationContext> registrationCodes;
+    QMap<QString, VerificationContext> resetCodes;
+
+    const int MAX_ATTEMPTS = 3;
+    const int CODE_TTL_SECS = 90;
 };
 
-#endif // AUTHMANAGER_H
+#endif
