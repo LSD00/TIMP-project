@@ -1,5 +1,5 @@
 QT += widgets
-
+QT += printsupport
 CONFIG += c++17
 
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -7,20 +7,30 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    graph.cpp \
     main.cpp \
-    avtorizwindow.cpp \
-    regiswindow.cpp \
-    restmail.cpp
+    avtorisation.cpp \
+    net.cpp \
+    qcustomplot.cpp \
+    registration.cpp \
+    resmail.cpp \
+    task.cpp
 
 HEADERS += \
-    avtorizwindow.h \
-    regiswindow.h \
-    restmail.h
+    avtorisation.h \
+    graph.h \
+    net.h \
+    qcustomplot.h \
+    registration.h \
+    resmail.h \
+    task.h
 
 FORMS += \
-    avtorizwindow.ui \
-    regiswindow.ui \
-    restmail.ui
+    avtorisation.ui \
+    graph.ui \
+    registration.ui \
+    resmail.ui \
+    task.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
