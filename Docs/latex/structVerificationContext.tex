@@ -1,0 +1,36 @@
+\doxysection{Структура Verification\+Context}
+\hypertarget{structVerificationContext}{}\label{structVerificationContext}\index{VerificationContext@{VerificationContext}}
+
+
+Контекст верификации пользователя.  
+
+
+
+
+{\ttfamily \#include $<$Auth\+Manager\+Docs.\+h$>$}
+
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structVerificationContext_a58b0df7ea3df092cc1c8142b730036bb}\label{structVerificationContext_a58b0df7ea3df092cc1c8142b730036bb} 
+QString {\bfseries code}
+\begin{DoxyCompactList}\small\item\em Сгенерированный 6-\/значный проверочный код. \end{DoxyCompactList}\item 
+\Hypertarget{structVerificationContext_a1b4631d5864451459a3014a59040ae98}\label{structVerificationContext_a1b4631d5864451459a3014a59040ae98} 
+QDate\+Time {\bfseries expires\+At}
+\begin{DoxyCompactList}\small\item\em Точное время, когда код перестает быть действительным. \end{DoxyCompactList}\item 
+\Hypertarget{structVerificationContext_a6134b5c5808f092850ef8c2c0d803e85}\label{structVerificationContext_a6134b5c5808f092850ef8c2c0d803e85} 
+int {\bfseries attempts} = 0
+\begin{DoxyCompactList}\small\item\em Текущее количество неудачных попыток ввода кода. \end{DoxyCompactList}\item 
+\Hypertarget{structVerificationContext_a871bde05deb61ac3f7ce6328df614b68}\label{structVerificationContext_a871bde05deb61ac3f7ce6328df614b68} 
+bool {\bfseries is\+Verified} = false
+\begin{DoxyCompactList}\small\item\em Флаг, указывающий, был ли код успешно подтвержден. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Контекст верификации пользователя. 
+
+Хранит временную информацию, необходимую для подтверждения email при регистрации или сбросе пароля. 
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Server/Auth\+Manager\+Docs.\+h\end{DoxyCompactItemize}

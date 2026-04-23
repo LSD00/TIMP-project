@@ -1,0 +1,30 @@
+\doxysection{Calc\+Docs.\+h}
+\hypertarget{CalcDocs_8h_source}{}\label{CalcDocs_8h_source}\index{Server/CalcDocs.h@{Server/CalcDocs.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ CALC\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ CALC\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#if\ defined(\_WIN32)}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#\ \ if\ defined(CALC\_LIBRARY)}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#\ \ \ \ define\ CALC\_EXPORT\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#\ \ else}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#\ \ \ \ define\ CALC\_EXPORT\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#\ \ endif}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#\ \ define\ CALC\_EXPORT\ \_\_attribute\_\_((visibility("{}default"{})))}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structCalcResult}{CalcResult}}\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structCalcResult_a2be7fadf793c0c1e01f0a39d778c11e0}{x}};\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structCalcResult_a46f1ca01aafdaa79e16957df2e3183c7}{y}};\ }
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00053\ CALC\_EXPORT\ std::vector<CalcResult>\ MainCalcSafe(\textcolor{keywordtype}{int}\ a,\ \textcolor{keywordtype}{int}\ b,\ \textcolor{keywordtype}{int}\ c);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CALC\_H}}
+
+\end{DoxyCode}
