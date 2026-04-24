@@ -27,7 +27,7 @@ def main():
     TEST_PASSWORD = "SuperSecurePassword123"
     NEW_PASSWORD = "NewSuperSecurePassword456"
 
-    print("=== Запуск интеграционного теста AntiMarazm ===")
+    print("=== Запуск интеграционного теста ===")
     
     # Создаем сокет
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
