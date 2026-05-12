@@ -11,6 +11,7 @@ class Server : public QTcpServer {
     Q_OBJECT
 public:
     explicit Server(QObject *parent = nullptr);
+    QJsonObject processPayload(const QByteArray& data);
     void startServer(quint16 port);
 
 protected:

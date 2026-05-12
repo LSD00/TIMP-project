@@ -20,3 +20,19 @@ add_executable(TcpServer
 )
 
 target_link_libraries(TcpServer PRIVATE Qt6::Core Qt6::Network Qt6::Sql CalcLib)
+
+enable_testing()
+# 1. Сборка Unit-тестов
+add_executable(TestCalc tests/test_calc.cpp)
+target_link_libraries(TestCalc PRIVATE Qt6::Core Qt6::Test CalcLib)
+add_test(NAME CalcUnitTests COMMAND TestCalc)
+
+# 2. Сборка Fuzz-таргета (Требует Clang)
+option(BUILD_FUZZER "Build Fuzzing Target" OFF)
+if(BUILD_FUZZER AND CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    add_executable(FuzzServer tests/fuzz_server.cpp src/Server.cpp)
+    target_link_libraries(FuzzServer PRIVATE Qt6::Core Qt6::Network)
+    # Добавляем флаги санитайзеров и фаззера
+    target_compile_options(FuzzServer PRIVATE -fsanitize=address,undefined,fuzzer -g -O1)
+    target_link_options(FuzzServer PRIVATE -fsanitize=address,undefined,fuzzer)
+endif()

@@ -20,8 +20,24 @@ void Server::incomingConnection(qintptr socketDescriptor) {
 void Server::onReadyRead() {
     QTcpSocket* client = qobject_cast<QTcpSocket*>(sender());
     if (!client) return;
-    QJsonDocument doc = QJsonDocument::fromJson(client->readAll());
-    if (!doc.isNull()) handleRequest(client, doc.object());
+    QByteArray rawData = client->readAll();
+    
+    // Парсинг изолирован от сети. Сделано для удобства тестирования
+    QJsonObject requestObj = processPayload(rawData); 
+    if (!requestObj.isEmpty()) {
+        handleRequest(client, requestObj);
+    }
+}
+
+QJsonObject Server::processPayload(const QByteArray& data) {
+    QJsonParseError parseError;
+    QJsonDocument doc = QJsonDocument::fromJson(data, &parseError);
+    
+    if (parseError.error != QJsonParseError::NoError || !doc.isObject()) {
+        qWarning() << "Invalid JSON payload:" << parseError.errorString();
+        return QJsonObject(); 
+    }
+    return doc.object();
 }
 
 void Server::sendAuthResponse(QTcpSocket* client, AuthResult result, const QString& customErrorMsg) {
