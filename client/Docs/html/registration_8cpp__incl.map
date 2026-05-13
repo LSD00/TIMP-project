@@ -1,0 +1,20 @@
+<map id="ТиМП Исходники/Client/registration.cpp" name="ТиМП Исходники/Client/registration.cpp">
+<area shape="rect" id="Node000001" title="Реализация логики окна регистрации." alt="" coords="163,5,333,45"/>
+<area shape="rect" id="Node000002" href="$registration_8h.html" title="Заголовочный файл класса окна регистрации." alt="" coords="5,93,115,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,48,101,90,99,85,202,43"/>
+<area shape="rect" id="Node000004" href="$avtorisation_8h.html" title="Заголовочный файл класса окна авторизации." alt="" coords="139,93,251,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="237,47,213,83,208,80,233,44"/>
+<area shape="rect" id="Node000007" href="$net_8h.html" title="Заголовочный файл с объявлениями функций для связи с сервером и математических вычислений." alt="" coords="275,93,330,119"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="263,44,289,80,285,84,259,47"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="355,93,483,119"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="290,43,382,85,380,90,288,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="23,167,97,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="63,119,63,153,57,153,57,119"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="127,167,243,192"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="196,119,191,154,186,153,190,119"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="268,167,327,192"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="213,116,271,156,268,161,210,121"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="304,119,302,153,297,153,299,119"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="351,167,425,192"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="318,117,365,156,362,160,315,121"/>
+</map>

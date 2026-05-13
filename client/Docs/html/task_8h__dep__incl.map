@@ -1,0 +1,9 @@
+<map id="ТиМП Исходники/Client/task.h" name="ТиМП Исходники/Client/task.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл класса меню/задач." alt="" coords="203,5,346,45"/>
+<area shape="rect" id="Node000002" href="$avtorisation_8cpp.html" title="Реализация логики окна авторизации." alt="" coords="5,93,179,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,54,133,96,131,91,221,49"/>
+<area shape="rect" id="Node000003" href="$graph_8cpp.html" title="Реализация интерфейса и логики построения графика." alt="" coords="203,93,346,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="277,59,277,93,272,93,272,59"/>
+<area shape="rect" id="Node000004" href="$task_8cpp.html" title="Реализация окна задач." alt="" coords="370,93,513,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="324,49,406,91,404,96,322,54"/>
+</map>

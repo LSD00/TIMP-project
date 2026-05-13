@@ -1,0 +1,7 @@
+var net_8cpp =
+[
+    [ "autor", "net_8cpp.html#a727ffd02be956f990d28a1958e32da56", null ],
+    [ "crgrap", "net_8cpp.html#ac2b7eb14152b535ade57f442459d7e9c", null ],
+    [ "regist", "net_8cpp.html#a3b011be4e1cc2430cb312ef7b37caea6", null ],
+    [ "respas", "net_8cpp.html#ae72656da8889417337854b555898f6e9", null ]
+];
