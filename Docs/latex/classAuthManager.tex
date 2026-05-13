@@ -1,0 +1,702 @@
+\doxysection{Класс Auth\+Manager}
+\hypertarget{classAuthManager}{}\label{classAuthManager}\index{AuthManager@{AuthManager}}
+
+
+Менеджер аутентификации и управления пользователями.  
+
+
+
+
+{\ttfamily \#include $<$Auth\+Manager\+Docs.\+h$>$}
+
+
+
+Граф наследования\+:Auth\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classAuthManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Auth\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classAuthManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAuthManager_aeae750570d1539539834e53b789e3de7}{Auth\+Manager}} (const \mbox{\hyperlink{classAuthManager}{Auth\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Запрет копирования. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAuthManager}{Auth\+Manager}} \& \mbox{\hyperlink{classAuthManager_a34e63862bc2617ca97f83cbfa2efdaa1}{operator=}} (const \mbox{\hyperlink{classAuthManager}{Auth\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Запрет присваивания. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Процесс регистрации}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{Auth\+Result}} \mbox{\hyperlink{classAuthManager_a000d618f8dbff5c2465629f7ebadf10f}{request\+Registration\+Code}} (const QString \&email, QString \texorpdfstring{$\ast$}{*}error\+Msg=nullptr)
+\begin{DoxyCompactList}\small\item\em Запрашивает отправку проверочного кода для новой регистрации. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{Auth\+Result}} \mbox{\hyperlink{classAuthManager_a5a6d42e075c7ce5cf9172a3e700149c0}{verify\+Registration\+Code}} (const QString \&email, const QString \&code, QString \texorpdfstring{$\ast$}{*}error\+Msg=nullptr)
+\begin{DoxyCompactList}\small\item\em Проверяет правильность кода подтверждения при регистрации. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{Auth\+Result}} \mbox{\hyperlink{classAuthManager_a1e440167cb3e4edf550e786853e483ea}{finalize\+Registration}} (const QString \&email, const QString \&password, QString \texorpdfstring{$\ast$}{*}error\+Msg=nullptr)
+\begin{DoxyCompactList}\small\item\em Завершение регистрации после подтверждения кода. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAuthManager_a83843cbea03c706dbb6552fbf436ee59}{cancel\+Registration}} (const QString \&email)
+\begin{DoxyCompactList}\small\item\em Отмена процесса регистрации. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Авторизация}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{Auth\+Result}} \mbox{\hyperlink{classAuthManager_a1f5e14a740015d3c20fc123bbc71fec2}{authenticate}} (const QString \&email, const QString \&password)
+\begin{DoxyCompactList}\small\item\em Авторизация пользователя по email и паролю. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Восстановление пароля}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{Auth\+Result}} \mbox{\hyperlink{classAuthManager_abe6220841219ddb11d0b814da05564ed}{request\+Password\+Reset}} (const QString \&email, QString \texorpdfstring{$\ast$}{*}error\+Msg=nullptr)
+\begin{DoxyCompactList}\small\item\em Запрос кода для сброса забытого пароля. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{Auth\+Result}} \mbox{\hyperlink{classAuthManager_ad72a248216ec7e99aad56b8422808b99}{verify\+Reset\+Code}} (const QString \&email, const QString \&code, QString \texorpdfstring{$\ast$}{*}error\+Msg=nullptr)
+\begin{DoxyCompactList}\small\item\em Проверка кода для сброса пароля. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{Auth\+Result}} \mbox{\hyperlink{classAuthManager_a28d569d5c47d91b4a87465d26aa95067}{reset\+Password}} (const QString \&email, const QString \&password, const QString \&password\+Confirm, QString \texorpdfstring{$\ast$}{*}error\+Msg=nullptr)
+\begin{DoxyCompactList}\small\item\em Установка нового пароля после его сброса. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Вспомогательные методы}\par
+\begin{DoxyCompactItemize}
+\item 
+QString \mbox{\hyperlink{classAuthManager_a26189a83443a3d7ec18929fd98c2ee04}{get\+Last\+Error}} () const
+\begin{DoxyCompactList}\small\item\em Получить описание последней ошибки. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAuthManager_a83736668bcbf76a6868f3f465a0ec5c8}{user\+Exists}} (const QString \&email)
+\begin{DoxyCompactList}\small\item\em Проверяет, существует ли пользователь в базе данных. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAuthManager_a4770b856b1ddcd4e60983612345d0eff}{validate\+Email}} (const QString \&email)
+\begin{DoxyCompactList}\small\item\em Валидация формата электронной почты. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAuthManager_aa3dd36a283b1dcf0f5bad4090aac58ff}{validate\+Password}} (const QString \&password, QString \texorpdfstring{$\ast$}{*}error\+Msg=nullptr)
+\begin{DoxyCompactList}\small\item\em Валидация сложности пароля. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classAuthManager}{Auth\+Manager}} \& \mbox{\hyperlink{classAuthManager_a3a33c4fac024a1a0a928cc027cb82484}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Получить глобальный экземпляр \doxylink{classAuthManager}{Auth\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classAuthManager_a5ac7251eb8b0efb93f43ba7a1eb1999f}{clean\+Expired\+Codes}} ()
+\begin{DoxyCompactList}\small\item\em Слот для периодической очистки просроченных кодов (Garbage Collector). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAuthManager_ac2bb200e13f45bee1f9adc689d33a2b1}{Auth\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Приватный конструктор для реализации Singleton. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAuthManager_a7f4077e05949041be8e030bc2caa84a9}{\texorpdfstring{$\sim$}{\string~}\+Auth\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Приватный деструктор. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAuthManager_a9cb68a675ac103d3b04846f09381a89e}{init\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Инициализация структуры таблиц в БД. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAuthManager_a43d6d749b983ad1513873714c8eba1ce}{send\+Email\+To\+User}} (const QString \&email, const QString \&code)
+\begin{DoxyCompactList}\small\item\em Отправка письма на почту через внешний API. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+QSql\+Database \mbox{\hyperlink{classAuthManager_a83ec4a1f7f139f4364dff33c28654734}{db}}
+\begin{DoxyCompactList}\small\item\em Объект подключения к базе данных Postgre\+SQL. \end{DoxyCompactList}\item 
+QMutex \mbox{\hyperlink{classAuthManager_a1f899440c3ff4b08ffda743cbe7466e3}{db\+Mutex}}
+\begin{DoxyCompactList}\small\item\em Мьютекс для защиты многопоточных обращений к БД. \end{DoxyCompactList}\item 
+QMutex \mbox{\hyperlink{classAuthManager_aa77cfef6974c66805733e232635e1219}{codes\+Mutex}}
+\begin{DoxyCompactList}\small\item\em Мьютекс для защиты внутренних словарей кодов. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classAuthManager_adb76305fb4f13759d75dcaf6f1dff1ab}{last\+Error}}
+\begin{DoxyCompactList}\small\item\em Буфер для хранения последней ошибки. \end{DoxyCompactList}\item 
+QTimer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classAuthManager_aca83cad52955f9f1ec5a4bef3776a433}{gc\+Timer}}
+\begin{DoxyCompactList}\small\item\em Таймер для очистки устаревших сессий (кодов). \end{DoxyCompactList}\item 
+QMap$<$ QString, \mbox{\hyperlink{structVerificationContext}{Verification\+Context}} $>$ \mbox{\hyperlink{classAuthManager_a792f823760652fb72d290032f4f84a27}{registration\+Codes}}
+\begin{DoxyCompactList}\small\item\em Активные сессии регистраций. \end{DoxyCompactList}\item 
+QMap$<$ QString, \mbox{\hyperlink{structVerificationContext}{Verification\+Context}} $>$ \mbox{\hyperlink{classAuthManager_a3face75f146a79fc3129c2a167505b0a}{reset\+Codes}}
+\begin{DoxyCompactList}\small\item\em Активные сессии сброса паролей. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classAuthManager_a76001ea42ed95ff9feb4efe55e04586b}{MAX\+\_\+\+ATTEMPTS}} = 3
+\begin{DoxyCompactList}\small\item\em Максимальное количество попыток ввода кода. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classAuthManager_ad6f16c7ba88ee6115b5ab72f6fac9548}{CODE\+\_\+\+TTL\+\_\+\+SECS}} = 90
+\begin{DoxyCompactList}\small\item\em Время жизни проверочного кода в секундах (1,5 минуты). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Менеджер аутентификации и управления пользователями. 
+
+Класс реализует паттерн Singleton. Обеспечивает безопасное потоконезависимое взаимодействие с базой данных (Postgre\+SQL) для регистрации, входа и сброса пароля. Наследуется от QObject для использования таймеров и сигналов/слотов. 
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8h_source}{Auth\+Manager\+Docs.\+h}} строка \mbox{\hyperlink{AuthManagerDocs_8h_source_l00064}{64}}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classAuthManager_aeae750570d1539539834e53b789e3de7}\label{classAuthManager_aeae750570d1539539834e53b789e3de7} 
+\index{AuthManager@{AuthManager}!AuthManager@{AuthManager}}
+\index{AuthManager@{AuthManager}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{AuthManager()}{AuthManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Auth\+Manager\+::\+Auth\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAuthManager}{Auth\+Manager}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Запрет копирования. 
+
+\Hypertarget{classAuthManager_ac2bb200e13f45bee1f9adc689d33a2b1}\label{classAuthManager_ac2bb200e13f45bee1f9adc689d33a2b1} 
+\index{AuthManager@{AuthManager}!AuthManager@{AuthManager}}
+\index{AuthManager@{AuthManager}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{AuthManager()}{AuthManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Auth\+Manager\+::\+Auth\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Приватный конструктор для реализации Singleton. 
+
+Конструктор по умолчанию.
+
+Инициализирует подключение к базе данных Postgre\+SQL, считывая параметры из файла конфигурации {\ttfamily config.\+ini}. Создает и запускает таймер сборки мусора (GC) для очистки просроченных кодов верификации. 
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00039}{39}}
+
+\Hypertarget{classAuthManager_a7f4077e05949041be8e030bc2caa84a9}\label{classAuthManager_a7f4077e05949041be8e030bc2caa84a9} 
+\index{AuthManager@{AuthManager}!````~AuthManager@{\texorpdfstring{$\sim$}{\string~}AuthManager}}
+\index{````~AuthManager@{\texorpdfstring{$\sim$}{\string~}AuthManager}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AuthManager()}{\string~AuthManager()}}
+{\footnotesize\ttfamily Auth\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+Auth\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Приватный деструктор. 
+
+Деструктор.
+
+Корректно закрывает соединение с базой данных и освобождает ресурсы. 
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00063}{63}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classAuthManager_a1f5e14a740015d3c20fc123bbc71fec2}\label{classAuthManager_a1f5e14a740015d3c20fc123bbc71fec2} 
+\index{AuthManager@{AuthManager}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{Auth\+Result}} Auth\+Manager\+::authenticate (\begin{DoxyParamCaption}\item[{const QString \&}]{email,  }\item[{const QString \&}]{password }\end{DoxyParamCaption})}
+
+
+
+Авторизация пользователя по email и паролю. 
+
+Выполняет сверку хэша пароля средствами базы данных (Postgre\+SQL {\ttfamily crypt}).
+
+
+\begin{DoxyParams}{Аргументы}
+{\em email} & Электронная почта пользователя. \\
+\hline
+{\em password} & Пароль в открытом виде. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Auth\+Result Результат авторизации (Success или Invalid\+Credentials). 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00234}{234}}
+
+\Hypertarget{classAuthManager_a83843cbea03c706dbb6552fbf436ee59}\label{classAuthManager_a83843cbea03c706dbb6552fbf436ee59} 
+\index{AuthManager@{AuthManager}!cancelRegistration@{cancelRegistration}}
+\index{cancelRegistration@{cancelRegistration}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{cancelRegistration()}{cancelRegistration()}}
+{\footnotesize\ttfamily void Auth\+Manager\+::cancel\+Registration (\begin{DoxyParamCaption}\item[{const QString \&}]{email }\end{DoxyParamCaption})}
+
+
+
+Отмена процесса регистрации. 
+
+Удаляет временные коды и стирает пользователя из БД, если для него еще не был установлен пароль (состояние незавершенной регистрации).
+
+
+\begin{DoxyParams}{Аргументы}
+{\em email} & Почта пользователя. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00332}{332}}
+
+\Hypertarget{classAuthManager_a5ac7251eb8b0efb93f43ba7a1eb1999f}\label{classAuthManager_a5ac7251eb8b0efb93f43ba7a1eb1999f} 
+\index{AuthManager@{AuthManager}!cleanExpiredCodes@{cleanExpiredCodes}}
+\index{cleanExpiredCodes@{cleanExpiredCodes}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{cleanExpiredCodes}{cleanExpiredCodes}}
+{\footnotesize\ttfamily void Auth\+Manager\+::clean\+Expired\+Codes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Слот для периодической очистки просроченных кодов (Garbage Collector). 
+
+Очистка просроченных кодов верификации.
+
+Проходит по словарям кодов регистрации и сброса пароля. Удаляет записи, время жизни которых (expires\+At) истекло. Метод вызывается по таймеру gc\+Timer. 
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00092}{92}}
+
+\Hypertarget{classAuthManager_a1e440167cb3e4edf550e786853e483ea}\label{classAuthManager_a1e440167cb3e4edf550e786853e483ea} 
+\index{AuthManager@{AuthManager}!finalizeRegistration@{finalizeRegistration}}
+\index{finalizeRegistration@{finalizeRegistration}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{finalizeRegistration()}{finalizeRegistration()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{Auth\+Result}} Auth\+Manager\+::finalize\+Registration (\begin{DoxyParamCaption}\item[{const QString \&}]{email,  }\item[{const QString \&}]{password,  }\item[{QString \texorpdfstring{$\ast$}{*}}]{error\+Msg = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Завершение регистрации после подтверждения кода. 
+
+Устанавливает хэш пароля для предварительно созданной записи пользователя.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em email} & Почта верифицированного пользователя. \\
+\hline
+{\em password} & Новый пароль. \\
+\hline
+{\em error\+Msg} & Указатель для записи ошибок. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Auth\+Result Результат сохранения пароля. 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00305}{305}}
+
+\Hypertarget{classAuthManager_a3a33c4fac024a1a0a928cc027cb82484}\label{classAuthManager_a3a33c4fac024a1a0a928cc027cb82484} 
+\index{AuthManager@{AuthManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAuthManager}{Auth\+Manager}} \& Auth\+Manager\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Получить глобальный экземпляр \doxylink{classAuthManager}{Auth\+Manager}. 
+
+Возвращает единственный экземпляр менеджера авторизации (паттерн Singleton).
+
+\begin{DoxyReturn}{Возвращает}
+Ссылка на единственный объект менеджера.
+
+Ссылка на глобальный экземпляр \doxylink{classAuthManager}{Auth\+Manager}. 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00027}{27}}
+
+\Hypertarget{classAuthManager_a26189a83443a3d7ec18929fd98c2ee04}\label{classAuthManager_a26189a83443a3d7ec18929fd98c2ee04} 
+\index{AuthManager@{AuthManager}!getLastError@{getLastError}}
+\index{getLastError@{getLastError}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{getLastError()}{getLastError()}}
+{\footnotesize\ttfamily QString Auth\+Manager\+::get\+Last\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Получить описание последней ошибки. 
+
+\begin{DoxyReturn}{Возвращает}
+Строка с описанием ошибки. 
+\end{DoxyReturn}
+\Hypertarget{classAuthManager_a9cb68a675ac103d3b04846f09381a89e}\label{classAuthManager_a9cb68a675ac103d3b04846f09381a89e} 
+\index{AuthManager@{AuthManager}!initDatabase@{initDatabase}}
+\index{initDatabase@{initDatabase}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{initDatabase()}{initDatabase()}}
+{\footnotesize\ttfamily void Auth\+Manager\+::init\+Database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Инициализация структуры таблиц в БД. 
+
+Инициализация структуры базы данных.
+
+Создает необходимые расширения (pgcrypto для хэширования) и таблицу пользователей {\ttfamily users}, если они не существуют. Метод потокобезопасен (защищен db\+Mutex). 
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00078}{78}}
+
+\Hypertarget{classAuthManager_a34e63862bc2617ca97f83cbfa2efdaa1}\label{classAuthManager_a34e63862bc2617ca97f83cbfa2efdaa1} 
+\index{AuthManager@{AuthManager}!operator=@{operator=}}
+\index{operator=@{operator=}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAuthManager}{Auth\+Manager}} \& Auth\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAuthManager}{Auth\+Manager}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Запрет присваивания. 
+
+\Hypertarget{classAuthManager_abe6220841219ddb11d0b814da05564ed}\label{classAuthManager_abe6220841219ddb11d0b814da05564ed} 
+\index{AuthManager@{AuthManager}!requestPasswordReset@{requestPasswordReset}}
+\index{requestPasswordReset@{requestPasswordReset}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{requestPasswordReset()}{requestPasswordReset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{Auth\+Result}} Auth\+Manager\+::request\+Password\+Reset (\begin{DoxyParamCaption}\item[{const QString \&}]{email,  }\item[{QString \texorpdfstring{$\ast$}{*}}]{error\+Msg = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Запрос кода для сброса забытого пароля. 
+
+Генерирует код и отправляет на почту, если пользователь существует в БД.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em email} & Электронная почта. \\
+\hline
+{\em error\+Msg} & Указатель для записи ошибок. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Auth\+Result Статус запроса (Success, User\+Not\+Found и т.\+д.). 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00352}{352}}
+
+\Hypertarget{classAuthManager_a000d618f8dbff5c2465629f7ebadf10f}\label{classAuthManager_a000d618f8dbff5c2465629f7ebadf10f} 
+\index{AuthManager@{AuthManager}!requestRegistrationCode@{requestRegistrationCode}}
+\index{requestRegistrationCode@{requestRegistrationCode}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{requestRegistrationCode()}{requestRegistrationCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{Auth\+Result}} Auth\+Manager\+::request\+Registration\+Code (\begin{DoxyParamCaption}\item[{const QString \&}]{email,  }\item[{QString \texorpdfstring{$\ast$}{*}}]{error\+Msg = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Запрашивает отправку проверочного кода для новой регистрации. 
+
+Проверяет валидность email и отсутствие пользователя в БД. Генерирует 6-\/значный код и отправляет его на указанный email.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em email} & Электронная почта пользователя. \\
+\hline
+{\em error\+Msg} & Указатель на строку для записи текста ошибки (опционально). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Auth\+Result Результат выполнения операции (Success, Invalid\+Email и т.\+д.). 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00117}{117}}
+
+\Hypertarget{classAuthManager_a28d569d5c47d91b4a87465d26aa95067}\label{classAuthManager_a28d569d5c47d91b4a87465d26aa95067} 
+\index{AuthManager@{AuthManager}!resetPassword@{resetPassword}}
+\index{resetPassword@{resetPassword}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{resetPassword()}{resetPassword()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{Auth\+Result}} Auth\+Manager\+::reset\+Password (\begin{DoxyParamCaption}\item[{const QString \&}]{email,  }\item[{const QString \&}]{password,  }\item[{const QString \&}]{password\+Confirm,  }\item[{QString \texorpdfstring{$\ast$}{*}}]{error\+Msg = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Установка нового пароля после его сброса. 
+
+Проверяет совпадение паролей, их надежность, а также факт успешной верификации кода. После этого обновляет хэш в базе данных.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em email} & Почта пользователя. \\
+\hline
+{\em password} & Новый пароль. \\
+\hline
+{\em password\+Confirm} & Подтверждение нового пароля. \\
+\hline
+{\em error\+Msg} & Указатель для записи ошибок. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Auth\+Result Успешность операции. 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00417}{417}}
+
+\Hypertarget{classAuthManager_a43d6d749b983ad1513873714c8eba1ce}\label{classAuthManager_a43d6d749b983ad1513873714c8eba1ce} 
+\index{AuthManager@{AuthManager}!sendEmailToUser@{sendEmailToUser}}
+\index{sendEmailToUser@{sendEmailToUser}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{sendEmailToUser()}{sendEmailToUser()}}
+{\footnotesize\ttfamily bool Auth\+Manager\+::send\+Email\+To\+User (\begin{DoxyParamCaption}\item[{const QString \&}]{email,  }\item[{const QString \&}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Отправка письма на почту через внешний API. 
+
+Отправляет email с кодом подтверждения с помощью API Brevo.
+
+\begin{DoxyWarning}{Предупреждения}
+Запрос выполняется синхронно (использует QEvent\+Loop), что заблокирует текущий поток до получения ответа от сервера.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Аргументы}
+{\em email} & Email получателя. \\
+\hline
+{\em code} & Сгенерированный проверочный код. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если письмо успешно отправлено, иначе false. 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00189}{189}}
+
+\Hypertarget{classAuthManager_a83736668bcbf76a6868f3f465a0ec5c8}\label{classAuthManager_a83736668bcbf76a6868f3f465a0ec5c8} 
+\index{AuthManager@{AuthManager}!userExists@{userExists}}
+\index{userExists@{userExists}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{userExists()}{userExists()}}
+{\footnotesize\ttfamily bool Auth\+Manager\+::user\+Exists (\begin{DoxyParamCaption}\item[{const QString \&}]{email }\end{DoxyParamCaption})}
+
+
+
+Проверяет, существует ли пользователь в базе данных. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em email} & Электронная почта для проверки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если email найден в БД. 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00253}{253}}
+
+\Hypertarget{classAuthManager_a4770b856b1ddcd4e60983612345d0eff}\label{classAuthManager_a4770b856b1ddcd4e60983612345d0eff} 
+\index{AuthManager@{AuthManager}!validateEmail@{validateEmail}}
+\index{validateEmail@{validateEmail}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{validateEmail()}{validateEmail()}}
+{\footnotesize\ttfamily bool Auth\+Manager\+::validate\+Email (\begin{DoxyParamCaption}\item[{const QString \&}]{email }\end{DoxyParamCaption})}
+
+
+
+Валидация формата электронной почты. 
+
+Использует регулярное выражение для проверки базового синтаксиса адреса.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em email} & Проверяемая строка. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если формат email корректен. 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00269}{269}}
+
+\Hypertarget{classAuthManager_aa3dd36a283b1dcf0f5bad4090aac58ff}\label{classAuthManager_aa3dd36a283b1dcf0f5bad4090aac58ff} 
+\index{AuthManager@{AuthManager}!validatePassword@{validatePassword}}
+\index{validatePassword@{validatePassword}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{validatePassword()}{validatePassword()}}
+{\footnotesize\ttfamily bool Auth\+Manager\+::validate\+Password (\begin{DoxyParamCaption}\item[{const QString \&}]{password,  }\item[{QString \texorpdfstring{$\ast$}{*}}]{error\+Msg = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Валидация сложности пароля. 
+
+Проверяет длину пароля (от 8 до 64 символов).
+
+
+\begin{DoxyParams}{Аргументы}
+{\em password} & Проверяемый пароль. \\
+\hline
+{\em error\+Msg} & Указатель для записи причины ошибки валидации. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если пароль удовлетворяет требованиям. 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00283}{283}}
+
+\Hypertarget{classAuthManager_a5a6d42e075c7ce5cf9172a3e700149c0}\label{classAuthManager_a5a6d42e075c7ce5cf9172a3e700149c0} 
+\index{AuthManager@{AuthManager}!verifyRegistrationCode@{verifyRegistrationCode}}
+\index{verifyRegistrationCode@{verifyRegistrationCode}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{verifyRegistrationCode()}{verifyRegistrationCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{Auth\+Result}} Auth\+Manager\+::verify\+Registration\+Code (\begin{DoxyParamCaption}\item[{const QString \&}]{email,  }\item[{const QString \&}]{code,  }\item[{QString \texorpdfstring{$\ast$}{*}}]{error\+Msg = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Проверяет правильность кода подтверждения при регистрации. 
+
+Сверяет введенный пользователем код с сохраненным. Контролирует количество попыток и срок действия кода. При успехе создает резервную запись пользователя в БД.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em email} & Электронная почта пользователя. \\
+\hline
+{\em code} & Код подтверждения, введенный пользователем. \\
+\hline
+{\em error\+Msg} & Указатель на строку для текста ошибки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Auth\+Result Результат проверки кода. 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00147}{147}}
+
+\Hypertarget{classAuthManager_ad72a248216ec7e99aad56b8422808b99}\label{classAuthManager_ad72a248216ec7e99aad56b8422808b99} 
+\index{AuthManager@{AuthManager}!verifyResetCode@{verifyResetCode}}
+\index{verifyResetCode@{verifyResetCode}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{verifyResetCode()}{verifyResetCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{Auth\+Result}} Auth\+Manager\+::verify\+Reset\+Code (\begin{DoxyParamCaption}\item[{const QString \&}]{email,  }\item[{const QString \&}]{code,  }\item[{QString \texorpdfstring{$\ast$}{*}}]{error\+Msg = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Проверка кода для сброса пароля. 
+
+Аналогично verify\+Registration\+Code, но работает со словарем reset\+Codes.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em email} & Почта пользователя. \\
+\hline
+{\em code} & Введенный код. \\
+\hline
+{\em error\+Msg} & Указатель для записи ошибок. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Auth\+Result Результат проверки. 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8cpp_source}{Auth\+Manager\+Docs.\+cpp}} строка \mbox{\hyperlink{AuthManagerDocs_8cpp_source_l00380}{380}}
+
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{classAuthManager_ad6f16c7ba88ee6115b5ab72f6fac9548}\label{classAuthManager_ad6f16c7ba88ee6115b5ab72f6fac9548} 
+\index{AuthManager@{AuthManager}!CODE\_TTL\_SECS@{CODE\_TTL\_SECS}}
+\index{CODE\_TTL\_SECS@{CODE\_TTL\_SECS}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{CODE\_TTL\_SECS}{CODE\_TTL\_SECS}}
+{\footnotesize\ttfamily const int Auth\+Manager\+::\+CODE\+\_\+\+TTL\+\_\+\+SECS = 90\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Время жизни проверочного кода в секундах (1,5 минуты). 
+
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8h_source}{Auth\+Manager\+Docs.\+h}} строка \mbox{\hyperlink{AuthManagerDocs_8h_source_l00139}{139}}
+
+\Hypertarget{classAuthManager_aa77cfef6974c66805733e232635e1219}\label{classAuthManager_aa77cfef6974c66805733e232635e1219} 
+\index{AuthManager@{AuthManager}!codesMutex@{codesMutex}}
+\index{codesMutex@{codesMutex}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{codesMutex}{codesMutex}}
+{\footnotesize\ttfamily QMutex Auth\+Manager\+::codes\+Mutex\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+Мьютекс для защиты внутренних словарей кодов. 
+
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8h_source}{Auth\+Manager\+Docs.\+h}} строка \mbox{\hyperlink{AuthManagerDocs_8h_source_l00130}{130}}
+
+\Hypertarget{classAuthManager_a83ec4a1f7f139f4364dff33c28654734}\label{classAuthManager_a83ec4a1f7f139f4364dff33c28654734} 
+\index{AuthManager@{AuthManager}!db@{db}}
+\index{db@{db}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily QSql\+Database Auth\+Manager\+::db\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Объект подключения к базе данных Postgre\+SQL. 
+
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8h_source}{Auth\+Manager\+Docs.\+h}} строка \mbox{\hyperlink{AuthManagerDocs_8h_source_l00128}{128}}
+
+\Hypertarget{classAuthManager_a1f899440c3ff4b08ffda743cbe7466e3}\label{classAuthManager_a1f899440c3ff4b08ffda743cbe7466e3} 
+\index{AuthManager@{AuthManager}!dbMutex@{dbMutex}}
+\index{dbMutex@{dbMutex}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{dbMutex}{dbMutex}}
+{\footnotesize\ttfamily QMutex Auth\+Manager\+::db\+Mutex\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+Мьютекс для защиты многопоточных обращений к БД. 
+
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8h_source}{Auth\+Manager\+Docs.\+h}} строка \mbox{\hyperlink{AuthManagerDocs_8h_source_l00129}{129}}
+
+\Hypertarget{classAuthManager_aca83cad52955f9f1ec5a4bef3776a433}\label{classAuthManager_aca83cad52955f9f1ec5a4bef3776a433} 
+\index{AuthManager@{AuthManager}!gcTimer@{gcTimer}}
+\index{gcTimer@{gcTimer}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{gcTimer}{gcTimer}}
+{\footnotesize\ttfamily QTimer\texorpdfstring{$\ast$}{*} Auth\+Manager\+::gc\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Таймер для очистки устаревших сессий (кодов). 
+
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8h_source}{Auth\+Manager\+Docs.\+h}} строка \mbox{\hyperlink{AuthManagerDocs_8h_source_l00133}{133}}
+
+\Hypertarget{classAuthManager_adb76305fb4f13759d75dcaf6f1dff1ab}\label{classAuthManager_adb76305fb4f13759d75dcaf6f1dff1ab} 
+\index{AuthManager@{AuthManager}!lastError@{lastError}}
+\index{lastError@{lastError}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{lastError}{lastError}}
+{\footnotesize\ttfamily QString Auth\+Manager\+::last\+Error\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Буфер для хранения последней ошибки. 
+
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8h_source}{Auth\+Manager\+Docs.\+h}} строка \mbox{\hyperlink{AuthManagerDocs_8h_source_l00132}{132}}
+
+\Hypertarget{classAuthManager_a76001ea42ed95ff9feb4efe55e04586b}\label{classAuthManager_a76001ea42ed95ff9feb4efe55e04586b} 
+\index{AuthManager@{AuthManager}!MAX\_ATTEMPTS@{MAX\_ATTEMPTS}}
+\index{MAX\_ATTEMPTS@{MAX\_ATTEMPTS}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{MAX\_ATTEMPTS}{MAX\_ATTEMPTS}}
+{\footnotesize\ttfamily const int Auth\+Manager\+::\+MAX\+\_\+\+ATTEMPTS = 3\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Максимальное количество попыток ввода кода. 
+
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8h_source}{Auth\+Manager\+Docs.\+h}} строка \mbox{\hyperlink{AuthManagerDocs_8h_source_l00138}{138}}
+
+\Hypertarget{classAuthManager_a792f823760652fb72d290032f4f84a27}\label{classAuthManager_a792f823760652fb72d290032f4f84a27} 
+\index{AuthManager@{AuthManager}!registrationCodes@{registrationCodes}}
+\index{registrationCodes@{registrationCodes}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{registrationCodes}{registrationCodes}}
+{\footnotesize\ttfamily QMap$<$QString, \mbox{\hyperlink{structVerificationContext}{Verification\+Context}}$>$ Auth\+Manager\+::registration\+Codes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Активные сессии регистраций. 
+
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8h_source}{Auth\+Manager\+Docs.\+h}} строка \mbox{\hyperlink{AuthManagerDocs_8h_source_l00135}{135}}
+
+\Hypertarget{classAuthManager_a3face75f146a79fc3129c2a167505b0a}\label{classAuthManager_a3face75f146a79fc3129c2a167505b0a} 
+\index{AuthManager@{AuthManager}!resetCodes@{resetCodes}}
+\index{resetCodes@{resetCodes}!AuthManager@{AuthManager}}
+\doxysubsubsection{\texorpdfstring{resetCodes}{resetCodes}}
+{\footnotesize\ttfamily QMap$<$QString, \mbox{\hyperlink{structVerificationContext}{Verification\+Context}}$>$ Auth\+Manager\+::reset\+Codes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Активные сессии сброса паролей. 
+
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8h_source}{Auth\+Manager\+Docs.\+h}} строка \mbox{\hyperlink{AuthManagerDocs_8h_source_l00136}{136}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+ТиМП Исходники/\+Server/\mbox{\hyperlink{AuthManagerDocs_8h}{Auth\+Manager\+Docs.\+h}}\item 
+ТиМП Исходники/\+Server/\mbox{\hyperlink{AuthManagerDocs_8cpp}{Auth\+Manager\+Docs.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,35 @@
+\doxysection{Calc\+Docs.\+cpp}
+\hypertarget{CalcDocs_8cpp_source}{}\label{CalcDocs_8cpp_source}\index{ТиМП Исходники/Server/CalcDocs.cpp@{ТиМП Исходники/Server/CalcDocs.cpp}}
+\mbox{\hyperlink{CalcDocs_8cpp}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}calc.h"{}}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00027}\mbox{\hyperlink{CalcDocs_8cpp_a1ec60e354c0c14fe35b2e385b36d747b}{00027}}\ std::vector<CalcResult>\ \mbox{\hyperlink{CalcDocs_8cpp_a1ec60e354c0c14fe35b2e385b36d747b}{MainCalcSafe}}(\textcolor{keywordtype}{int}\ a,\ \textcolor{keywordtype}{int}\ b,\ \textcolor{keywordtype}{int}\ c)\ \{}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00028}00028\ \ \ \ \ std::vector<CalcResult>\ results;}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//\ Резервируем\ память\ под\ 41\ точку\ (от\ -\/10\ до\ 10\ включительно,\ с\ шагом\ 0.5)}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00030}00030\ \ \ \ \ results.reserve(41);}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00031}00031\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{double}\ x\ =\ -\/10.0;}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ 40;\ ++i,\ x\ +=\ 0.5)\ \{}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ y\ =\ 0.0;\ \textcolor{comment}{//\ По\ умолчанию\ 0\ (в\ том\ числе\ для\ x=0\ и\ x=1)}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Защита\ от\ деления\ на\ ноль\ (когда\ x\string^2\ -\/\ 1\ =\ 0,\ то\ есть\ x\ =\ -\/1)}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ (std::abs(x\ *\ x\ -\/\ 1)\ >\ 1e-\/9)\ ?\ (a\ /\ (x\ *\ x\ -\/\ 1))\ :\ 0.0;}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (x\ >\ 0\ \&\&\ x\ <\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Вычисление\ для\ промежутка\ (0;\ 1)}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ (1.0\ /\ x)\ +\ b;}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (x\ >\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Вычисление\ для\ значений\ больше\ 1}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ (c\ *\ x)\ /\ (x\ *\ x\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Добавляем\ рассчитанную\ точку\ в\ вектор}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ results.push\_back(\{x,\ y\});}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{return}\ results;}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8cpp_source_l00051}00051\ \}}
+
+\end{DoxyCode}

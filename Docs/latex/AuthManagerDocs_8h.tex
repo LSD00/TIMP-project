@@ -1,0 +1,111 @@
+\doxysection{Файл ТиМП Исходники/\+Server/\+Auth\+Manager\+Docs.h}
+\hypertarget{AuthManagerDocs_8h}{}\label{AuthManagerDocs_8h}\index{ТиМП Исходники/Server/AuthManagerDocs.h@{ТиМП Исходники/Server/AuthManagerDocs.h}}
+{\ttfamily \#include $<$QString$>$}\newline
+{\ttfamily \#include $<$QSql\+Database$>$}\newline
+{\ttfamily \#include $<$QMutex$>$}\newline
+{\ttfamily \#include $<$QMap$>$}\newline
+{\ttfamily \#include $<$QDate\+Time$>$}\newline
+{\ttfamily \#include $<$QTimer$>$}\newline
+{\ttfamily \#include $<$QObject$>$}\newline
+Граф включаемых заголовочных файлов для Auth\+Manager\+Docs.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AuthManagerDocs_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structVerificationContext}{Verification\+Context}}
+\begin{DoxyCompactList}\small\item\em Контекст верификации пользователя. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classAuthManager}{Auth\+Manager}}
+\begin{DoxyCompactList}\small\item\em Менеджер аутентификации и управления пользователями. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{Auth\+Result}} \{ \newline
+\mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea505a83f220c02df2f85c3810cd9ceb38}{Success}}
+, \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea094a6f6b0868122a9dd008cb91c083e4}{Connection\+Error}}
+, \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea45d3c76b79a4795dae38fb5d5b48ad45}{Invalid\+Email}}
+, \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea460899c942673a93b86a81ca6297cd36}{Weak\+Password}}
+, \newline
+\mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea28ec83712271c6d109f6eac45c04fc71}{User\+Already\+Exists}}
+, \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea5e349b2189e271e32f633c077d4ff028}{User\+Not\+Found}}
+, \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fceaa31437013b94ae5b39a818c6defac7ea}{Database\+Error}}
+, \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea3121e825c13ba377fb5adb741201c401}{Invalid\+Credentials}}
+, \newline
+\mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea8efc205b664814d3458d9457a330ee78}{Code\+Expired}}
+, \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea54811ceb822294b83e9ded0838e73c02}{Invalid\+Code}}
+, \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fceaa7ef31aab8d88f6735da209bb411fd40}{Too\+Many\+Attempts}}
+, \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea3da277f7b49fb7aca46d67a5600011f2}{Code\+Not\+Verified}}
+ \}
+\begin{DoxyCompactList}\small\item\em Перечисление кодов возврата для операций аутентификации. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Перечисления}
+\Hypertarget{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}\label{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce} 
+\index{AuthManagerDocs.h@{AuthManagerDocs.h}!AuthResult@{AuthResult}}
+\index{AuthResult@{AuthResult}!AuthManagerDocs.h@{AuthManagerDocs.h}}
+\doxysubsubsection{\texorpdfstring{AuthResult}{AuthResult}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{Auth\+Result}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Перечисление кодов возврата для операций аутентификации. 
+
+Описывает все возможные исходы при регистрации, входе в систему или восстановлении пароля. \begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Success@{Success}!AuthManagerDocs.h@{AuthManagerDocs.h}}\index{AuthManagerDocs.h@{AuthManagerDocs.h}!Success@{Success}}}\Hypertarget{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea505a83f220c02df2f85c3810cd9ceb38}\label{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea505a83f220c02df2f85c3810cd9ceb38} 
+Success&Операция выполнена успешно. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ConnectionError@{ConnectionError}!AuthManagerDocs.h@{AuthManagerDocs.h}}\index{AuthManagerDocs.h@{AuthManagerDocs.h}!ConnectionError@{ConnectionError}}}\Hypertarget{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea094a6f6b0868122a9dd008cb91c083e4}\label{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea094a6f6b0868122a9dd008cb91c083e4} 
+Connection\+Error&Ошибка сетевого соединения (например, при отправке письма). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InvalidEmail@{InvalidEmail}!AuthManagerDocs.h@{AuthManagerDocs.h}}\index{AuthManagerDocs.h@{AuthManagerDocs.h}!InvalidEmail@{InvalidEmail}}}\Hypertarget{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea45d3c76b79a4795dae38fb5d5b48ad45}\label{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea45d3c76b79a4795dae38fb5d5b48ad45} 
+Invalid\+Email&Неверный формат адреса электронной почты. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WeakPassword@{WeakPassword}!AuthManagerDocs.h@{AuthManagerDocs.h}}\index{AuthManagerDocs.h@{AuthManagerDocs.h}!WeakPassword@{WeakPassword}}}\Hypertarget{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea460899c942673a93b86a81ca6297cd36}\label{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea460899c942673a93b86a81ca6297cd36} 
+Weak\+Password&Пароль не удовлетворяет требованиям безопасности. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UserAlreadyExists@{UserAlreadyExists}!AuthManagerDocs.h@{AuthManagerDocs.h}}\index{AuthManagerDocs.h@{AuthManagerDocs.h}!UserAlreadyExists@{UserAlreadyExists}}}\Hypertarget{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea28ec83712271c6d109f6eac45c04fc71}\label{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea28ec83712271c6d109f6eac45c04fc71} 
+User\+Already\+Exists&Пользователь с таким email уже зарегистрирован. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UserNotFound@{UserNotFound}!AuthManagerDocs.h@{AuthManagerDocs.h}}\index{AuthManagerDocs.h@{AuthManagerDocs.h}!UserNotFound@{UserNotFound}}}\Hypertarget{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea5e349b2189e271e32f633c077d4ff028}\label{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea5e349b2189e271e32f633c077d4ff028} 
+User\+Not\+Found&Пользователь с таким email не найден в базе данных. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DatabaseError@{DatabaseError}!AuthManagerDocs.h@{AuthManagerDocs.h}}\index{AuthManagerDocs.h@{AuthManagerDocs.h}!DatabaseError@{DatabaseError}}}\Hypertarget{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fceaa31437013b94ae5b39a818c6defac7ea}\label{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fceaa31437013b94ae5b39a818c6defac7ea} 
+Database\+Error&Внутренняя ошибка базы данных. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InvalidCredentials@{InvalidCredentials}!AuthManagerDocs.h@{AuthManagerDocs.h}}\index{AuthManagerDocs.h@{AuthManagerDocs.h}!InvalidCredentials@{InvalidCredentials}}}\Hypertarget{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea3121e825c13ba377fb5adb741201c401}\label{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea3121e825c13ba377fb5adb741201c401} 
+Invalid\+Credentials&Неверный email или пароль при входе. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CodeExpired@{CodeExpired}!AuthManagerDocs.h@{AuthManagerDocs.h}}\index{AuthManagerDocs.h@{AuthManagerDocs.h}!CodeExpired@{CodeExpired}}}\Hypertarget{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea8efc205b664814d3458d9457a330ee78}\label{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea8efc205b664814d3458d9457a330ee78} 
+Code\+Expired&Время действия проверочного кода истекло. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InvalidCode@{InvalidCode}!AuthManagerDocs.h@{AuthManagerDocs.h}}\index{AuthManagerDocs.h@{AuthManagerDocs.h}!InvalidCode@{InvalidCode}}}\Hypertarget{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea54811ceb822294b83e9ded0838e73c02}\label{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea54811ceb822294b83e9ded0838e73c02} 
+Invalid\+Code&Введен неверный проверочный код. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TooManyAttempts@{TooManyAttempts}!AuthManagerDocs.h@{AuthManagerDocs.h}}\index{AuthManagerDocs.h@{AuthManagerDocs.h}!TooManyAttempts@{TooManyAttempts}}}\Hypertarget{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fceaa7ef31aab8d88f6735da209bb411fd40}\label{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fceaa7ef31aab8d88f6735da209bb411fd40} 
+Too\+Many\+Attempts&Превышено максимально допустимое количество попыток ввода кода. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CodeNotVerified@{CodeNotVerified}!AuthManagerDocs.h@{AuthManagerDocs.h}}\index{AuthManagerDocs.h@{AuthManagerDocs.h}!CodeNotVerified@{CodeNotVerified}}}\Hypertarget{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea3da277f7b49fb7aca46d67a5600011f2}\label{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea3da277f7b49fb7aca46d67a5600011f2} 
+Code\+Not\+Verified&Попытка завершить операцию до успешной верификации кода. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8h_source}{Auth\+Manager\+Docs.\+h}} строка \mbox{\hyperlink{AuthManagerDocs_8h_source_l00027}{27}}
+
