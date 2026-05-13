@@ -1,0 +1,203 @@
+\doxysection{Класс graph}
+\hypertarget{classgraph}{}\label{classgraph}\index{graph@{graph}}
+
+
+Класс окна визуализации данных.  
+
+
+
+
+{\ttfamily \#include $<$graph.\+h$>$}
+
+
+
+Граф наследования\+:graph\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classgraph__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса graph\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classgraph__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgraph_a797e6f418c9ce21878678a3f4847c2b0}{graph}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{classgraph_aeb62eaf197cdcb4800fa016eebc3d55a}{\texorpdfstring{$\sim$}{\string~}graph}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgraph_a9084109811dd9d632d92d5ec7f08d1ab}{printgraph}} (QVector$<$ double $>$ y)
+\begin{DoxyCompactList}\small\item\em Отрисовка графика на виджете. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgraph_aae15bc16bda368912aeba29d8224b6b6}{on\+\_\+push\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик кнопки "{}Назад"{} (возврат в меню задач). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgraph_ab2fed8e9e7551677a453039eb608efc2}{on\+\_\+horizontal\+Slider\+\_\+slider\+Moved}} (int position)
+\begin{DoxyCompactList}\small\item\em Обработчик изменения ползунка коэффициента \textquotesingle{}a\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgraph_a6c7790f277ba4095be7606101db93daa}{on\+\_\+horizontal\+Slider\+\_\+2\+\_\+slider\+Moved}} (int position)
+\begin{DoxyCompactList}\small\item\em Обработчик изменения ползунка коэффициента \textquotesingle{}b\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgraph_ade35ac8921790db722def803a594b0b0}{on\+\_\+horizontal\+Slider\+\_\+3\+\_\+slider\+Moved}} (int position)
+\begin{DoxyCompactList}\small\item\em Обработчик изменения ползунка коэффициента \textquotesingle{}c\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::graph \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgraph_ad7c43af2f936234ded728bfbd7ae9407}{ui}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс окна визуализации данных. 
+
+
+\begin{DoxyItemize}
+\item Отвечает за отрисовку графика функции на основе входных данных от пользователя (коэффициенты a, b, c), которые задаются при помощи ползунков. Для отрисовки используется сторонний компонент (например, QCustom\+Plot, внедренный в ui-\/\texorpdfstring{$>$}{>}widget). 
+\end{DoxyItemize}
+
+См. определение в файле \mbox{\hyperlink{graph_8h_source}{graph.\+h}} строка \mbox{\hyperlink{graph_8h_source_l00022}{22}}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classgraph_a797e6f418c9ce21878678a3f4847c2b0}\label{classgraph_a797e6f418c9ce21878678a3f4847c2b0} 
+\index{graph@{graph}!graph@{graph}}
+\index{graph@{graph}!graph@{graph}}
+\doxysubsubsection{\texorpdfstring{graph()}{graph()}}
+{\footnotesize\ttfamily graph\+::graph (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}} строка \mbox{\hyperlink{graph_8cpp_source_l00014}{14}}
+
+\Hypertarget{classgraph_aeb62eaf197cdcb4800fa016eebc3d55a}\label{classgraph_aeb62eaf197cdcb4800fa016eebc3d55a} 
+\index{graph@{graph}!````~graph@{\texorpdfstring{$\sim$}{\string~}graph}}
+\index{````~graph@{\texorpdfstring{$\sim$}{\string~}graph}!graph@{graph}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}graph()}{\string~graph()}}
+{\footnotesize\ttfamily graph\+::\texorpdfstring{$\sim$}{\string~}graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}} строка \mbox{\hyperlink{graph_8cpp_source_l00032}{32}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classgraph_a6c7790f277ba4095be7606101db93daa}\label{classgraph_a6c7790f277ba4095be7606101db93daa} 
+\index{graph@{graph}!on\_horizontalSlider\_2\_sliderMoved@{on\_horizontalSlider\_2\_sliderMoved}}
+\index{on\_horizontalSlider\_2\_sliderMoved@{on\_horizontalSlider\_2\_sliderMoved}!graph@{graph}}
+\doxysubsubsection{\texorpdfstring{on\_horizontalSlider\_2\_sliderMoved}{on\_horizontalSlider\_2\_sliderMoved}}
+{\footnotesize\ttfamily void graph\+::on\+\_\+horizontal\+Slider\+\_\+2\+\_\+slider\+Moved (\begin{DoxyParamCaption}\item[{int}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Обработчик изменения ползунка коэффициента \textquotesingle{}b\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em position} & Новое значение коэффициента. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}} строка \mbox{\hyperlink{graph_8cpp_source_l00065}{65}}
+
+\Hypertarget{classgraph_ade35ac8921790db722def803a594b0b0}\label{classgraph_ade35ac8921790db722def803a594b0b0} 
+\index{graph@{graph}!on\_horizontalSlider\_3\_sliderMoved@{on\_horizontalSlider\_3\_sliderMoved}}
+\index{on\_horizontalSlider\_3\_sliderMoved@{on\_horizontalSlider\_3\_sliderMoved}!graph@{graph}}
+\doxysubsubsection{\texorpdfstring{on\_horizontalSlider\_3\_sliderMoved}{on\_horizontalSlider\_3\_sliderMoved}}
+{\footnotesize\ttfamily void graph\+::on\+\_\+horizontal\+Slider\+\_\+3\+\_\+slider\+Moved (\begin{DoxyParamCaption}\item[{int}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Обработчик изменения ползунка коэффициента \textquotesingle{}c\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em position} & Новое значение коэффициента. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}} строка \mbox{\hyperlink{graph_8cpp_source_l00071}{71}}
+
+\Hypertarget{classgraph_ab2fed8e9e7551677a453039eb608efc2}\label{classgraph_ab2fed8e9e7551677a453039eb608efc2} 
+\index{graph@{graph}!on\_horizontalSlider\_sliderMoved@{on\_horizontalSlider\_sliderMoved}}
+\index{on\_horizontalSlider\_sliderMoved@{on\_horizontalSlider\_sliderMoved}!graph@{graph}}
+\doxysubsubsection{\texorpdfstring{on\_horizontalSlider\_sliderMoved}{on\_horizontalSlider\_sliderMoved}}
+{\footnotesize\ttfamily void graph\+::on\+\_\+horizontal\+Slider\+\_\+slider\+Moved (\begin{DoxyParamCaption}\item[{int}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Обработчик изменения ползунка коэффициента \textquotesingle{}a\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em position} & Новое значение коэффициента. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}} строка \mbox{\hyperlink{graph_8cpp_source_l00059}{59}}
+
+\Hypertarget{classgraph_aae15bc16bda368912aeba29d8224b6b6}\label{classgraph_aae15bc16bda368912aeba29d8224b6b6} 
+\index{graph@{graph}!on\_pushButton\_clicked@{on\_pushButton\_clicked}}
+\index{on\_pushButton\_clicked@{on\_pushButton\_clicked}!graph@{graph}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_clicked}{on\_pushButton\_clicked}}
+{\footnotesize\ttfamily void graph\+::on\+\_\+push\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Обработчик кнопки "{}Назад"{} (возврат в меню задач). 
+
+
+
+См. определение в файле \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}} строка \mbox{\hyperlink{graph_8cpp_source_l00037}{37}}
+
+\Hypertarget{classgraph_a9084109811dd9d632d92d5ec7f08d1ab}\label{classgraph_a9084109811dd9d632d92d5ec7f08d1ab} 
+\index{graph@{graph}!printgraph@{printgraph}}
+\index{printgraph@{printgraph}!graph@{graph}}
+\doxysubsubsection{\texorpdfstring{printgraph}{printgraph}}
+{\footnotesize\ttfamily void graph\+::printgraph (\begin{DoxyParamCaption}\item[{QVector$<$ double $>$}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Отрисовка графика на виджете. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em y} & Вектор вычисленных значений Y, полученных из \doxylink{net_8cpp}{net.\+cpp}. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}} строка \mbox{\hyperlink{graph_8cpp_source_l00044}{44}}
+
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{classgraph_ad7c43af2f936234ded728bfbd7ae9407}\label{classgraph_ad7c43af2f936234ded728bfbd7ae9407} 
+\index{graph@{graph}!ui@{ui}}
+\index{ui@{ui}!graph@{graph}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::graph\texorpdfstring{$\ast$}{*} graph\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{graph_8h_source}{graph.\+h}} строка \mbox{\hyperlink{graph_8h_source_l00059}{59}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+ТиМП Исходники/\+Client/\mbox{\hyperlink{graph_8h}{graph.\+h}}\item 
+ТиМП Исходники/\+Client/\mbox{\hyperlink{graph_8cpp}{graph.\+cpp}}\end{DoxyCompactItemize}

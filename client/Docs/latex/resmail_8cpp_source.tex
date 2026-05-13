@@ -1,0 +1,43 @@
+\doxysection{resmail.\+cpp}
+\hypertarget{resmail_8cpp_source}{}\label{resmail_8cpp_source}\index{ТиМП Исходники/Client/resmail.cpp@{ТиМП Исходники/Client/resmail.cpp}}
+\mbox{\hyperlink{resmail_8cpp}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{resmail_8h}{resmail.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{avtorisation_8h}{avtorisation.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}ui\_resmail.h"{}}}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{net_8h}{net.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00013}\mbox{\hyperlink{resmail_8cpp_a14869eca19fe80c3213b9be7c8929417}{00013}}\ std::string\ \mbox{\hyperlink{resmail_8cpp_a14869eca19fe80c3213b9be7c8929417}{mal}};}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00015}\mbox{\hyperlink{classresmail_ab7441255a717329dbeea6304fa187cfe}{00015}}\ \mbox{\hyperlink{classresmail_ab7441255a717329dbeea6304fa187cfe}{resmail::resmail}}(QWidget\ *parent)}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00016}00016\ \ \ \ \ :\ QDialog(parent)}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00017}00017\ \ \ \ \ ,\ ui(new\ \mbox{\hyperlink{namespaceUi}{Ui}}::\mbox{\hyperlink{classresmail}{resmail}})}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{classresmail_a4082cd8ec34940d750d30ce4d41dba88}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00020}00020\ \}}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00022}\mbox{\hyperlink{classresmail_a068a66ea0f12a3a5130e04c9283f5cf9}{00022}}\ \mbox{\hyperlink{classresmail_a068a66ea0f12a3a5130e04c9283f5cf9}{resmail::\string~resmail}}()}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00023}00023\ \{}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classresmail_a4082cd8ec34940d750d30ce4d41dba88}{ui}};}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00027}\mbox{\hyperlink{classresmail_ae307b285fa9c459b59219e8cfe78d3af}{00027}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classresmail_ae307b285fa9c459b59219e8cfe78d3af}{resmail::on\_pushButton\_2\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{classavtorisation}{avtorisation}}\ *e\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classavtorisation}{avtorisation}};}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00030}00030\ \ \ \ \ e-\/>show();}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00031}00031\ \ \ \ \ close();}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00034}\mbox{\hyperlink{classresmail_a6147b77538d67c3b2eb6e4a2d9823d9d}{00034}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classresmail_a6147b77538d67c3b2eb6e4a2d9823d9d}{resmail::on\_lineEdit\_textChanged}}(\textcolor{keyword}{const}\ QString\ \&arg1)}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00035}00035\ \{}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00036}00036\ \ \ \ \ \mbox{\hyperlink{resmail_8cpp_a14869eca19fe80c3213b9be7c8929417}{mal}}\ =\ arg1.toStdString();}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00039}\mbox{\hyperlink{classresmail_ac6e3624db2273ee02a5ce5413539340f}{00039}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classresmail_ac6e3624db2273ee02a5ce5413539340f}{resmail::on\_pushButton\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00040}00040\ \{}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{net_8cpp_ae72656da8889417337854b555898f6e9}{respas}}(\mbox{\hyperlink{resmail_8cpp_a14869eca19fe80c3213b9be7c8929417}{mal}});}
+\DoxyCodeLine{\Hypertarget{resmail_8cpp_source_l00042}00042\ \}}
+
+\end{DoxyCode}

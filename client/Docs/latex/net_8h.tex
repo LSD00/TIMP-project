@@ -1,0 +1,150 @@
+\doxysection{Файл ТиМП Исходники/\+Client/net.h}
+\hypertarget{net_8h}{}\label{net_8h}\index{ТиМП Исходники/Client/net.h@{ТиМП Исходники/Client/net.h}}
+
+
+Заголовочный файл с объявлениями функций для связи с сервером и математических вычислений.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$QVector$>$}\newline
+Граф включаемых заголовочных файлов для net.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{net_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{net_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{net_8h_a3b011be4e1cc2430cb312ef7b37caea6}{regist}} (std\+::string \mbox{\hyperlink{registration_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}, std\+::string \mbox{\hyperlink{avtorisation_8cpp_a546243311e1bb28ba13c57c41f885327}{mail}}, std\+::string password)
+\begin{DoxyCompactList}\small\item\em Функция регистрации нового пользователя. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{net_8h_a727ffd02be956f990d28a1958e32da56}{autor}} (std\+::string \mbox{\hyperlink{avtorisation_8cpp_a546243311e1bb28ba13c57c41f885327}{mail}}, std\+::string password)
+\begin{DoxyCompactList}\small\item\em Функция авторизации существующего пользователя. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{net_8h_ae72656da8889417337854b555898f6e9}{respas}} (std\+::string \mbox{\hyperlink{avtorisation_8cpp_a546243311e1bb28ba13c57c41f885327}{mail}})
+\begin{DoxyCompactList}\small\item\em Функция восстановления пароля. \end{DoxyCompactList}\item 
+QVector$<$ double $>$ \mbox{\hyperlink{net_8h_ac2b7eb14152b535ade57f442459d7e9c}{crgrap}} (int \mbox{\hyperlink{graph_8cpp_aa4c2a5552e9bc49b1816ff532f558c74}{a}}, int \mbox{\hyperlink{graph_8cpp_a148e3876077787926724625411d6e7a9}{b}}, int \mbox{\hyperlink{graph_8cpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}})
+\begin{DoxyCompactList}\small\item\em Вычисление значений кусочно-\/заданной функции для построения графика. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Заголовочный файл с объявлениями функций для связи с сервером и математических вычислений. 
+
+
+
+См. определение в файле \mbox{\hyperlink{net_8h_source}{net.\+h}}
+
+
+
+\doxysubsection{Функции}
+\Hypertarget{net_8h_a727ffd02be956f990d28a1958e32da56}\label{net_8h_a727ffd02be956f990d28a1958e32da56} 
+\index{net.h@{net.h}!autor@{autor}}
+\index{autor@{autor}!net.h@{net.h}}
+\doxysubsubsection{\texorpdfstring{autor()}{autor()}}
+{\footnotesize\ttfamily bool autor (\begin{DoxyParamCaption}\item[{std\+::string}]{mail,  }\item[{std\+::string}]{password }\end{DoxyParamCaption})}
+
+
+
+Функция авторизации существующего пользователя. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mail} & Электронная почта. \\
+\hline
+{\em password} & Пароль. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если авторизация успешна, иначе false. 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{net_8cpp_source}{net.\+cpp}} строка \mbox{\hyperlink{net_8cpp_source_l00014}{14}}
+
+\Hypertarget{net_8h_ac2b7eb14152b535ade57f442459d7e9c}\label{net_8h_ac2b7eb14152b535ade57f442459d7e9c} 
+\index{net.h@{net.h}!crgrap@{crgrap}}
+\index{crgrap@{crgrap}!net.h@{net.h}}
+\doxysubsubsection{\texorpdfstring{crgrap()}{crgrap()}}
+{\footnotesize\ttfamily QVector$<$ double $>$ crgrap (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Вычисление значений кусочно-\/заданной функции для построения графика. 
+
+
+\begin{DoxyItemize}
+\item Функция генерирует массив значений Y на основе заданных коэффициентов a, b и c в диапазоне X от -\/10 до 10 с шагом 0.\+067.
+\item 
+\begin{DoxyParams}{Аргументы}
+{\em a} & Коэффициент для X \texorpdfstring{$<$}{<} 0. \\
+\hline
+{\em b} & Коэффициент для 0 \texorpdfstring{$<$}{<}= X \texorpdfstring{$<$}{<} 1. \\
+\hline
+{\em c} & Коэффициент для X \texorpdfstring{$>$}{>} 1. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+QVector$<$double$>$ Вектор вычисленных значений Y для построения графика. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+См. определение в файле \mbox{\hyperlink{net_8cpp_source}{net.\+cpp}} строка \mbox{\hyperlink{net_8cpp_source_l00024}{24}}
+
+\Hypertarget{net_8h_a3b011be4e1cc2430cb312ef7b37caea6}\label{net_8h_a3b011be4e1cc2430cb312ef7b37caea6} 
+\index{net.h@{net.h}!regist@{regist}}
+\index{regist@{regist}!net.h@{net.h}}
+\doxysubsubsection{\texorpdfstring{regist()}{regist()}}
+{\footnotesize\ttfamily bool regist (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{mail,  }\item[{std\+::string}]{password }\end{DoxyParamCaption})}
+
+
+
+Функция регистрации нового пользователя. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em name} & Имя пользователя. \\
+\hline
+{\em mail} & Электронная почта. \\
+\hline
+{\em password} & Пароль. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если регистрация прошла успешно, иначе false. 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{net_8cpp_source}{net.\+cpp}} строка \mbox{\hyperlink{net_8cpp_source_l00009}{9}}
+
+\Hypertarget{net_8h_ae72656da8889417337854b555898f6e9}\label{net_8h_ae72656da8889417337854b555898f6e9} 
+\index{net.h@{net.h}!respas@{respas}}
+\index{respas@{respas}!net.h@{net.h}}
+\doxysubsubsection{\texorpdfstring{respas()}{respas()}}
+{\footnotesize\ttfamily bool respas (\begin{DoxyParamCaption}\item[{std\+::string}]{mail }\end{DoxyParamCaption})}
+
+
+
+Функция восстановления пароля. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mail} & Электронная почта, на которую зарегистрирован аккаунт. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если запрос на восстановление успешно отправлен. 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{net_8cpp_source}{net.\+cpp}} строка \mbox{\hyperlink{net_8cpp_source_l00019}{19}}
+

@@ -1,0 +1,76 @@
+\doxysection{graph.\+cpp}
+\hypertarget{graph_8cpp_source}{}\label{graph_8cpp_source}\index{ТиМП Исходники/Client/graph.cpp@{ТиМП Исходники/Client/graph.cpp}}
+\mbox{\hyperlink{graph_8cpp}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{graph_8h}{graph.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{task_8h}{task.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}ui\_graph.h"{}}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{net_8h}{net.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00012}\mbox{\hyperlink{graph_8cpp_aa4c2a5552e9bc49b1816ff532f558c74}{00012}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{graph_8cpp_aa4c2a5552e9bc49b1816ff532f558c74}{a}}\ =\ 1,\ \mbox{\hyperlink{graph_8cpp_a148e3876077787926724625411d6e7a9}{b}}\ =\ 0,\ \mbox{\hyperlink{graph_8cpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00014}\mbox{\hyperlink{classgraph_a797e6f418c9ce21878678a3f4847c2b0}{00014}}\ \mbox{\hyperlink{classgraph_a797e6f418c9ce21878678a3f4847c2b0}{graph::graph}}(QWidget\ *parent)}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00015}00015\ \ \ \ \ :\ QDialog(parent)}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00016}00016\ \ \ \ \ ,\ ui(new\ \mbox{\hyperlink{namespaceUi}{Ui}}::\mbox{\hyperlink{classgraph}{graph}})}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{classgraph_ad7c43af2f936234ded728bfbd7ae9407}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00019}00019\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//\ Инициализация\ ползунков}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{classgraph_ad7c43af2f936234ded728bfbd7ae9407}{ui}}-\/>horizontalSlider-\/>setRange(-\/10,\ 10);}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{classgraph_ad7c43af2f936234ded728bfbd7ae9407}{ui}}-\/>horizontalSlider-\/>setValue(\mbox{\hyperlink{graph_8cpp_aa4c2a5552e9bc49b1816ff532f558c74}{a}});}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{classgraph_ad7c43af2f936234ded728bfbd7ae9407}{ui}}-\/>horizontalSlider\_2-\/>setRange(-\/10,\ 10);}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{classgraph_ad7c43af2f936234ded728bfbd7ae9407}{ui}}-\/>horizontalSlider\_2-\/>setValue(\mbox{\hyperlink{graph_8cpp_a148e3876077787926724625411d6e7a9}{b}});}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{classgraph_ad7c43af2f936234ded728bfbd7ae9407}{ui}}-\/>horizontalSlider\_3-\/>setRange(-\/10,\ 10);}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{classgraph_ad7c43af2f936234ded728bfbd7ae9407}{ui}}-\/>horizontalSlider\_3-\/>setValue(\mbox{\hyperlink{graph_8cpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}});}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00027}00027\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{comment}{//\ Первоначальная\ отрисовка\ графика}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{classgraph_a9084109811dd9d632d92d5ec7f08d1ab}{printgraph}}(\mbox{\hyperlink{net_8cpp_ac2b7eb14152b535ade57f442459d7e9c}{crgrap}}(\mbox{\hyperlink{graph_8cpp_aa4c2a5552e9bc49b1816ff532f558c74}{a}},\ \mbox{\hyperlink{graph_8cpp_a148e3876077787926724625411d6e7a9}{b}},\ \mbox{\hyperlink{graph_8cpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}}));}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00032}\mbox{\hyperlink{classgraph_aeb62eaf197cdcb4800fa016eebc3d55a}{00032}}\ \mbox{\hyperlink{classgraph_aeb62eaf197cdcb4800fa016eebc3d55a}{graph::\string~graph}}()}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00033}00033\ \{}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classgraph_ad7c43af2f936234ded728bfbd7ae9407}{ui}};}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00037}\mbox{\hyperlink{classgraph_aae15bc16bda368912aeba29d8224b6b6}{00037}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgraph_aae15bc16bda368912aeba29d8224b6b6}{graph::on\_pushButton\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00038}00038\ \{}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{classTask}{Task}}\ *e\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classTask}{Task}};}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00040}00040\ \ \ \ \ e-\/>show();}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00041}00041\ \ \ \ \ close();}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00042}00042\ \}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00044}\mbox{\hyperlink{classgraph_a9084109811dd9d632d92d5ec7f08d1ab}{00044}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgraph_a9084109811dd9d632d92d5ec7f08d1ab}{graph::printgraph}}(QVector<double>\ y)\{}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00045}00045\ \ \ \ \ QVector<double>\ x;}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{comment}{//\ Заполнение\ вектора\ значений\ X}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{double}\ i\ =\ -\/10;\ i\ <\ 10;\ i\ =\ i\ +\ 0.067)\ \{}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ x.push\_back(i);}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00050}00050\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{comment}{//\ Настройка\ графика}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00052}00052\ \ \ \ \ \mbox{\hyperlink{classgraph_ad7c43af2f936234ded728bfbd7ae9407}{ui}}-\/>widget-\/>addGraph();}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00053}00053\ \ \ \ \ \mbox{\hyperlink{classgraph_ad7c43af2f936234ded728bfbd7ae9407}{ui}}-\/>widget-\/>graph(0)-\/>setData(x,\ y);}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00054}00054\ \ \ \ \ \mbox{\hyperlink{classgraph_ad7c43af2f936234ded728bfbd7ae9407}{ui}}-\/>widget-\/>xAxis-\/>setRange(-\/10,\ 10);}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00055}00055\ \ \ \ \ \mbox{\hyperlink{classgraph_ad7c43af2f936234ded728bfbd7ae9407}{ui}}-\/>widget-\/>yAxis-\/>setRange(-\/10,\ 10);}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00056}00056\ \ \ \ \ \mbox{\hyperlink{classgraph_ad7c43af2f936234ded728bfbd7ae9407}{ui}}-\/>widget-\/>replot();}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00059}\mbox{\hyperlink{classgraph_ab2fed8e9e7551677a453039eb608efc2}{00059}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgraph_ab2fed8e9e7551677a453039eb608efc2}{graph::on\_horizontalSlider\_sliderMoved}}(\textcolor{keywordtype}{int}\ position)}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00060}00060\ \{}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00061}00061\ \ \ \ \ \mbox{\hyperlink{graph_8cpp_aa4c2a5552e9bc49b1816ff532f558c74}{a}}\ =\ position;}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00062}00062\ \ \ \ \ \mbox{\hyperlink{classgraph_a9084109811dd9d632d92d5ec7f08d1ab}{printgraph}}(\mbox{\hyperlink{net_8cpp_ac2b7eb14152b535ade57f442459d7e9c}{crgrap}}(\mbox{\hyperlink{graph_8cpp_aa4c2a5552e9bc49b1816ff532f558c74}{a}},\ \mbox{\hyperlink{graph_8cpp_a148e3876077787926724625411d6e7a9}{b}},\ \mbox{\hyperlink{graph_8cpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}}));\ \textcolor{comment}{//\ Перерисовка\ с\ новым\ коэффициентом}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00065}\mbox{\hyperlink{classgraph_a6c7790f277ba4095be7606101db93daa}{00065}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgraph_a6c7790f277ba4095be7606101db93daa}{graph::on\_horizontalSlider\_2\_sliderMoved}}(\textcolor{keywordtype}{int}\ position)}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00066}00066\ \{}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00067}00067\ \ \ \ \ \mbox{\hyperlink{graph_8cpp_a148e3876077787926724625411d6e7a9}{b}}\ =\ position;}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00068}00068\ \ \ \ \ \mbox{\hyperlink{classgraph_a9084109811dd9d632d92d5ec7f08d1ab}{printgraph}}(\mbox{\hyperlink{net_8cpp_ac2b7eb14152b535ade57f442459d7e9c}{crgrap}}(\mbox{\hyperlink{graph_8cpp_aa4c2a5552e9bc49b1816ff532f558c74}{a}},\ \mbox{\hyperlink{graph_8cpp_a148e3876077787926724625411d6e7a9}{b}},\ \mbox{\hyperlink{graph_8cpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}}));\ \textcolor{comment}{//\ Перерисовка\ с\ новым\ коэффициентом}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00069}00069\ \}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00071}\mbox{\hyperlink{classgraph_ade35ac8921790db722def803a594b0b0}{00071}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classgraph_ade35ac8921790db722def803a594b0b0}{graph::on\_horizontalSlider\_3\_sliderMoved}}(\textcolor{keywordtype}{int}\ position)}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00072}00072\ \{}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00073}00073\ \ \ \ \ \mbox{\hyperlink{graph_8cpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}}\ =\ position;}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00074}00074\ \ \ \ \ \mbox{\hyperlink{classgraph_a9084109811dd9d632d92d5ec7f08d1ab}{printgraph}}(\mbox{\hyperlink{net_8cpp_ac2b7eb14152b535ade57f442459d7e9c}{crgrap}}(\mbox{\hyperlink{graph_8cpp_aa4c2a5552e9bc49b1816ff532f558c74}{a}},\ \mbox{\hyperlink{graph_8cpp_a148e3876077787926724625411d6e7a9}{b}},\ \mbox{\hyperlink{graph_8cpp_a4e1e0e72dd773439e333c84dd762a9c3}{c}}));\ \textcolor{comment}{//\ Перерисовка\ с\ новым\ коэффициентом}}
+\DoxyCodeLine{\Hypertarget{graph_8cpp_source_l00075}00075\ \}}
+
+\end{DoxyCode}

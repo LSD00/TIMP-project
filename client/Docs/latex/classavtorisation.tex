@@ -1,0 +1,210 @@
+\doxysection{Класс avtorisation}
+\hypertarget{classavtorisation}{}\label{classavtorisation}\index{avtorisation@{avtorisation}}
+
+
+Класс главного окна для входа в приложение.  
+
+
+
+
+{\ttfamily \#include $<$avtorisation.\+h$>$}
+
+
+
+Граф наследования\+:avtorisation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classavtorisation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса avtorisation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classavtorisation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classavtorisation_a5546def8ddae0b1d2ef90fd75b66c779}{avtorisation}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор класса. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classavtorisation_a8ccd4841c3a64fb1e8acb5deb353ffe9}{\texorpdfstring{$\sim$}{\string~}avtorisation}} () override
+\begin{DoxyCompactList}\small\item\em Деструктор класса. Очищает выделенную память под UI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classavtorisation_aa5e6b6516eb1386bc88ee108dbdbc19a}{on\+\_\+push\+Button\+\_\+3\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик нажатия на кнопку "{}Забыли пароль?"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classavtorisation_a4af6471aba4b8267bbc92637efd6980c}{on\+\_\+push\+Button\+\_\+2\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик нажатия на кнопку "{}Регистрация"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classavtorisation_a6e44b4c0569c496425f8458ee0461918}{on\+\_\+push\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик нажатия на кнопку "{}Войти"{}. Инициирует проверку данных. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classavtorisation_ae5f542a946580e4736b27ca3e016acf2}{on\+\_\+line\+Edit\+\_\+text\+Changed}} (const QString \&arg1)
+\begin{DoxyCompactList}\small\item\em Обработчик изменения текста в поле ввода электронной почты. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classavtorisation_a1237c17471e2963b5f1235d102ad32b2}{on\+\_\+line\+Edit\+\_\+2\+\_\+text\+Changed}} (const QString \&arg1)
+\begin{DoxyCompactList}\small\item\em Обработчик изменения текста в поле ввода пароля. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::avtorisation \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classavtorisation_add299bde661df92b8bd42f99f0222b6b}{ui}}
+\begin{DoxyCompactList}\small\item\em Указатель на графический интерфейс окна. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс главного окна для входа в приложение. 
+
+
+\begin{DoxyItemize}
+\item Данный класс отвечает за интерфейс авторизации пользователя. Он обрабатывает ввод электронной почты и пароля, а также обеспечивает навигацию к окнам регистрации и восстановления пароля. 
+\end{DoxyItemize}
+
+См. определение в файле \mbox{\hyperlink{avtorisation_8h_source}{avtorisation.\+h}} строка \mbox{\hyperlink{avtorisation_8h_source_l00025}{25}}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classavtorisation_a5546def8ddae0b1d2ef90fd75b66c779}\label{classavtorisation_a5546def8ddae0b1d2ef90fd75b66c779} 
+\index{avtorisation@{avtorisation}!avtorisation@{avtorisation}}
+\index{avtorisation@{avtorisation}!avtorisation@{avtorisation}}
+\doxysubsubsection{\texorpdfstring{avtorisation()}{avtorisation()}}
+{\footnotesize\ttfamily avtorisation\+::avtorisation (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор класса. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Родительский виджет (по умолчанию nullptr). \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{avtorisation_8cpp_source}{avtorisation.\+cpp}} строка \mbox{\hyperlink{avtorisation_8cpp_source_l00016}{16}}
+
+\Hypertarget{classavtorisation_a8ccd4841c3a64fb1e8acb5deb353ffe9}\label{classavtorisation_a8ccd4841c3a64fb1e8acb5deb353ffe9} 
+\index{avtorisation@{avtorisation}!````~avtorisation@{\texorpdfstring{$\sim$}{\string~}avtorisation}}
+\index{````~avtorisation@{\texorpdfstring{$\sim$}{\string~}avtorisation}!avtorisation@{avtorisation}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}avtorisation()}{\string~avtorisation()}}
+{\footnotesize\ttfamily avtorisation\+::\texorpdfstring{$\sim$}{\string~}avtorisation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Деструктор класса. Очищает выделенную память под UI. 
+
+
+
+См. определение в файле \mbox{\hyperlink{avtorisation_8cpp_source}{avtorisation.\+cpp}} строка \mbox{\hyperlink{avtorisation_8cpp_source_l00023}{23}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classavtorisation_a1237c17471e2963b5f1235d102ad32b2}\label{classavtorisation_a1237c17471e2963b5f1235d102ad32b2} 
+\index{avtorisation@{avtorisation}!on\_lineEdit\_2\_textChanged@{on\_lineEdit\_2\_textChanged}}
+\index{on\_lineEdit\_2\_textChanged@{on\_lineEdit\_2\_textChanged}!avtorisation@{avtorisation}}
+\doxysubsubsection{\texorpdfstring{on\_lineEdit\_2\_textChanged}{on\_lineEdit\_2\_textChanged}}
+{\footnotesize\ttfamily void avtorisation\+::on\+\_\+line\+Edit\+\_\+2\+\_\+text\+Changed (\begin{DoxyParamCaption}\item[{const QString \&}]{arg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Обработчик изменения текста в поле ввода пароля. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em arg1} & Введенная строка (Пароль). \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{avtorisation_8cpp_source}{avtorisation.\+cpp}} строка \mbox{\hyperlink{avtorisation_8cpp_source_l00057}{57}}
+
+\Hypertarget{classavtorisation_ae5f542a946580e4736b27ca3e016acf2}\label{classavtorisation_ae5f542a946580e4736b27ca3e016acf2} 
+\index{avtorisation@{avtorisation}!on\_lineEdit\_textChanged@{on\_lineEdit\_textChanged}}
+\index{on\_lineEdit\_textChanged@{on\_lineEdit\_textChanged}!avtorisation@{avtorisation}}
+\doxysubsubsection{\texorpdfstring{on\_lineEdit\_textChanged}{on\_lineEdit\_textChanged}}
+{\footnotesize\ttfamily void avtorisation\+::on\+\_\+line\+Edit\+\_\+text\+Changed (\begin{DoxyParamCaption}\item[{const QString \&}]{arg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Обработчик изменения текста в поле ввода электронной почты. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em arg1} & Введенная строка (E-\/mail). \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{avtorisation_8cpp_source}{avtorisation.\+cpp}} строка \mbox{\hyperlink{avtorisation_8cpp_source_l00052}{52}}
+
+\Hypertarget{classavtorisation_a4af6471aba4b8267bbc92637efd6980c}\label{classavtorisation_a4af6471aba4b8267bbc92637efd6980c} 
+\index{avtorisation@{avtorisation}!on\_pushButton\_2\_clicked@{on\_pushButton\_2\_clicked}}
+\index{on\_pushButton\_2\_clicked@{on\_pushButton\_2\_clicked}!avtorisation@{avtorisation}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_2\_clicked}{on\_pushButton\_2\_clicked}}
+{\footnotesize\ttfamily void avtorisation\+::on\+\_\+push\+Button\+\_\+2\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Обработчик нажатия на кнопку "{}Регистрация"{}. 
+
+
+
+См. определение в файле \mbox{\hyperlink{avtorisation_8cpp_source}{avtorisation.\+cpp}} строка \mbox{\hyperlink{avtorisation_8cpp_source_l00035}{35}}
+
+\Hypertarget{classavtorisation_aa5e6b6516eb1386bc88ee108dbdbc19a}\label{classavtorisation_aa5e6b6516eb1386bc88ee108dbdbc19a} 
+\index{avtorisation@{avtorisation}!on\_pushButton\_3\_clicked@{on\_pushButton\_3\_clicked}}
+\index{on\_pushButton\_3\_clicked@{on\_pushButton\_3\_clicked}!avtorisation@{avtorisation}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_3\_clicked}{on\_pushButton\_3\_clicked}}
+{\footnotesize\ttfamily void avtorisation\+::on\+\_\+push\+Button\+\_\+3\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Обработчик нажатия на кнопку "{}Забыли пароль?"{}. 
+
+
+
+См. определение в файле \mbox{\hyperlink{avtorisation_8cpp_source}{avtorisation.\+cpp}} строка \mbox{\hyperlink{avtorisation_8cpp_source_l00028}{28}}
+
+\Hypertarget{classavtorisation_a6e44b4c0569c496425f8458ee0461918}\label{classavtorisation_a6e44b4c0569c496425f8458ee0461918} 
+\index{avtorisation@{avtorisation}!on\_pushButton\_clicked@{on\_pushButton\_clicked}}
+\index{on\_pushButton\_clicked@{on\_pushButton\_clicked}!avtorisation@{avtorisation}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_clicked}{on\_pushButton\_clicked}}
+{\footnotesize\ttfamily void avtorisation\+::on\+\_\+push\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Обработчик нажатия на кнопку "{}Войти"{}. Инициирует проверку данных. 
+
+
+
+См. определение в файле \mbox{\hyperlink{avtorisation_8cpp_source}{avtorisation.\+cpp}} строка \mbox{\hyperlink{avtorisation_8cpp_source_l00042}{42}}
+
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{classavtorisation_add299bde661df92b8bd42f99f0222b6b}\label{classavtorisation_add299bde661df92b8bd42f99f0222b6b} 
+\index{avtorisation@{avtorisation}!ui@{ui}}
+\index{ui@{ui}!avtorisation@{avtorisation}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::avtorisation\texorpdfstring{$\ast$}{*} avtorisation\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Указатель на графический интерфейс окна. 
+
+
+
+См. определение в файле \mbox{\hyperlink{avtorisation_8h_source}{avtorisation.\+h}} строка \mbox{\hyperlink{avtorisation_8h_source_l00064}{64}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+ТиМП Исходники/\+Client/\mbox{\hyperlink{avtorisation_8h}{avtorisation.\+h}}\item 
+ТиМП Исходники/\+Client/\mbox{\hyperlink{avtorisation_8cpp}{avtorisation.\+cpp}}\end{DoxyCompactItemize}
