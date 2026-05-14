@@ -1,0 +1,5 @@
+<map id="AuthManager::validateEmail" name="AuthManager::validateEmail">
+<area shape="rect" id="Node000001" title="Проверяет строку на соответствие формату электронной почты (через регулярное выражение)." alt="" coords="332,5,539,31"/>
+<area shape="rect" id="Node000002" href="$classAuthManager.html#a000d618f8dbff5c2465629f7ebadf10f" title="Инициирует процесс регистрации, отправляя код подтверждения на email." alt="" coords="5,5,284,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="318,21,284,21,284,15,318,15"/>
+</map>

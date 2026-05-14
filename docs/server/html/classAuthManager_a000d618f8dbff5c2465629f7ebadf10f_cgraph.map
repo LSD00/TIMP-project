@@ -1,0 +1,9 @@
+<map id="AuthManager::requestRegistrationCode" name="AuthManager::requestRegistrationCode">
+<area shape="rect" id="Node000001" title="Инициирует процесс регистрации, отправляя код подтверждения на email." alt="" coords="5,70,284,95"/>
+<area shape="rect" id="Node000002" href="$classAuthManager.html#a53058aa0995bc53256d717128094d783" title="Асинхронно отправляет email с кодом верификации через внешний API (Brevo)." alt="" coords="336,5,535,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,67,322,45,323,50,210,73"/>
+<area shape="rect" id="Node000003" href="$classAuthManager.html#a83736668bcbf76a6868f3f465a0ec5c8" title="Проверяет наличие пользователя в базе данных." alt="" coords="343,70,527,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="284,80,330,80,330,85,284,85"/>
+<area shape="rect" id="Node000004" href="$classAuthManager.html#a4770b856b1ddcd4e60983612345d0eff" title="Проверяет строку на соответствие формату электронной почты (через регулярное выражение)." alt="" coords="332,119,539,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="221,93,347,114,346,120,220,98"/>
+</map>

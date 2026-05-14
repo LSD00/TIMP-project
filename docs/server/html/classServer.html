@@ -1,0 +1,684 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ТиМП: Класс Server</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ТиМП
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classServer.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classServer-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Server</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Главный класс TCP-сервера.  
+ <a href="classServer.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ServerDocs_8h_source.html">ServerDocs.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:Server:</div>
+<div class="dyncontent">
+<div class="center"><img src="classServer__inherit__graph.png" border="0" usemap="#aServer_inherit__map" alt="Inheritance graph"/></div>
+<map name="aServer_inherit__map" id="aServer_inherit__map">
+<area shape="rect" title="Главный класс TCP&#45;сервера." alt="" coords="5,119,239,732"/>
+<area shape="rect" title=" " alt="" coords="79,5,165,71"/>
+<area shape="poly" title=" " alt="" coords="125,84,125,118,119,118,119,84"/>
+</map>
+</div>
+<div class="dynheader">
+Граф связей класса Server:</div>
+<div class="dyncontent">
+<div class="center"><img src="classServer__coll__graph.png" border="0" usemap="#aServer_coll__map" alt="Collaboration graph"/></div>
+<map name="aServer_coll__map" id="aServer_coll__map">
+<area shape="rect" title="Главный класс TCP&#45;сервера." alt="" coords="5,119,239,732"/>
+<area shape="rect" title=" " alt="" coords="79,5,165,71"/>
+<area shape="poly" title=" " alt="" coords="125,84,125,118,119,118,119,84"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aaf98d5194faee831c6340cc736b9b879" id="r_aaf98d5194faee831c6340cc736b9b879"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#aaf98d5194faee831c6340cc736b9b879">Server</a> (QObject *parent=nullptr)</td></tr>
+<tr class="memdesc:aaf98d5194faee831c6340cc736b9b879"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор сервера.  <br /></td></tr>
+<tr class="separator:aaf98d5194faee831c6340cc736b9b879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a345934ddad7b5a98d058801aa3edcb02" id="r_a345934ddad7b5a98d058801aa3edcb02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a345934ddad7b5a98d058801aa3edcb02">startServer</a> (quint16 port)</td></tr>
+<tr class="memdesc:a345934ddad7b5a98d058801aa3edcb02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запуск сервера на указанном порту.  <br /></td></tr>
+<tr class="separator:a345934ddad7b5a98d058801aa3edcb02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:aa229a1587514197693274aa0d589344b" id="r_aa229a1587514197693274aa0d589344b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#aa229a1587514197693274aa0d589344b">incomingConnection</a> (qintptr socketDescriptor) override</td></tr>
+<tr class="memdesc:aa229a1587514197693274aa0d589344b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработчик новых входящих подключений (переопределение QTcpServer).  <br /></td></tr>
+<tr class="separator:aa229a1587514197693274aa0d589344b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-slots" name="pri-slots"></a>
+Закрытые слоты</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Обработчики сигналов сокетов</div></td></tr>
+<tr class="memitem:ac67d866fb14c4644acd1098bacfadeee" id="r_ac67d866fb14c4644acd1098bacfadeee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#ac67d866fb14c4644acd1098bacfadeee">onReadyRead</a> ()</td></tr>
+<tr class="memdesc:ac67d866fb14c4644acd1098bacfadeee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Слот, вызываемый при поступлении новых данных от клиента.  <br /></td></tr>
+<tr class="separator:ac67d866fb14c4644acd1098bacfadeee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8afa35c8257d78be38596587e469bea3" id="r_a8afa35c8257d78be38596587e469bea3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a8afa35c8257d78be38596587e469bea3">onClientDisconnected</a> ()</td></tr>
+<tr class="memdesc:a8afa35c8257d78be38596587e469bea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Слот, вызываемый при отключении клиента.  <br /></td></tr>
+<tr class="separator:a8afa35c8257d78be38596587e469bea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Внутренняя логика обработки API</div></td></tr>
+<tr class="memitem:a765e4ffe32ffff676ba9e523ab7fcdaa" id="r_a765e4ffe32ffff676ba9e523ab7fcdaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a765e4ffe32ffff676ba9e523ab7fcdaa">handleRequest</a> (QTcpSocket *client, const QJsonObject &amp;request)</td></tr>
+<tr class="memdesc:a765e4ffe32ffff676ba9e523ab7fcdaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Главный маршрутизатор (роутер) входящих запросов.  <br /></td></tr>
+<tr class="separator:a765e4ffe32ffff676ba9e523ab7fcdaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c38927d999bbb4155872da0974d8717" id="r_a5c38927d999bbb4155872da0974d8717"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a5c38927d999bbb4155872da0974d8717">sendResponse</a> (QTcpSocket *client, const QJsonObject &amp;response)</td></tr>
+<tr class="memdesc:a5c38927d999bbb4155872da0974d8717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка произвольного JSON-ответа клиенту.  <br /></td></tr>
+<tr class="separator:a5c38927d999bbb4155872da0974d8717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a7ffb50db36752ca6d4d43eb574562" id="r_ad0a7ffb50db36752ca6d4d43eb574562"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#ad0a7ffb50db36752ca6d4d43eb574562">sendAuthResponse</a> (QTcpSocket *client, <a class="el" href="AuthManagerDocs_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a> result, const QString &amp;customErrorMsg=QString())</td></tr>
+<tr class="memdesc:ad0a7ffb50db36752ca6d4d43eb574562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка стандартизированного ответа на запросы аутентификации.  <br /></td></tr>
+<tr class="separator:ad0a7ffb50db36752ca6d4d43eb574562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a2a54dfaaa52018da9d2537f68ded1026" id="r_a2a54dfaaa52018da9d2537f68ded1026"><td class="memItemLeft" align="right" valign="top">QMap&lt; QTcpSocket *, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a2a54dfaaa52018da9d2537f68ded1026">authenticatedClients</a></td></tr>
+<tr class="memdesc:a2a54dfaaa52018da9d2537f68ded1026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Карта состояния авторизации клиентов.  <br /></td></tr>
+<tr class="separator:a2a54dfaaa52018da9d2537f68ded1026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Главный класс TCP-сервера. </p>
+<p>Сервер принимает подключения от клиентов, читает JSON-сообщения, обрабатывает открытые запросы (авторизация, регистрация) и защищенные запросы (вычисление графиков), доступные только после входа. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="ServerDocs_8h_source.html">ServerDocs.h</a> строка <a class="el" href="ServerDocs_8h_source.html#l00027">27</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aaf98d5194faee831c6340cc736b9b879" name="aaf98d5194faee831c6340cc736b9b879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf98d5194faee831c6340cc736b9b879">&#9670;&#160;</a></span>Server()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Server::Server </td>
+          <td>(</td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конструктор сервера. </p>
+<p>Инициализирует сервер без немедленного запуска прослушивания.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>Родительский QObject (опционально, по умолчанию nullptr). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="ServerDocs_8cpp_source.html">ServerDocs.cpp</a> строка <a class="el" href="ServerDocs_8cpp_source.html#l00017">17</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a765e4ffe32ffff676ba9e523ab7fcdaa" name="a765e4ffe32ffff676ba9e523ab7fcdaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765e4ffe32ffff676ba9e523ab7fcdaa">&#9670;&#160;</a></span>handleRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::handleRequest </td>
+          <td>(</td>
+          <td class="paramtype">QTcpSocket *&#160;</td>
+          <td class="paramname"><em>client</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QJsonObject &amp;&#160;</td>
+          <td class="paramname"><em>request</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Главный маршрутизатор (роутер) входящих запросов. </p>
+<p>Разбор JSON-команды клиента и вызов нужного модуля.</p>
+<p>Анализирует поле <code>action</code> из JSON, проверяет права доступа (авторизован ли клиент) и направляет запрос в соответствующую подсистему (<a class="el" href="classAuthManager.html" title="Главный класс-синглтон для управления процессом авторизации, регистрации и восстановления паролей.">AuthManager</a> или вычисления).</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client</td><td>Указатель на сокет клиента, отправившего запрос. </td></tr>
+    <tr><td class="paramname">request</td><td>Разобранный JSON-объект запроса.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Ядро серверной логики. Разделено на 2 части:</p><ol type="1">
+<li>Открытые эндпоинты (логин, регистрация, восстановление пароля).</li>
+<li>Защищенные эндпоинты (вычисление диаграмм). Доступны только при флаге <code>true</code> в <code>authenticatedClients</code>. </li>
+</ol>
+
+<p class="definition">См. определение в файле <a class="el" href="ServerDocs_8cpp_source.html">ServerDocs.cpp</a> строка <a class="el" href="ServerDocs_8cpp_source.html#l00083">83</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classServer_a765e4ffe32ffff676ba9e523ab7fcdaa_cgraph.png" border="0" usemap="#aclassServer_a765e4ffe32ffff676ba9e523ab7fcdaa_cgraph" alt=""/></div>
+<map name="aclassServer_a765e4ffe32ffff676ba9e523ab7fcdaa_cgraph" id="aclassServer_a765e4ffe32ffff676ba9e523ab7fcdaa_cgraph">
+<area shape="rect" title="Главный маршрутизатор (роутер) входящих запросов." alt="" coords="5,104,175,129"/>
+<area shape="rect" href="classAuthManager.html#a1f5e14a740015d3c20fc123bbc71fec2" title="Проверяет учетные данные пользователя при входе в систему." alt="" coords="223,5,421,31"/>
+<area shape="poly" title=" " alt="" coords="109,102,158,71,222,40,243,32,245,37,224,44,161,75,111,106"/>
+<area shape="rect" href="classAuthManager.html#a3a33c4fac024a1a0a928cc027cb82484" title="Возвращает единственный экземпляр класса AuthManager (паттерн Singleton)." alt="" coords="225,55,419,80"/>
+<area shape="poly" title=" " alt="" coords="150,101,248,80,249,86,151,107"/>
+<area shape="rect" href="CalcDocs_8cpp.html#a1ec60e354c0c14fe35b2e385b36d747b" title="Безопасное вычисление кусочной функции с шагом 0.5." alt="" coords="267,104,377,129"/>
+<area shape="poly" title=" " alt="" coords="175,114,253,114,253,119,175,119"/>
+<area shape="rect" href="classServer.html#ad0a7ffb50db36752ca6d4d43eb574562" title="Отправка стандартизированного ответа на запросы аутентификации." alt="" coords="224,153,420,179"/>
+<area shape="poly" title=" " alt="" coords="151,127,249,148,248,153,150,132"/>
+<area shape="rect" href="classServer.html#a5c38927d999bbb4155872da0974d8717" title="Отправка произвольного JSON&#45;ответа клиенту." alt="" coords="469,179,636,204"/>
+<area shape="poly" title=" " alt="" coords="109,127,158,160,190,176,223,187,282,199,343,204,456,201,456,206,343,209,282,204,222,193,188,180,156,164,106,132"/>
+<area shape="poly" title=" " alt="" coords="420,174,456,178,456,183,420,179"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="classServer_a765e4ffe32ffff676ba9e523ab7fcdaa_icgraph.png" border="0" usemap="#aclassServer_a765e4ffe32ffff676ba9e523ab7fcdaa_icgraph" alt=""/></div>
+<map name="aclassServer_a765e4ffe32ffff676ba9e523ab7fcdaa_icgraph" id="aclassServer_a765e4ffe32ffff676ba9e523ab7fcdaa_icgraph">
+<area shape="rect" title="Главный маршрутизатор (роутер) входящих запросов." alt="" coords="469,5,639,31"/>
+<area shape="rect" href="classServer.html#ac67d866fb14c4644acd1098bacfadeee" title="Слот, вызываемый при поступлении новых данных от клиента." alt="" coords="259,5,421,31"/>
+<area shape="poly" title=" " alt="" coords="456,21,421,21,421,15,456,15"/>
+<area shape="rect" href="classServer.html#aa229a1587514197693274aa0d589344b" title="Обработчик новых входящих подключений (переопределение QTcpServer)." alt="" coords="5,5,211,31"/>
+<area shape="poly" title=" " alt="" coords="245,21,211,21,211,15,245,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa229a1587514197693274aa0d589344b" name="aa229a1587514197693274aa0d589344b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa229a1587514197693274aa0d589344b">&#9670;&#160;</a></span>incomingConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::incomingConnection </td>
+          <td>(</td>
+          <td class="paramtype">qintptr&#160;</td>
+          <td class="paramname"><em>socketDescriptor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обработчик новых входящих подключений (переопределение QTcpServer). </p>
+<p>Инициализация нового клиента при успешном TCP рукопожатии.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socketDescriptor</td><td>Системный дескриптор нового сокета.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Создает новый QTcpSocket, настраивает сигналы <code>readyRead</code> и <code>disconnected</code>. По умолчанию клиент добавляется в словарь сессий как неавторизованный (false). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="ServerDocs_8cpp_source.html">ServerDocs.cpp</a> строка <a class="el" href="ServerDocs_8cpp_source.html#l00035">35</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classServer_aa229a1587514197693274aa0d589344b_cgraph.png" border="0" usemap="#aclassServer_aa229a1587514197693274aa0d589344b_cgraph" alt=""/></div>
+<map name="aclassServer_aa229a1587514197693274aa0d589344b_cgraph" id="aclassServer_aa229a1587514197693274aa0d589344b_cgraph">
+<area shape="rect" title="Обработчик новых входящих подключений (переопределение QTcpServer)." alt="" coords="5,80,211,105"/>
+<area shape="rect" href="classServer.html#a8afa35c8257d78be38596587e469bea3" title="Слот, вызываемый при отключении клиента." alt="" coords="259,55,473,80"/>
+<area shape="poly" title=" " alt="" coords="211,80,245,77,245,82,211,85"/>
+<area shape="rect" href="classServer.html#ac67d866fb14c4644acd1098bacfadeee" title="Слот, вызываемый при поступлении новых данных от клиента." alt="" coords="285,104,447,129"/>
+<area shape="poly" title=" " alt="" coords="211,100,271,105,271,111,211,105"/>
+<area shape="rect" href="classServer.html#a765e4ffe32ffff676ba9e523ab7fcdaa" title="Главный маршрутизатор (роутер) входящих запросов." alt="" coords="521,104,691,129"/>
+<area shape="poly" title=" " alt="" coords="448,114,508,114,508,119,448,119"/>
+<area shape="rect" href="classAuthManager.html#a1f5e14a740015d3c20fc123bbc71fec2" title="Проверяет учетные данные пользователя при входе в систему." alt="" coords="739,5,937,31"/>
+<area shape="poly" title=" " alt="" coords="625,102,674,71,738,40,759,32,761,37,740,44,677,75,627,106"/>
+<area shape="rect" href="classAuthManager.html#a3a33c4fac024a1a0a928cc027cb82484" title="Возвращает единственный экземпляр класса AuthManager (паттерн Singleton)." alt="" coords="741,55,935,80"/>
+<area shape="poly" title=" " alt="" coords="666,101,764,80,765,86,667,107"/>
+<area shape="rect" href="CalcDocs_8cpp.html#a1ec60e354c0c14fe35b2e385b36d747b" title="Безопасное вычисление кусочной функции с шагом 0.5." alt="" coords="783,104,893,129"/>
+<area shape="poly" title=" " alt="" coords="691,114,769,114,769,119,691,119"/>
+<area shape="rect" href="classServer.html#ad0a7ffb50db36752ca6d4d43eb574562" title="Отправка стандартизированного ответа на запросы аутентификации." alt="" coords="740,153,936,179"/>
+<area shape="poly" title=" " alt="" coords="667,127,765,148,764,153,666,132"/>
+<area shape="rect" href="classServer.html#a5c38927d999bbb4155872da0974d8717" title="Отправка произвольного JSON&#45;ответа клиенту." alt="" coords="985,179,1152,204"/>
+<area shape="poly" title=" " alt="" coords="625,127,674,160,706,176,739,187,798,199,859,204,972,201,972,206,859,209,798,204,738,193,704,180,672,164,622,132"/>
+<area shape="poly" title=" " alt="" coords="936,174,972,178,972,183,936,179"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8afa35c8257d78be38596587e469bea3" name="a8afa35c8257d78be38596587e469bea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8afa35c8257d78be38596587e469bea3">&#9670;&#160;</a></span>onClientDisconnected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::onClientDisconnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Слот, вызываемый при отключении клиента. </p>
+<p>Очистка ресурсов при разрыве соединения.</p>
+<p>Удаляет клиента из таблицы сессий и корректно освобождает память сокета.</p>
+<p>Удаляет информацию о сокете из словаря <code>authenticatedClients</code> и планирует безопасное удаление объекта сокета из памяти (deleteLater). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="ServerDocs_8cpp_source.html">ServerDocs.cpp</a> строка <a class="el" href="ServerDocs_8cpp_source.html#l00177">177</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="classServer_a8afa35c8257d78be38596587e469bea3_icgraph.png" border="0" usemap="#aclassServer_a8afa35c8257d78be38596587e469bea3_icgraph" alt=""/></div>
+<map name="aclassServer_a8afa35c8257d78be38596587e469bea3_icgraph" id="aclassServer_a8afa35c8257d78be38596587e469bea3_icgraph">
+<area shape="rect" title="Слот, вызываемый при отключении клиента." alt="" coords="259,5,473,31"/>
+<area shape="rect" href="classServer.html#aa229a1587514197693274aa0d589344b" title="Обработчик новых входящих подключений (переопределение QTcpServer)." alt="" coords="5,5,211,31"/>
+<area shape="poly" title=" " alt="" coords="245,21,211,21,211,15,245,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac67d866fb14c4644acd1098bacfadeee" name="ac67d866fb14c4644acd1098bacfadeee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac67d866fb14c4644acd1098bacfadeee">&#9670;&#160;</a></span>onReadyRead</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::onReadyRead </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Слот, вызываемый при поступлении новых данных от клиента. </p>
+<p>Чтение входящего потока данных из сокета.</p>
+<p>Читает данные, пытается распарсить их как JSON и, в случае успеха, передает объект в <a class="el" href="classServer.html#a765e4ffe32ffff676ba9e523ab7fcdaa" title="Главный маршрутизатор (роутер) входящих запросов.">handleRequest()</a>.</p>
+<p>Метод читает все доступные байты, преобразует их в QJsonDocument и, если формат корректен, передает в обработчик handleRequest. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="ServerDocs_8cpp_source.html">ServerDocs.cpp</a> строка <a class="el" href="ServerDocs_8cpp_source.html#l00052">52</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classServer_ac67d866fb14c4644acd1098bacfadeee_cgraph.png" border="0" usemap="#aclassServer_ac67d866fb14c4644acd1098bacfadeee_cgraph" alt=""/></div>
+<map name="aclassServer_ac67d866fb14c4644acd1098bacfadeee_cgraph" id="aclassServer_ac67d866fb14c4644acd1098bacfadeee_cgraph">
+<area shape="rect" title="Слот, вызываемый при поступлении новых данных от клиента." alt="" coords="5,104,168,129"/>
+<area shape="rect" href="classServer.html#a765e4ffe32ffff676ba9e523ab7fcdaa" title="Главный маршрутизатор (роутер) входящих запросов." alt="" coords="216,104,385,129"/>
+<area shape="poly" title=" " alt="" coords="168,114,202,114,202,119,168,119"/>
+<area shape="rect" href="classAuthManager.html#a1f5e14a740015d3c20fc123bbc71fec2" title="Проверяет учетные данные пользователя при входе в систему." alt="" coords="433,5,632,31"/>
+<area shape="poly" title=" " alt="" coords="319,102,369,71,432,40,454,32,456,37,434,44,372,75,322,106"/>
+<area shape="rect" href="classAuthManager.html#a3a33c4fac024a1a0a928cc027cb82484" title="Возвращает единственный экземпляр класса AuthManager (паттерн Singleton)." alt="" coords="436,55,629,80"/>
+<area shape="poly" title=" " alt="" coords="360,101,458,80,459,86,362,107"/>
+<area shape="rect" href="CalcDocs_8cpp.html#a1ec60e354c0c14fe35b2e385b36d747b" title="Безопасное вычисление кусочной функции с шагом 0.5." alt="" coords="477,104,588,129"/>
+<area shape="poly" title=" " alt="" coords="385,114,464,114,464,119,385,119"/>
+<area shape="rect" href="classServer.html#ad0a7ffb50db36752ca6d4d43eb574562" title="Отправка стандартизированного ответа на запросы аутентификации." alt="" coords="435,153,631,179"/>
+<area shape="poly" title=" " alt="" coords="362,127,459,148,458,153,360,132"/>
+<area shape="rect" href="classServer.html#a5c38927d999bbb4155872da0974d8717" title="Отправка произвольного JSON&#45;ответа клиенту." alt="" coords="680,179,847,204"/>
+<area shape="poly" title=" " alt="" coords="320,127,369,160,401,176,434,187,493,199,554,204,666,201,667,206,554,209,492,204,433,193,399,180,366,164,317,132"/>
+<area shape="poly" title=" " alt="" coords="631,174,667,178,666,183,630,179"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="classServer_ac67d866fb14c4644acd1098bacfadeee_icgraph.png" border="0" usemap="#aclassServer_ac67d866fb14c4644acd1098bacfadeee_icgraph" alt=""/></div>
+<map name="aclassServer_ac67d866fb14c4644acd1098bacfadeee_icgraph" id="aclassServer_ac67d866fb14c4644acd1098bacfadeee_icgraph">
+<area shape="rect" title="Слот, вызываемый при поступлении новых данных от клиента." alt="" coords="259,5,421,31"/>
+<area shape="rect" href="classServer.html#aa229a1587514197693274aa0d589344b" title="Обработчик новых входящих подключений (переопределение QTcpServer)." alt="" coords="5,5,211,31"/>
+<area shape="poly" title=" " alt="" coords="245,21,211,21,211,15,245,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad0a7ffb50db36752ca6d4d43eb574562" name="ad0a7ffb50db36752ca6d4d43eb574562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0a7ffb50db36752ca6d4d43eb574562">&#9670;&#160;</a></span>sendAuthResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::sendAuthResponse </td>
+          <td>(</td>
+          <td class="paramtype">QTcpSocket *&#160;</td>
+          <td class="paramname"><em>client</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="AuthManagerDocs_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a>&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>customErrorMsg</em> = <code>QString()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Отправка стандартизированного ответа на запросы аутентификации. </p>
+<p>Формирует и отправляет JSON-ответ для операций аутентификации.</p>
+<p>Формирует JSON с полями <code>status</code> и <code>message</code> на основе кода AuthResult.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client</td><td>Целевой сокет клиента. </td></tr>
+    <tr><td class="paramname">result</td><td>Результат операции из модуля <a class="el" href="classAuthManager.html" title="Главный класс-синглтон для управления процессом авторизации, регистрации и восстановления паролей.">AuthManager</a>. </td></tr>
+    <tr><td class="paramname">customErrorMsg</td><td>Пользовательский текст ошибки (если стандартный не подходит).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Если операция прошла успешно, возвращает <code>{"status": "success"}</code>. В противном случае возвращает <code>{"status": "error", "message": "..."}</code>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="ServerDocs_8cpp_source.html">ServerDocs.cpp</a> строка <a class="el" href="ServerDocs_8cpp_source.html#l00068">68</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classServer_ad0a7ffb50db36752ca6d4d43eb574562_cgraph.png" border="0" usemap="#aclassServer_ad0a7ffb50db36752ca6d4d43eb574562_cgraph" alt=""/></div>
+<map name="aclassServer_ad0a7ffb50db36752ca6d4d43eb574562_cgraph" id="aclassServer_ad0a7ffb50db36752ca6d4d43eb574562_cgraph">
+<area shape="rect" title="Отправка стандартизированного ответа на запросы аутентификации." alt="" coords="5,5,201,31"/>
+<area shape="rect" href="classServer.html#a5c38927d999bbb4155872da0974d8717" title="Отправка произвольного JSON&#45;ответа клиенту." alt="" coords="249,5,416,31"/>
+<area shape="poly" title=" " alt="" coords="201,15,236,15,236,21,201,21"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="classServer_ad0a7ffb50db36752ca6d4d43eb574562_icgraph.png" border="0" usemap="#aclassServer_ad0a7ffb50db36752ca6d4d43eb574562_icgraph" alt=""/></div>
+<map name="aclassServer_ad0a7ffb50db36752ca6d4d43eb574562_icgraph" id="aclassServer_ad0a7ffb50db36752ca6d4d43eb574562_icgraph">
+<area shape="rect" title="Отправка стандартизированного ответа на запросы аутентификации." alt="" coords="687,5,883,31"/>
+<area shape="rect" href="classServer.html#a765e4ffe32ffff676ba9e523ab7fcdaa" title="Главный маршрутизатор (роутер) входящих запросов." alt="" coords="469,5,639,31"/>
+<area shape="poly" title=" " alt="" coords="673,21,639,21,639,15,673,15"/>
+<area shape="rect" href="classServer.html#ac67d866fb14c4644acd1098bacfadeee" title="Слот, вызываемый при поступлении новых данных от клиента." alt="" coords="259,5,421,31"/>
+<area shape="poly" title=" " alt="" coords="456,21,421,21,421,15,456,15"/>
+<area shape="rect" href="classServer.html#aa229a1587514197693274aa0d589344b" title="Обработчик новых входящих подключений (переопределение QTcpServer)." alt="" coords="5,5,211,31"/>
+<area shape="poly" title=" " alt="" coords="245,21,211,21,211,15,245,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5c38927d999bbb4155872da0974d8717" name="a5c38927d999bbb4155872da0974d8717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c38927d999bbb4155872da0974d8717">&#9670;&#160;</a></span>sendResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::sendResponse </td>
+          <td>(</td>
+          <td class="paramtype">QTcpSocket *&#160;</td>
+          <td class="paramname"><em>client</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QJsonObject &amp;&#160;</td>
+          <td class="paramname"><em>response</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Отправка произвольного JSON-ответа клиенту. </p>
+<p>Сериализация и отправка JSON по сети.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client</td><td>Целевой сокет клиента. </td></tr>
+    <tr><td class="paramname">response</td><td>Тело ответа в формате JSON.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Конвертирует QJsonObject в компактный формат и добавляет символ переноса строки (<code>\n</code>) для корректного чтения на стороне клиента. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="ServerDocs_8cpp_source.html">ServerDocs.cpp</a> строка <a class="el" href="ServerDocs_8cpp_source.html#l00167">167</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="classServer_a5c38927d999bbb4155872da0974d8717_icgraph.png" border="0" usemap="#aclassServer_a5c38927d999bbb4155872da0974d8717_icgraph" alt=""/></div>
+<map name="aclassServer_a5c38927d999bbb4155872da0974d8717_icgraph" id="aclassServer_a5c38927d999bbb4155872da0974d8717_icgraph">
+<area shape="rect" title="Отправка произвольного JSON&#45;ответа клиенту." alt="" coords="931,5,1097,31"/>
+<area shape="rect" href="classServer.html#a765e4ffe32ffff676ba9e523ab7fcdaa" title="Главный маршрутизатор (роутер) входящих запросов." alt="" coords="469,5,639,31"/>
+<area shape="poly" title=" " alt="" coords="917,21,639,21,639,15,917,15"/>
+<area shape="rect" href="classServer.html#ad0a7ffb50db36752ca6d4d43eb574562" title="Отправка стандартизированного ответа на запросы аутентификации." alt="" coords="687,31,883,56"/>
+<area shape="poly" title=" " alt="" coords="917,31,883,35,883,30,916,26"/>
+<area shape="rect" href="classServer.html#ac67d866fb14c4644acd1098bacfadeee" title="Слот, вызываемый при поступлении новых данных от клиента." alt="" coords="259,5,421,31"/>
+<area shape="poly" title=" " alt="" coords="456,21,421,21,421,15,456,15"/>
+<area shape="rect" href="classServer.html#aa229a1587514197693274aa0d589344b" title="Обработчик новых входящих подключений (переопределение QTcpServer)." alt="" coords="5,5,211,31"/>
+<area shape="poly" title=" " alt="" coords="245,21,211,21,211,15,245,15"/>
+<area shape="poly" title=" " alt="" coords="673,34,639,30,639,25,673,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a345934ddad7b5a98d058801aa3edcb02" name="a345934ddad7b5a98d058801aa3edcb02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a345934ddad7b5a98d058801aa3edcb02">&#9670;&#160;</a></span>startServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::startServer </td>
+          <td>(</td>
+          <td class="paramtype">quint16&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запуск сервера на указанном порту. </p>
+<p>Начинает прослушивание всех сетевых интерфейсов (Any) на заданном порту. Выводит сообщение в лог (qInfo) в случае успеха.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Номер порта для прослушивания (например, 1234). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="ServerDocs_8cpp_source.html">ServerDocs.cpp</a> строка <a class="el" href="ServerDocs_8cpp_source.html#l00023">23</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a2a54dfaaa52018da9d2537f68ded1026" name="a2a54dfaaa52018da9d2537f68ded1026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a54dfaaa52018da9d2537f68ded1026">&#9670;&#160;</a></span>authenticatedClients</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMap&lt;QTcpSocket*, bool&gt; Server::authenticatedClients</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Карта состояния авторизации клиентов. </p>
+<p>Ключ — указатель на сокет, значение — флаг (true = авторизован, false = гость). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="ServerDocs_8h_source.html">ServerDocs.h</a> строка <a class="el" href="ServerDocs_8h_source.html#l00111">111</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>ТиМП Исходники/Server/<a class="el" href="ServerDocs_8h_source.html">ServerDocs.h</a></li>
+<li>ТиМП Исходники/Server/<a class="el" href="ServerDocs_8cpp_source.html">ServerDocs.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classServer.html">Server</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

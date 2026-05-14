@@ -1,0 +1,14 @@
+<map id="Server::handleRequest" name="Server::handleRequest">
+<area shape="rect" id="Node000001" title="Главный маршрутизатор (роутер) входящих запросов." alt="" coords="5,104,175,129"/>
+<area shape="rect" id="Node000002" href="$classAuthManager.html#a1f5e14a740015d3c20fc123bbc71fec2" title="Проверяет учетные данные пользователя при входе в систему." alt="" coords="223,5,421,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,102,158,71,222,40,243,32,245,37,224,44,161,75,111,106"/>
+<area shape="rect" id="Node000003" href="$classAuthManager.html#a3a33c4fac024a1a0a928cc027cb82484" title="Возвращает единственный экземпляр класса AuthManager (паттерн Singleton)." alt="" coords="225,55,419,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,101,248,80,249,86,151,107"/>
+<area shape="rect" id="Node000004" href="$CalcDocs_8cpp.html#a1ec60e354c0c14fe35b2e385b36d747b" title="Безопасное вычисление кусочной функции с шагом 0.5." alt="" coords="267,104,377,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="175,114,253,114,253,119,175,119"/>
+<area shape="rect" id="Node000005" href="$classServer.html#ad0a7ffb50db36752ca6d4d43eb574562" title="Отправка стандартизированного ответа на запросы аутентификации." alt="" coords="224,153,420,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="151,127,249,148,248,153,150,132"/>
+<area shape="rect" id="Node000006" href="$classServer.html#a5c38927d999bbb4155872da0974d8717" title="Отправка произвольного JSON&#45;ответа клиенту." alt="" coords="469,179,636,204"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="109,127,158,160,190,176,223,187,282,199,343,204,456,201,456,206,343,209,282,204,222,193,188,180,156,164,106,132"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="420,174,456,178,456,183,420,179"/>
+</map>
