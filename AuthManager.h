@@ -55,7 +55,6 @@ public:
     bool validateEmail(const QString& email);
     bool validatePassword(const QString& password, QString* errorMsg = nullptr);
 
-
 private slots:
     void cleanExpiredCodes();
 
@@ -64,9 +63,8 @@ private:
     ~AuthManager();
 
     void initDatabase();
-    bool sendEmailToUser(const QString& email, const QString& code);
+    void sendEmailToUserAsync(const QString& email, const QString& code);
     bool userExists(const QString& email);
-
 
     QSqlDatabase db;
     mutable QMutex dbMutex;
@@ -74,6 +72,7 @@ private:
 
     QString lastError;
     QTimer* gcTimer;
+    QNetworkAccessManager* networkManager;
 
     QMap<QString, VerificationContext> registrationCodes;
     QMap<QString, VerificationContext> resetCodes;
