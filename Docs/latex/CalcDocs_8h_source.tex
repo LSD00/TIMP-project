@@ -1,0 +1,30 @@
+\doxysection{Calc\+Docs.\+h}
+\hypertarget{CalcDocs_8h_source}{}\label{CalcDocs_8h_source}\index{ТиМП Исходники/Server/CalcDocs.h@{ТиМП Исходники/Server/CalcDocs.h}}
+\mbox{\hyperlink{CalcDocs_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00009}00009\ \textcolor{preprocessor}{\#ifndef\ CALC\_H}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00010}00010\ \textcolor{preprocessor}{\#define\ CALC\_H}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00021}00021\ \textcolor{preprocessor}{\#if\ defined(\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00022}00022\ \textcolor{preprocessor}{\#\ \ if\ defined(CALC\_LIBRARY)}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00023}00023\ \textcolor{preprocessor}{\#\ \ \ \ define\ CALC\_EXPORT\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00024}00024\ \textcolor{preprocessor}{\#\ \ else}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00025}00025\ \textcolor{preprocessor}{\#\ \ \ \ define\ CALC\_EXPORT\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00026}00026\ \textcolor{preprocessor}{\#\ \ endif}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00027}00027\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00028}\mbox{\hyperlink{CalcDocs_8h_a8aaf1a6bd2ac6886e95c60fadc188d5c}{00028}}\ \textcolor{preprocessor}{\#\ \ define\ CALC\_EXPORT\ \_\_attribute\_\_((visibility("{}default"{})))}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00029}00029\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00037}\mbox{\hyperlink{structCalcResult}{00037}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structCalcResult}{CalcResult}}\ \{}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00038}\mbox{\hyperlink{structCalcResult_a2be7fadf793c0c1e01f0a39d778c11e0}{00038}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structCalcResult_a2be7fadf793c0c1e01f0a39d778c11e0}{x}};\ }
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00039}\mbox{\hyperlink{structCalcResult_a46f1ca01aafdaa79e16957df2e3183c7}{00039}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structCalcResult_a46f1ca01aafdaa79e16957df2e3183c7}{y}};\ }
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00040}00040\ \};}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00053}00053\ \mbox{\hyperlink{CalcDocs_8h_a8aaf1a6bd2ac6886e95c60fadc188d5c}{CALC\_EXPORT}}\ std::vector<CalcResult>\ \mbox{\hyperlink{CalcDocs_8h_a2c81dc0fc5a34950a24878abebe0a518}{MainCalcSafe}}(\textcolor{keywordtype}{int}\ a,\ \textcolor{keywordtype}{int}\ b,\ \textcolor{keywordtype}{int}\ c);}
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{CalcDocs_8h_source_l00055}00055\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CALC\_H}}
+
+\end{DoxyCode}

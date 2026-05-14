@@ -1,0 +1,138 @@
+\doxysection{Server\+Docs.\+cpp}
+\hypertarget{ServerDocs_8cpp_source}{}\label{ServerDocs_8cpp_source}\index{ТиМП Исходники/Server/ServerDocs.cpp@{ТиМП Исходники/Server/ServerDocs.cpp}}
+\mbox{\hyperlink{ServerDocs_8cpp}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}Server.h"{}}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}calc.h"{}}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <QJsonDocument>}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <QJsonArray>}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00017}\mbox{\hyperlink{classServer_aaf98d5194faee831c6340cc736b9b879}{00017}}\ \mbox{\hyperlink{classServer_aaf98d5194faee831c6340cc736b9b879}{Server::Server}}(QObject\ *parent)\ :\ QTcpServer(parent)\ \{\}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00023}\mbox{\hyperlink{classServer_a345934ddad7b5a98d058801aa3edcb02}{00023}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServer_a345934ddad7b5a98d058801aa3edcb02}{Server::startServer}}(quint16\ port)\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>listen(QHostAddress::Any,\ port))\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ qInfo()\ <<\ \textcolor{stringliteral}{"{}Server\ running\ on\ port"{}}\ <<\ port;}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00035}\mbox{\hyperlink{classServer_aa229a1587514197693274aa0d589344b}{00035}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServer_aa229a1587514197693274aa0d589344b}{Server::incomingConnection}}(qintptr\ socketDescriptor)\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00036}00036\ \ \ \ \ QTcpSocket*\ client\ =\ \textcolor{keyword}{new}\ QTcpSocket(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00037}00037\ \ \ \ \ client-\/>setSocketDescriptor(socketDescriptor);}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00038}00038\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{comment}{//\ Регистрируем\ клиента\ в\ системе\ как\ "{}не\ авторизован"{}}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{classServer_a2a54dfaaa52018da9d2537f68ded1026}{authenticatedClients}}.insert(client,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00041}00041\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00042}00042\ \ \ \ \ connect(client,\ \&QTcpSocket::readyRead,\ \textcolor{keyword}{this},\ \&\mbox{\hyperlink{classServer_ac67d866fb14c4644acd1098bacfadeee}{Server::onReadyRead}});}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00043}00043\ \ \ \ \ connect(client,\ \&QTcpSocket::disconnected,\ \textcolor{keyword}{this},\ \&\mbox{\hyperlink{classServer_a8afa35c8257d78be38596587e469bea3}{Server::onClientDisconnected}});}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00044}00044\ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00052}\mbox{\hyperlink{classServer_ac67d866fb14c4644acd1098bacfadeee}{00052}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServer_ac67d866fb14c4644acd1098bacfadeee}{Server::onReadyRead}}()\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00053}00053\ \ \ \ \ QTcpSocket*\ client\ =\ qobject\_cast<QTcpSocket*>(sender());}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{if}\ (!client)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00055}00055\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00056}00056\ \ \ \ \ QJsonDocument\ doc\ =\ QJsonDocument::fromJson(client-\/>readAll());}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{if}\ (!doc.isNull())\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classServer_a765e4ffe32ffff676ba9e523ab7fcdaa}{handleRequest}}(client,\ doc.object());}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00060}00060\ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00068}\mbox{\hyperlink{classServer_ad0a7ffb50db36752ca6d4d43eb574562}{00068}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServer_ad0a7ffb50db36752ca6d4d43eb574562}{Server::sendAuthResponse}}(QTcpSocket*\ client,\ \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{AuthResult}}\ result,\ \textcolor{keyword}{const}\ QString\&\ customErrorMsg)\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{if}\ (result\ ==\ \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea505a83f220c02df2f85c3810cd9ceb38}{AuthResult::Success}})\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classServer_a5c38927d999bbb4155872da0974d8717}{sendResponse}}(client,\ \{\{\textcolor{stringliteral}{"{}status"{}},\ \textcolor{stringliteral}{"{}success"{}}\}\});}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00071}00071\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classServer_a5c38927d999bbb4155872da0974d8717}{sendResponse}}(client,\ \{\{\textcolor{stringliteral}{"{}status"{}},\ \textcolor{stringliteral}{"{}error"{}}\},\ \{\textcolor{stringliteral}{"{}message"{}},\ customErrorMsg.isEmpty()\ ?\ \textcolor{stringliteral}{"{}Auth\ Error"{}}\ :\ customErrorMsg\}\});}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00074}00074\ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00083}\mbox{\hyperlink{classServer_a765e4ffe32ffff676ba9e523ab7fcdaa}{00083}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServer_a765e4ffe32ffff676ba9e523ab7fcdaa}{Server::handleRequest}}(QTcpSocket*\ client,\ \textcolor{keyword}{const}\ QJsonObject\&\ request)\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00084}00084\ \ \ \ \ QString\ action\ =\ request.value(\textcolor{stringliteral}{"{}action"{}}).toString();}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00085}00085\ \ \ \ \ QString\ email\ =\ request.value(\textcolor{stringliteral}{"{}email"{}}).toString();}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00086}00086\ \ \ \ \ QString\ errorMsg;}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00088}00088\ \ \ \ \ \textcolor{comment}{//\ ==========================================}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00089}00089\ \ \ \ \ \textcolor{comment}{//\ 1.\ ОТКРЫТЫЕ\ ЭНДПОИНТЫ\ (Не\ требуют\ логина)}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00090}00090\ \ \ \ \ \textcolor{comment}{//\ ==========================================}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{if}\ (action\ ==\ \textcolor{stringliteral}{"{}login"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fce}{AuthResult}}\ res\ =\ \mbox{\hyperlink{classAuthManager_a3a33c4fac024a1a0a928cc027cb82484}{AuthManager::getInstance}}().\mbox{\hyperlink{classAuthManager_a1f5e14a740015d3c20fc123bbc71fec2}{authenticate}}(email,\ request.value(\textcolor{stringliteral}{"{}password"{}}).toString());}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (res\ ==\ \mbox{\hyperlink{AuthManagerDocs_8h_a87ba9bd5edfd749f4729620dbadd5fcea505a83f220c02df2f85c3810cd9ceb38}{AuthResult::Success}})\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classServer_a2a54dfaaa52018da9d2537f68ded1026}{authenticatedClients}}[client]\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ Устанавливаем\ статус\ "{}Авторизован"{}}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classServer_ad0a7ffb50db36752ca6d4d43eb574562}{sendAuthResponse}}(client,\ res);}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00099}00099\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00100}00100\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00101}00101\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Цикл\ регистрации\ -\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00102}00102\ \ \ \ \ \textcolor{keywordflow}{if}\ (action\ ==\ \textcolor{stringliteral}{"{}register\_request"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classServer_ad0a7ffb50db36752ca6d4d43eb574562}{sendAuthResponse}}(client,\ \mbox{\hyperlink{classAuthManager_a3a33c4fac024a1a0a928cc027cb82484}{AuthManager::getInstance}}().requestRegistrationCode(email,\ \&errorMsg),\ errorMsg);}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00106}00106\ \ \ \ \ \textcolor{keywordflow}{if}\ (action\ ==\ \textcolor{stringliteral}{"{}register\_verify"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classServer_ad0a7ffb50db36752ca6d4d43eb574562}{sendAuthResponse}}(client,\ \mbox{\hyperlink{classAuthManager_a3a33c4fac024a1a0a928cc027cb82484}{AuthManager::getInstance}}().verifyRegistrationCode(email,\ request.value(\textcolor{stringliteral}{"{}code"{}}).toString(),\ \&errorMsg),\ errorMsg);}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00109}00109\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00110}00110\ \ \ \ \ \textcolor{keywordflow}{if}\ (action\ ==\ \textcolor{stringliteral}{"{}register\_finalize"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classServer_ad0a7ffb50db36752ca6d4d43eb574562}{sendAuthResponse}}(client,\ \mbox{\hyperlink{classAuthManager_a3a33c4fac024a1a0a928cc027cb82484}{AuthManager::getInstance}}().finalizeRegistration(email,\ request.value(\textcolor{stringliteral}{"{}password"{}}).toString(),\ \&errorMsg),\ errorMsg);}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00113}00113\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00115}00115\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Цикл\ сброса\ пароля\ -\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00116}00116\ \ \ \ \ \textcolor{keywordflow}{if}\ (action\ ==\ \textcolor{stringliteral}{"{}reset\_request"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classServer_ad0a7ffb50db36752ca6d4d43eb574562}{sendAuthResponse}}(client,\ \mbox{\hyperlink{classAuthManager_a3a33c4fac024a1a0a928cc027cb82484}{AuthManager::getInstance}}().requestPasswordReset(email,\ \&errorMsg),\ errorMsg);}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00119}00119\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00120}00120\ \ \ \ \ \textcolor{keywordflow}{if}\ (action\ ==\ \textcolor{stringliteral}{"{}reset\_verify"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classServer_ad0a7ffb50db36752ca6d4d43eb574562}{sendAuthResponse}}(client,\ \mbox{\hyperlink{classAuthManager_a3a33c4fac024a1a0a928cc027cb82484}{AuthManager::getInstance}}().verifyResetCode(email,\ request.value(\textcolor{stringliteral}{"{}code"{}}).toString(),\ \&errorMsg),\ errorMsg);}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00123}00123\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00124}00124\ \ \ \ \ \textcolor{keywordflow}{if}\ (action\ ==\ \textcolor{stringliteral}{"{}reset\_finalize"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classServer_ad0a7ffb50db36752ca6d4d43eb574562}{sendAuthResponse}}(client,\ \mbox{\hyperlink{classAuthManager_a3a33c4fac024a1a0a928cc027cb82484}{AuthManager::getInstance}}().resetPassword(email,\ request.value(\textcolor{stringliteral}{"{}password"{}}).toString(),\ request.value(\textcolor{stringliteral}{"{}password\_confirm"{}}).toString(),\ \&errorMsg),\ errorMsg);}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00127}00127\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00129}00129\ \ \ \ \ \textcolor{comment}{//\ ==========================================}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00130}00130\ \ \ \ \ \textcolor{comment}{//\ 2.\ ЗАЩИЩЕННЫЕ\ ЭНДПОИНТЫ\ (Требуют\ логина)}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00131}00131\ \ \ \ \ \textcolor{comment}{//\ ==========================================}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00132}00132\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00133}00133\ \ \ \ \ \textcolor{comment}{//\ Проверка\ прав\ доступа:\ если\ флаг\ сессии\ равен\ false,\ отсекаем\ запрос.}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00134}00134\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classServer_a2a54dfaaa52018da9d2537f68ded1026}{authenticatedClients}}.value(client,\ \textcolor{keyword}{false}))\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00135}00135\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classServer_a5c38927d999bbb4155872da0974d8717}{sendResponse}}(client,\ \{\{\textcolor{stringliteral}{"{}status"{}},\ \textcolor{stringliteral}{"{}error"{}}\},\ \{\textcolor{stringliteral}{"{}message"{}},\ \textcolor{stringliteral}{"{}Unauthorized"{}}\}\});}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00137}00137\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00139}00139\ \ \ \ \ \textcolor{comment}{//\ Запрос\ на\ вычисление\ графиков}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00140}00140\ \ \ \ \ \textcolor{keywordflow}{if}\ (action\ ==\ \textcolor{stringliteral}{"{}calc"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ res\ =\ \mbox{\hyperlink{CalcDocs_8cpp_a1ec60e354c0c14fe35b2e385b36d747b}{MainCalcSafe}}(}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ request.value(\textcolor{stringliteral}{"{}a"{}}).toInt(),\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ request.value(\textcolor{stringliteral}{"{}b"{}}).toInt(),\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ request.value(\textcolor{stringliteral}{"{}c"{}}).toInt()}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00146}00146\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00147}00147\ \ \ \ \ \ \ \ \ QJsonArray\ arr;}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ p\ :\ res)\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Предполагается,\ что\ p\ имеет\ поля\ x\ и\ y}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ arr.append(QJsonObject\{\{\textcolor{stringliteral}{"{}x"{}},\ p.x\},\ \{\textcolor{stringliteral}{"{}y"{}},\ p.y\}\});}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00151}00151\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00152}00152\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classServer_a5c38927d999bbb4155872da0974d8717}{sendResponse}}(client,\ \{\{\textcolor{stringliteral}{"{}status"{}},\ \textcolor{stringliteral}{"{}success"{}}\},\ \{\textcolor{stringliteral}{"{}data"{}},\ arr\}\});}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00154}00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00155}00155\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00157}00157\ \ \ \ \ \textcolor{comment}{//\ Если\ экшен\ неизвестен}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00158}00158\ \ \ \ \ \mbox{\hyperlink{classServer_a5c38927d999bbb4155872da0974d8717}{sendResponse}}(client,\ \{\{\textcolor{stringliteral}{"{}status"{}},\ \textcolor{stringliteral}{"{}error"{}}\},\ \{\textcolor{stringliteral}{"{}message"{}},\ \textcolor{stringliteral}{"{}Unknown\ action"{}}\}\});}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00159}00159\ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00167}\mbox{\hyperlink{classServer_a5c38927d999bbb4155872da0974d8717}{00167}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServer_a5c38927d999bbb4155872da0974d8717}{Server::sendResponse}}(QTcpSocket*\ client,\ \textcolor{keyword}{const}\ QJsonObject\&\ response)\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00168}00168\ \ \ \ \ client-\/>write(QJsonDocument(response).toJson(QJsonDocument::Compact)\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00169}00169\ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00177}\mbox{\hyperlink{classServer_a8afa35c8257d78be38596587e469bea3}{00177}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServer_a8afa35c8257d78be38596587e469bea3}{Server::onClientDisconnected}}()\ \{}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00178}00178\ \ \ \ \ QTcpSocket*\ client\ =\ qobject\_cast<QTcpSocket*>(sender());}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00179}00179\ \ \ \ \ \textcolor{keywordflow}{if}\ (client)\ \{\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00180}00180\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classServer_a2a54dfaaa52018da9d2537f68ded1026}{authenticatedClients}}.remove(client);\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00181}00181\ \ \ \ \ \ \ \ \ client-\/>deleteLater();\ }
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00182}00182\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ServerDocs_8cpp_source_l00183}00183\ \}}
+
+\end{DoxyCode}
