@@ -7,13 +7,21 @@
 #include <QMap>
 #include <QDateTime>
 #include <QTimer>
-#include <QObject>
+#include <QNetworkAccessManager>
 
 enum class AuthResult {
-    Success, ConnectionError, InvalidEmail, WeakPassword,
-    UserAlreadyExists, UserNotFound, DatabaseError,
-    InvalidCredentials, CodeExpired, InvalidCode,
-    TooManyAttempts, CodeNotVerified
+    Success,
+    ConnectionError,
+    InvalidEmail,
+    WeakPassword,
+    UserAlreadyExists,
+    UserNotFound,
+    DatabaseError,
+    InvalidCredentials,
+    CodeExpired,
+    InvalidCode,
+    TooManyAttempts,
+    CodeNotVerified
 };
 
 struct VerificationContext {
@@ -27,25 +35,23 @@ class AuthManager : public QObject {
     Q_OBJECT
 public:
     static AuthManager& getInstance();
-    
+
     AuthManager(const AuthManager&) = delete;
     AuthManager& operator=(const AuthManager&) = delete;
 
     AuthResult requestRegistrationCode(const QString& email, QString* errorMsg = nullptr);
     AuthResult verifyRegistrationCode(const QString& email, const QString& code, QString* errorMsg = nullptr);
     AuthResult finalizeRegistration(const QString& email, const QString& password, QString* errorMsg = nullptr);
-    
+
     AuthResult authenticate(const QString& email, const QString& password);
-    
+
     AuthResult requestPasswordReset(const QString& email, QString* errorMsg = nullptr);
     AuthResult verifyResetCode(const QString& email, const QString& code, QString* errorMsg = nullptr);
     AuthResult resetPassword(const QString& email, const QString& password, const QString& passwordConfirm, QString* errorMsg = nullptr);
 
-    // ВОССТАНОВЛЕННЫЕ МЕТОДЫ:
     void cancelRegistration(const QString& email);
     QString getLastError() const;
 
-    bool userExists(const QString& email);
     bool validateEmail(const QString& email);
     bool validatePassword(const QString& password, QString* errorMsg = nullptr);
 
@@ -55,16 +61,19 @@ private slots:
 private:
     AuthManager();
     ~AuthManager();
+
     void initDatabase();
-    bool sendEmailToUser(const QString& email, const QString& code);
+    void sendEmailToUserAsync(const QString& email, const QString& code);
+    bool userExists(const QString& email);
 
     QSqlDatabase db;
     mutable QMutex dbMutex;
     mutable QMutex codesMutex;
-    
+
     QString lastError;
     QTimer* gcTimer;
-    
+    QNetworkAccessManager* networkManager;
+
     QMap<QString, VerificationContext> registrationCodes;
     QMap<QString, VerificationContext> resetCodes;
 
@@ -72,4 +81,4 @@ private:
     const int CODE_TTL_SECS = 90;
 };
 
-#endif // AUTHMANAGER_H
+#endif
