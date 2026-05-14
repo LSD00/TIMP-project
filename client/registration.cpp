@@ -1,6 +1,7 @@
 #include "registration.h"
 #include "avtorisation.h"
 #include "net.h"
+#include "pdtmail.h"
 #include "ui_registration.h"
 std::string ml, name, pss;
 registration::registration(QWidget *parent)
@@ -46,5 +47,10 @@ void registration::on_lineEdit_3_textChanged(const QString &arg1)
 void registration::on_pushButton_clicked()
 {
     regist(name,ml,pss);
+    if (code_for_pass!=0){
+        Pdtmail *e=new Pdtmail;
+        e->show();
+        close();
+    }
 }
 

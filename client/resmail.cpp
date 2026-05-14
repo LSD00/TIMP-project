@@ -2,8 +2,9 @@
 #include "avtorisation.h"
 #include "ui_resmail.h"
 #include "net.h"
+#include "codereset.h"
 #include <QWidget>
-std::string mal;
+std::string mall;
 resmail::resmail(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::resmail)
@@ -26,12 +27,16 @@ void resmail::on_pushButton_2_clicked()
 
 void resmail::on_lineEdit_textChanged(const QString &arg1)
 {
-    mal=arg1.toStdString();
+    mall=arg1.toStdString();
 }
 
 
 void resmail::on_pushButton_clicked()
 {
-    respas(mal);
+    if (respas(mall)){
+    codereset *e=new codereset;
+    e->show();
+    close();
+    }
 }
 

@@ -7,17 +7,20 @@
     <x>0</x>
     <y>0</y>
     <width>1261</width>
-    <height>669</height>
+    <height>696</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">backround = rgb(255, 255, 255)</string>
+  </property>
   <widget class="QSlider" name="horizontalSlider">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>90</y>
+     <x>30</x>
+     <y>210</y>
      <width>271</width>
      <height>16</height>
     </rect>
@@ -32,15 +35,15 @@
      <x>549</x>
      <y>9</y>
      <width>701</width>
-     <height>651</height>
+     <height>671</height>
     </rect>
    </property>
   </widget>
   <widget class="QSlider" name="horizontalSlider_2">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>160</y>
+     <x>30</x>
+     <y>260</y>
      <width>271</width>
      <height>16</height>
     </rect>
@@ -52,8 +55,8 @@
   <widget class="QSlider" name="horizontalSlider_3">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>230</y>
+     <x>30</x>
+     <y>310</y>
      <width>271</width>
      <height>16</height>
     </rect>
@@ -65,8 +68,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>70</y>
+     <x>160</x>
+     <y>190</y>
      <width>52</width>
      <height>15</height>
     </rect>
@@ -78,8 +81,8 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>140</y>
+     <x>160</x>
+     <y>240</y>
      <width>52</width>
      <height>15</height>
     </rect>
@@ -91,8 +94,8 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>210</y>
+     <x>160</x>
+     <y>290</y>
      <width>52</width>
      <height>15</height>
     </rect>
@@ -101,17 +104,67 @@
     <string>c</string>
    </property>
   </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>10</y>
+     <width>211</width>
+     <height>631</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>550</y>
-     <width>80</width>
+     <x>40</x>
+     <y>600</y>
+     <width>83</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
-    <string>задание</string>
+    <string>&lt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>261</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;
+&lt;head/&gt;
+&lt;body&gt;
+&lt;table&gt;
+ &lt;tr&gt;
+     &lt;td&gt;
+     &lt;table border=&quot;0&quot;&gt;
+       &lt;tr&gt;&lt;/tr&gt;
+       &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+       &lt;tr&gt;&lt;td align=&quot;center&quot; style=&quot;font-weight: bold;&quot;&gt;f(x)=&lt;/td&gt;&lt;/tr&gt;
+       &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+     &lt;/table&gt;
+   &lt;/td&gt;
+   &lt;td&gt;
+     &lt;span style=&quot;font-size:45pt;&quot;&gt;{&lt;/span&gt;
+   &lt;/td&gt;
+   &lt;td&gt;
+     &lt;table border=&quot;0&quot;&gt;
+       &lt;tr&gt;&lt;/tr&gt;
+       &lt;tr&gt;&lt;td align=&quot;center&quot; style=&quot;color: red;&quot; style=&quot;font-weight: bold;&quot;&gt;a / (x*x - 1), x&amp;lt;0&lt;/td&gt;&lt;/tr&gt;
+       &lt;tr&gt;&lt;td align=&quot;center&quot; style=&quot;color: green;&quot; style=&quot;font-weight: bold;&quot;&gt;(1 / x) + b, 0&amp;lt;x&amp;lt;1&lt;/td&gt;&lt;/tr&gt;
+       &lt;tr&gt;&lt;td align=&quot;center&quot; style=&quot;color: blue;&quot; style=&quot;font-weight: bold;&quot;&gt;(c * x) / (x * x + 1), 1&amp;lt;x&lt;/td&gt;&lt;/tr&gt;
+     &lt;/table&gt;
+   &lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>

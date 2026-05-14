@@ -1,16 +1,44 @@
 #include <QDebug>
 #include "net.h"
-bool regist(std::string name, std::string mail, std::string password){
-    qDebug()<<name<<mail<<password;
-    return true;
+void regist(std::string name, std::string mail, std::string password){
+    nlohmann::json for_registration;
+    for_registration["name"]=name;
+    for_registration["mail"]=mail;
+    for_registration["password"]=password;
+    std::ofstream file_for_registration("for_registration.json");
+    file_for_registration << for_registration.dump(4);
+    file_for_registration.close();
+    std::ifstream for_code("for_code.json");
+    nlohmann::json for_cod;
+    for_code >> for_cod;
+    code_for_pass=for_cod["code"];
 }
 bool autor(std::string mail, std::string password){
-    qDebug()<<mail<<password;
-    return true;
+    nlohmann::json for_authorization;
+    for_authorization["mail"]=mail;
+    for_authorization["password"]=password;
+    std::ofstream file_for_authorization("for_authorization.json");
+    file_for_authorization << for_authorization.dump(4);
+    file_for_authorization.close();
+    std::ifstream for_allow("for_allow.json");
+    nlohmann::json for_cod;
+    for_allow >> for_cod;
+    return for_cod["allow"];
 }
 bool respas(std::string mail){
-    qDebug()<<mail;
-    return true;
+    nlohmann::json for_registration;
+    for_registration["mail"]=mail;
+    std::ofstream file_for_registration("for_mail.json");
+    file_for_registration << for_registration.dump(4);
+    file_for_registration.close();
+    std::ifstream for_allow("for_allow.json");
+    nlohmann::json for_cod;
+    for_allow >> for_cod;
+    code_for_pass=for_cod["allow"];
+
+}
+bool nwpass(std::string password){
+
 }
 QVector<double> crgrap(int a, int b, int c){
     QVector<double> res;
@@ -27,3 +55,4 @@ QVector<double> crgrap(int a, int b, int c){
     }
     return res;
 }
+void otprdat(){};

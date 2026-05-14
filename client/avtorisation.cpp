@@ -37,10 +37,18 @@ void avtorisation::on_pushButton_2_clicked()
 
 void avtorisation::on_pushButton_clicked()
 {
+    if (mail.find('e') != std::string::npos and mail.find('t') != std::string::npos and pass.length()>3){
     if (autor(mail, pass)){
         Task *e=new Task;
         e->show();
         close();
+    } else {
+        ncrct *e=new ncrct;
+        e->show();
+    }
+    } else {
+        no_format_input *e=new no_format_input;
+        e->show();
     }
 }
 
