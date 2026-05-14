@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Core Network Sql)
+find_package(Qt6 REQUIRED COMPONENTS Core Network Sql Test)
 
 # Динамическая библиотека для вычислений (CalcLib)
 add_library(CalcLib SHARED src/calc.cpp src/calc.h)
