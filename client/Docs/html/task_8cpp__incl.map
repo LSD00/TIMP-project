@@ -1,0 +1,12 @@
+<map id="ТиМП Исходники/Client/task.cpp" name="ТиМП Исходники/Client/task.cpp">
+<area shape="rect" id="Node000001" title="Реализация окна задач." alt="" coords="56,5,199,45"/>
+<area shape="rect" id="Node000002" href="$task_8h.html" title="Заголовочный файл класса меню/задач." alt="" coords="5,93,68,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,48,62,86,59,82,104,44"/>
+<area shape="rect" id="Node000004" href="$graph_8h.html" title="Заголовочный файл класса для построения математических графиков." alt="" coords="92,93,163,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="130,46,130,79,125,79,125,46"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="187,93,268,119"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="153,43,203,82,200,87,150,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="45,167,119,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="46,118,70,154,65,157,42,120"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="122,120,99,157,94,154,118,118"/>
+</map>

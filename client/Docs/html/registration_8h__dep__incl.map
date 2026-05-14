@@ -1,0 +1,7 @@
+<map id="ТиМП Исходники/Client/registration.h" name="ТиМП Исходники/Client/registration.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл класса окна регистрации." alt="" coords="112,5,267,45"/>
+<area shape="rect" id="Node000002" href="$avtorisation_8cpp.html" title="Реализация логики окна авторизации." alt="" coords="5,93,179,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,56,115,95,112,91,156,52"/>
+<area shape="rect" id="Node000003" href="$registration_8cpp.html" title="Реализация логики окна регистрации." alt="" coords="203,93,373,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="223,52,268,91,264,95,220,56"/>
+</map>

@@ -1,0 +1,61 @@
+\doxysection{avtorisation.\+cpp}
+\hypertarget{avtorisation_8cpp_source}{}\label{avtorisation_8cpp_source}\index{ТиМП Исходники/Client/avtorisation.cpp@{ТиМП Исходники/Client/avtorisation.cpp}}
+\mbox{\hyperlink{avtorisation_8cpp}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{avtorisation_8h}{avtorisation.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{registration_8h}{registration.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{resmail_8h}{resmail.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{task_8h}{task.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}ui\_avtorisation.h"{}}}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{net_8h}{net.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00014}\mbox{\hyperlink{avtorisation_8cpp_a546243311e1bb28ba13c57c41f885327}{00014}}\ std::string\ \mbox{\hyperlink{avtorisation_8cpp_a546243311e1bb28ba13c57c41f885327}{mail}},\ \mbox{\hyperlink{avtorisation_8cpp_a58b9916ef3b1f184f9b0de114580e09c}{pass}};}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00016}\mbox{\hyperlink{classavtorisation_a5546def8ddae0b1d2ef90fd75b66c779}{00016}}\ \mbox{\hyperlink{classavtorisation_a5546def8ddae0b1d2ef90fd75b66c779}{avtorisation::avtorisation}}(QWidget\ *parent)}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00017}00017\ \ \ \ \ :\ QMainWindow(parent)}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00018}00018\ \ \ \ \ ,\ ui(new\ \mbox{\hyperlink{namespaceUi}{Ui}}::\mbox{\hyperlink{classavtorisation}{avtorisation}})}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00019}00019\ \{}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{classavtorisation_add299bde661df92b8bd42f99f0222b6b}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00023}\mbox{\hyperlink{classavtorisation_a8ccd4841c3a64fb1e8acb5deb353ffe9}{00023}}\ \mbox{\hyperlink{classavtorisation_a8ccd4841c3a64fb1e8acb5deb353ffe9}{avtorisation::\string~avtorisation}}()}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00024}00024\ \{}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classavtorisation_add299bde661df92b8bd42f99f0222b6b}{ui}};}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00028}\mbox{\hyperlink{classavtorisation_aa5e6b6516eb1386bc88ee108dbdbc19a}{00028}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classavtorisation_aa5e6b6516eb1386bc88ee108dbdbc19a}{avtorisation::on\_pushButton\_3\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00029}00029\ \{}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{classresmail}{resmail}}\ *e\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classresmail}{resmail}};}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00031}00031\ \ \ \ \ e-\/>show();}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00032}00032\ \ \ \ \ close();}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00035}\mbox{\hyperlink{classavtorisation_a4af6471aba4b8267bbc92637efd6980c}{00035}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classavtorisation_a4af6471aba4b8267bbc92637efd6980c}{avtorisation::on\_pushButton\_2\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{classregistration}{registration}}\ *e\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classregistration}{registration}};}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00038}00038\ \ \ \ \ e-\/>show();}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00039}00039\ \ \ \ \ close();}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00042}\mbox{\hyperlink{classavtorisation_a6e44b4c0569c496425f8458ee0461918}{00042}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classavtorisation_a6e44b4c0569c496425f8458ee0461918}{avtorisation::on\_pushButton\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00043}00043\ \{}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ Проверка\ логина\ и\ пароля\ через\ сетевую\ функцию\ autor()}}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{net_8cpp_a727ffd02be956f990d28a1958e32da56}{autor}}(\mbox{\hyperlink{avtorisation_8cpp_a546243311e1bb28ba13c57c41f885327}{mail}},\ \mbox{\hyperlink{avtorisation_8cpp_a58b9916ef3b1f184f9b0de114580e09c}{pass}}))\ \{}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTask}{Task}}\ *e\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classTask}{Task}};}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ e-\/>show();}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ close();}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00050}00050\ \}}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00052}\mbox{\hyperlink{classavtorisation_ae5f542a946580e4736b27ca3e016acf2}{00052}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classavtorisation_ae5f542a946580e4736b27ca3e016acf2}{avtorisation::on\_lineEdit\_textChanged}}(\textcolor{keyword}{const}\ QString\ \&arg1)}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00053}00053\ \{}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00054}00054\ \ \ \ \ \mbox{\hyperlink{avtorisation_8cpp_a546243311e1bb28ba13c57c41f885327}{mail}}\ =\ arg1.toStdString();}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00057}\mbox{\hyperlink{classavtorisation_a1237c17471e2963b5f1235d102ad32b2}{00057}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classavtorisation_a1237c17471e2963b5f1235d102ad32b2}{avtorisation::on\_lineEdit\_2\_textChanged}}(\textcolor{keyword}{const}\ QString\ \&arg1)}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00058}00058\ \{}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00059}00059\ \ \ \ \ \mbox{\hyperlink{avtorisation_8cpp_a58b9916ef3b1f184f9b0de114580e09c}{pass}}\ =\ arg1.toStdString();}
+\DoxyCodeLine{\Hypertarget{avtorisation_8cpp_source_l00060}00060\ \}}
+
+\end{DoxyCode}

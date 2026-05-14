@@ -1,0 +1,52 @@
+\doxysection{registration.\+cpp}
+\hypertarget{registration_8cpp_source}{}\label{registration_8cpp_source}\index{ТиМП Исходники/Client/registration.cpp@{ТиМП Исходники/Client/registration.cpp}}
+\mbox{\hyperlink{registration_8cpp}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{registration_8h}{registration.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{avtorisation_8h}{avtorisation.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{net_8h}{net.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}ui\_registration.h"{}}}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00012}\mbox{\hyperlink{registration_8cpp_ab635a9fc1d77a02ae421aebde85bfb3f}{00012}}\ std::string\ \mbox{\hyperlink{registration_8cpp_ab635a9fc1d77a02ae421aebde85bfb3f}{ml}},\ \mbox{\hyperlink{registration_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},\ \mbox{\hyperlink{registration_8cpp_a50e869c85e4414f5977701684a729970}{pss}};}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00014}\mbox{\hyperlink{classregistration_a18fb1e1dad535252deb3b46d858f0388}{00014}}\ \mbox{\hyperlink{classregistration_a18fb1e1dad535252deb3b46d858f0388}{registration::registration}}(QWidget\ *parent)}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00015}00015\ \ \ \ \ :\ QDialog(parent)}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00016}00016\ \ \ \ \ ,\ ui(new\ \mbox{\hyperlink{namespaceUi}{Ui}}::\mbox{\hyperlink{classregistration}{registration}})}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{classregistration_a233165f565b3f9ee665e8cdbdf145e13}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00021}\mbox{\hyperlink{classregistration_a810017b2a89d603f4cf11a0beb9eac4b}{00021}}\ \mbox{\hyperlink{classregistration_a810017b2a89d603f4cf11a0beb9eac4b}{registration::\string~registration}}()}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00022}00022\ \{}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classregistration_a233165f565b3f9ee665e8cdbdf145e13}{ui}};}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00026}\mbox{\hyperlink{classregistration_ae9474d88b3629a36af6be4f6309d5bf7}{00026}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classregistration_ae9474d88b3629a36af6be4f6309d5bf7}{registration::on\_pushButton\_2\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00027}00027\ \{}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00028}00028\ \ \ \ \ \mbox{\hyperlink{classavtorisation}{avtorisation}}\ *e\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classavtorisation}{avtorisation}};}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00029}00029\ \ \ \ \ e-\/>show();}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00030}00030\ \ \ \ \ close();}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00033}\mbox{\hyperlink{classregistration_a2c668dbe2be08dd568359f66571f52fb}{00033}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classregistration_a2c668dbe2be08dd568359f66571f52fb}{registration::on\_lineEdit\_textChanged}}(\textcolor{keyword}{const}\ QString\ \&arg1)}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00034}00034\ \{}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{registration_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}}\ =\ arg1.toStdString();}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00038}\mbox{\hyperlink{classregistration_a1df7ac2d16ee73b3e59d442372408581}{00038}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classregistration_a1df7ac2d16ee73b3e59d442372408581}{registration::on\_lineEdit\_2\_textChanged}}(\textcolor{keyword}{const}\ QString\ \&arg1)}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00039}00039\ \{}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{registration_8cpp_ab635a9fc1d77a02ae421aebde85bfb3f}{ml}}\ =\ arg1.toStdString();}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00041}00041\ \}}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00043}\mbox{\hyperlink{classregistration_aa08c91ee34889a27acca0cf31c9a8292}{00043}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classregistration_aa08c91ee34889a27acca0cf31c9a8292}{registration::on\_lineEdit\_3\_textChanged}}(\textcolor{keyword}{const}\ QString\ \&arg1)}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00044}00044\ \{}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00045}00045\ \ \ \ \ \mbox{\hyperlink{registration_8cpp_a50e869c85e4414f5977701684a729970}{pss}}\ =\ arg1.toStdString();}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00046}00046\ \}}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00048}\mbox{\hyperlink{classregistration_a43a40ec5598f757d0163d5ffda0d3275}{00048}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classregistration_a43a40ec5598f757d0163d5ffda0d3275}{registration::on\_pushButton\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00049}00049\ \{}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00050}00050\ \ \ \ \ \mbox{\hyperlink{net_8cpp_a3b011be4e1cc2430cb312ef7b37caea6}{regist}}(\mbox{\hyperlink{registration_8cpp_a9b45b3e13bd9167aab02e17e08916231}{name}},\ \mbox{\hyperlink{registration_8cpp_ab635a9fc1d77a02ae421aebde85bfb3f}{ml}},\ \mbox{\hyperlink{registration_8cpp_a50e869c85e4414f5977701684a729970}{pss}});}
+\DoxyCodeLine{\Hypertarget{registration_8cpp_source_l00051}00051\ \}}
+
+\end{DoxyCode}

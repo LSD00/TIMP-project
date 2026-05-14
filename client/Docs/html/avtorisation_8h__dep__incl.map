@@ -1,0 +1,11 @@
+<map id="ТиМП Исходники/Client/avtorisation.h" name="ТиМП Исходники/Client/avtorisation.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл класса окна авторизации." alt="" coords="286,5,445,45"/>
+<area shape="rect" id="Node000002" href="$avtorisation_8cpp.html" title="Реализация логики окна авторизации." alt="" coords="5,93,179,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="293,52,153,96,151,91,291,47"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Точка входа в приложение." alt="" coords="203,93,346,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="337,57,297,95,293,91,334,53"/>
+<area shape="rect" id="Node000004" href="$registration_8cpp.html" title="Реализация логики окна регистрации." alt="" coords="371,93,541,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="397,53,438,91,434,95,393,57"/>
+<area shape="rect" id="Node000005" href="$resmail_8cpp.html" title="Реализация логики восстановления пароля." alt="" coords="565,93,709,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="439,47,579,91,577,96,437,52"/>
+</map>

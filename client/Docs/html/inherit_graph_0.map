@@ -1,0 +1,11 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,80,80,105"/>
+<area shape="rect" id="Node000001" href="$classTask.html" title="Класс промежуточного окна (меню задач)." alt="" coords="151,5,202,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="74,70,127,40,150,28,152,32,129,44,77,75"/>
+<area shape="rect" id="Node000002" href="$classgraph.html" title="Класс окна визуализации данных." alt="" coords="147,55,206,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="93,80,147,70,148,75,94,86"/>
+<area shape="rect" id="Node000003" href="$classregistration.html" title="Класс окна регистрации новых пользователей." alt="" coords="128,104,225,129"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="94,99,128,105,127,111,93,104"/>
+<area shape="rect" id="Node000004" href="$classresmail.html" title="Класс диалогового окна сброса пароля." alt="" coords="141,153,212,179"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="79,110,129,138,152,151,150,156,127,143,77,115"/>
+</map>
