@@ -1,0 +1,103 @@
+\doxysection{Структура Verification\+Context}
+\hypertarget{structVerificationContext}{}\label{structVerificationContext}\index{VerificationContext@{VerificationContext}}
+
+
+Структура для хранения информации о процессе верификации (регистрация/сброс пароля).  
+
+
+
+
+{\ttfamily \#include $<$Auth\+Manager\+Docs.\+h$>$}
+
+
+
+Граф связей класса Verification\+Context\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{structVerificationContext__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+QString \mbox{\hyperlink{structVerificationContext_a58b0df7ea3df092cc1c8142b730036bb}{code}}
+\begin{DoxyCompactList}\small\item\em Сгенерированный код подтверждения (обычно 6 цифр). \end{DoxyCompactList}\item 
+QDate\+Time \mbox{\hyperlink{structVerificationContext_a1b4631d5864451459a3014a59040ae98}{expires\+At}}
+\begin{DoxyCompactList}\small\item\em Время, до которого код считается действительным. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structVerificationContext_a6134b5c5808f092850ef8c2c0d803e85}{attempts}} = 0
+\begin{DoxyCompactList}\small\item\em Текущее количество неудачных попыток ввода кода. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structVerificationContext_a871bde05deb61ac3f7ce6328df614b68}{is\+Verified}} = false
+\begin{DoxyCompactList}\small\item\em Флаг, указывающий, был ли код успешно подтвержден пользователем. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Структура для хранения информации о процессе верификации (регистрация/сброс пароля). 
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8h_source}{Auth\+Manager\+Docs.\+h}} строка \mbox{\hyperlink{AuthManagerDocs_8h_source_l00040}{40}}
+
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{structVerificationContext_a6134b5c5808f092850ef8c2c0d803e85}\label{structVerificationContext_a6134b5c5808f092850ef8c2c0d803e85} 
+\index{VerificationContext@{VerificationContext}!attempts@{attempts}}
+\index{attempts@{attempts}!VerificationContext@{VerificationContext}}
+\doxysubsubsection{\texorpdfstring{attempts}{attempts}}
+{\footnotesize\ttfamily int Verification\+Context\+::attempts = 0}
+
+
+
+Текущее количество неудачных попыток ввода кода. 
+
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8h_source}{Auth\+Manager\+Docs.\+h}} строка \mbox{\hyperlink{AuthManagerDocs_8h_source_l00043}{43}}
+
+\Hypertarget{structVerificationContext_a58b0df7ea3df092cc1c8142b730036bb}\label{structVerificationContext_a58b0df7ea3df092cc1c8142b730036bb} 
+\index{VerificationContext@{VerificationContext}!code@{code}}
+\index{code@{code}!VerificationContext@{VerificationContext}}
+\doxysubsubsection{\texorpdfstring{code}{code}}
+{\footnotesize\ttfamily QString Verification\+Context\+::code}
+
+
+
+Сгенерированный код подтверждения (обычно 6 цифр). 
+
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8h_source}{Auth\+Manager\+Docs.\+h}} строка \mbox{\hyperlink{AuthManagerDocs_8h_source_l00041}{41}}
+
+\Hypertarget{structVerificationContext_a1b4631d5864451459a3014a59040ae98}\label{structVerificationContext_a1b4631d5864451459a3014a59040ae98} 
+\index{VerificationContext@{VerificationContext}!expiresAt@{expiresAt}}
+\index{expiresAt@{expiresAt}!VerificationContext@{VerificationContext}}
+\doxysubsubsection{\texorpdfstring{expiresAt}{expiresAt}}
+{\footnotesize\ttfamily QDate\+Time Verification\+Context\+::expires\+At}
+
+
+
+Время, до которого код считается действительным. 
+
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8h_source}{Auth\+Manager\+Docs.\+h}} строка \mbox{\hyperlink{AuthManagerDocs_8h_source_l00042}{42}}
+
+\Hypertarget{structVerificationContext_a871bde05deb61ac3f7ce6328df614b68}\label{structVerificationContext_a871bde05deb61ac3f7ce6328df614b68} 
+\index{VerificationContext@{VerificationContext}!isVerified@{isVerified}}
+\index{isVerified@{isVerified}!VerificationContext@{VerificationContext}}
+\doxysubsubsection{\texorpdfstring{isVerified}{isVerified}}
+{\footnotesize\ttfamily bool Verification\+Context\+::is\+Verified = false}
+
+
+
+Флаг, указывающий, был ли код успешно подтвержден пользователем. 
+
+
+
+См. определение в файле \mbox{\hyperlink{AuthManagerDocs_8h_source}{Auth\+Manager\+Docs.\+h}} строка \mbox{\hyperlink{AuthManagerDocs_8h_source_l00044}{44}}
+
+
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+ТиМП Исходники/\+Server/\mbox{\hyperlink{AuthManagerDocs_8h}{Auth\+Manager\+Docs.\+h}}\end{DoxyCompactItemize}
