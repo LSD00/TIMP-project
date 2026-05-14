@@ -1,0 +1,18 @@
+<map id="ТиМП Исходники/Client/graph.cpp" name="ТиМП Исходники/Client/graph.cpp">
+<area shape="rect" id="Node000001" title="Реализация интерфейса и логики построения графика." alt="" coords="111,5,253,45"/>
+<area shape="rect" id="Node000002" href="$graph_8h.html" title="Заголовочный файл класса для построения математических графиков." alt="" coords="5,93,76,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,48,75,89,73,84,147,43"/>
+<area shape="rect" id="Node000004" href="$task_8h.html" title="Заголовочный файл класса меню/задач." alt="" coords="100,93,163,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="172,47,149,83,144,80,167,44"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="187,93,278,119"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="197,44,220,80,215,83,192,47"/>
+<area shape="rect" id="Node000006" href="$net_8h.html" title="Заголовочный файл с объявлениями функций для связи с сервером и математических вычислений." alt="" coords="303,93,357,119"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="219,43,297,84,295,89,216,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="49,167,123,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="50,118,74,154,69,157,46,120"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="126,120,103,157,98,154,122,118"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="255,167,314,192"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="325,120,302,157,297,154,320,118"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="339,167,412,192"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="340,118,363,154,358,157,335,120"/>
+</map>

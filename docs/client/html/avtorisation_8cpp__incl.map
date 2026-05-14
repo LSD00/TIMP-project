@@ -1,0 +1,26 @@
+<map id="ТиМП Исходники/Client/avtorisation.cpp" name="ТиМП Исходники/Client/avtorisation.cpp">
+<area shape="rect" id="Node000001" title="Реализация логики окна авторизации." alt="" coords="235,5,408,45"/>
+<area shape="rect" id="Node000002" href="$avtorisation_8h.html" title="Заголовочный файл класса окна авторизации." alt="" coords="333,93,445,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="340,44,372,81,368,84,336,47"/>
+<area shape="rect" id="Node000005" href="$registration_8h.html" title="Заголовочный файл класса окна регистрации." alt="" coords="200,93,309,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="307,47,275,84,271,81,303,44"/>
+<area shape="rect" id="Node000007" href="$resmail_8h.html" title="Заголовочный файл окна восстановления пароля." alt="" coords="5,93,88,119"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="256,48,101,92,99,87,255,43"/>
+<area shape="rect" id="Node000008" href="$task_8h.html" title="Заголовочный файл класса меню/задач." alt="" coords="113,93,175,119"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="280,48,184,90,181,85,278,43"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="469,93,600,119"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="373,43,491,86,489,91,372,48"/>
+<area shape="rect" id="Node000010" href="$net_8h.html" title="Заголовочный файл с объявлениями функций для связи с сервером и математических вычислений." alt="" coords="625,93,679,119"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="409,43,612,91,611,96,407,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="331,167,447,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="392,119,392,153,387,153,387,119"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="503,167,561,192"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="413,116,498,158,495,163,411,121"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="107,167,181,192"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="238,121,175,161,172,157,235,116"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="64,117,118,156,115,160,61,121"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="147,119,147,153,141,153,141,119"/>
+<area shape="poly" id="edge12_Node000010_Node000004" title=" " alt="" coords="634,121,565,162,562,157,631,116"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="615,167,689,192"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="655,119,655,153,649,153,649,119"/>
+</map>
