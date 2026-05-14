@@ -1,0 +1,12 @@
+<map id="Server::sendResponse" name="Server::sendResponse">
+<area shape="rect" id="Node000001" title="Отправка произвольного JSON&#45;ответа клиенту." alt="" coords="931,5,1097,31"/>
+<area shape="rect" id="Node000002" href="$classServer.html#a765e4ffe32ffff676ba9e523ab7fcdaa" title="Главный маршрутизатор (роутер) входящих запросов." alt="" coords="469,5,639,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="917,21,639,21,639,15,917,15"/>
+<area shape="rect" id="Node000005" href="$classServer.html#ad0a7ffb50db36752ca6d4d43eb574562" title="Отправка стандартизированного ответа на запросы аутентификации." alt="" coords="687,31,883,56"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="917,31,883,35,883,30,916,26"/>
+<area shape="rect" id="Node000003" href="$classServer.html#ac67d866fb14c4644acd1098bacfadeee" title="Слот, вызываемый при поступлении новых данных от клиента." alt="" coords="259,5,421,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="456,21,421,21,421,15,456,15"/>
+<area shape="rect" id="Node000004" href="$classServer.html#aa229a1587514197693274aa0d589344b" title="Обработчик новых входящих подключений (переопределение QTcpServer)." alt="" coords="5,5,211,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="245,21,211,21,211,15,245,15"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="673,34,639,30,639,25,673,28"/>
+</map>

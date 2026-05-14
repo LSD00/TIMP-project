@@ -1,0 +1,7 @@
+<map id="AuthManager::AuthManager" name="AuthManager::AuthManager">
+<area shape="rect" id="Node000001" title="Приватный конструктор. Настраивает подключение к БД и таймер сборки мусора." alt="" coords="5,42,209,67"/>
+<area shape="rect" id="Node000002" href="$classAuthManager.html#a5ac7251eb8b0efb93f43ba7a1eb1999f" title="Слот для периодической очистки просроченных кодов верификации. Вызывается по таймеру." alt="" coords="257,5,459,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,40,243,36,244,41,210,45"/>
+<area shape="rect" id="Node000003" href="$classAuthManager.html#a9cb68a675ac103d3b04846f09381a89e" title="Инициализирует структуру базы данных (создает таблицы и расширения, если их нет)." alt="" coords="258,70,458,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,63,245,67,244,73,209,69"/>
+</map>

@@ -1,0 +1,20 @@
+<map id="Server::incomingConnection" name="Server::incomingConnection">
+<area shape="rect" id="Node000001" title="Обработчик новых входящих подключений (переопределение QTcpServer)." alt="" coords="5,80,211,105"/>
+<area shape="rect" id="Node000002" href="$classServer.html#a8afa35c8257d78be38596587e469bea3" title="Слот, вызываемый при отключении клиента." alt="" coords="259,55,473,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,80,245,77,245,82,211,85"/>
+<area shape="rect" id="Node000003" href="$classServer.html#ac67d866fb14c4644acd1098bacfadeee" title="Слот, вызываемый при поступлении новых данных от клиента." alt="" coords="285,104,447,129"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,100,271,105,271,111,211,105"/>
+<area shape="rect" id="Node000004" href="$classServer.html#a765e4ffe32ffff676ba9e523ab7fcdaa" title="Главный маршрутизатор (роутер) входящих запросов." alt="" coords="521,104,691,129"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="448,114,508,114,508,119,448,119"/>
+<area shape="rect" id="Node000005" href="$classAuthManager.html#a1f5e14a740015d3c20fc123bbc71fec2" title="Проверяет учетные данные пользователя при входе в систему." alt="" coords="739,5,937,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="625,102,674,71,738,40,759,32,761,37,740,44,677,75,627,106"/>
+<area shape="rect" id="Node000006" href="$classAuthManager.html#a3a33c4fac024a1a0a928cc027cb82484" title="Возвращает единственный экземпляр класса AuthManager (паттерн Singleton)." alt="" coords="741,55,935,80"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="666,101,764,80,765,86,667,107"/>
+<area shape="rect" id="Node000007" href="$CalcDocs_8cpp.html#a1ec60e354c0c14fe35b2e385b36d747b" title="Безопасное вычисление кусочной функции с шагом 0.5." alt="" coords="783,104,893,129"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="691,114,769,114,769,119,691,119"/>
+<area shape="rect" id="Node000008" href="$classServer.html#ad0a7ffb50db36752ca6d4d43eb574562" title="Отправка стандартизированного ответа на запросы аутентификации." alt="" coords="740,153,936,179"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="667,127,765,148,764,153,666,132"/>
+<area shape="rect" id="Node000009" href="$classServer.html#a5c38927d999bbb4155872da0974d8717" title="Отправка произвольного JSON&#45;ответа клиенту." alt="" coords="985,179,1152,204"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="625,127,674,160,706,176,739,187,798,199,859,204,972,201,972,206,859,209,798,204,738,193,704,180,672,164,622,132"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="936,174,972,178,972,183,936,179"/>
+</map>
