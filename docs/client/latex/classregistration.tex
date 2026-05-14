@@ -1,0 +1,211 @@
+\doxysection{Класс registration}
+\hypertarget{classregistration}{}\label{classregistration}\index{registration@{registration}}
+
+
+Класс окна регистрации новых пользователей.  
+
+
+
+
+{\ttfamily \#include $<$registration.\+h$>$}
+
+
+
+Граф наследования\+:registration\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classregistration__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса registration\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classregistration__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classregistration_a18fb1e1dad535252deb3b46d858f0388}{registration}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор окна регистрации. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classregistration_a810017b2a89d603f4cf11a0beb9eac4b}{\texorpdfstring{$\sim$}{\string~}registration}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classregistration_ae9474d88b3629a36af6be4f6309d5bf7}{on\+\_\+push\+Button\+\_\+2\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик кнопки возврата к окну авторизации. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classregistration_a2c668dbe2be08dd568359f66571f52fb}{on\+\_\+line\+Edit\+\_\+text\+Changed}} (const QString \&arg1)
+\begin{DoxyCompactList}\small\item\em Сохранение ввода имени пользователя. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classregistration_a1df7ac2d16ee73b3e59d442372408581}{on\+\_\+line\+Edit\+\_\+2\+\_\+text\+Changed}} (const QString \&arg1)
+\begin{DoxyCompactList}\small\item\em Сохранение ввода электронной почты. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classregistration_aa08c91ee34889a27acca0cf31c9a8292}{on\+\_\+line\+Edit\+\_\+3\+\_\+text\+Changed}} (const QString \&arg1)
+\begin{DoxyCompactList}\small\item\em Сохранение ввода пароля. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classregistration_a43a40ec5598f757d0163d5ffda0d3275}{on\+\_\+push\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Обработчик кнопки "{}Зарегистрироваться"{}. Инициирует отправку данных. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::registration \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classregistration_a233165f565b3f9ee665e8cdbdf145e13}{ui}}
+\begin{DoxyCompactList}\small\item\em Указатель на интерфейс формы регистрации. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс окна регистрации новых пользователей. 
+
+
+\begin{DoxyItemize}
+\item Отвечает за сбор имени, электронной почты и пароля от нового пользователя и отправку этих данных на сервер (клиентскую логику) для регистрации. 
+\end{DoxyItemize}
+
+См. определение в файле \mbox{\hyperlink{registration_8h_source}{registration.\+h}} строка \mbox{\hyperlink{registration_8h_source_l00021}{21}}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classregistration_a18fb1e1dad535252deb3b46d858f0388}\label{classregistration_a18fb1e1dad535252deb3b46d858f0388} 
+\index{registration@{registration}!registration@{registration}}
+\index{registration@{registration}!registration@{registration}}
+\doxysubsubsection{\texorpdfstring{registration()}{registration()}}
+{\footnotesize\ttfamily registration\+::registration (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор окна регистрации. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em parent} & Родительский виджет. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{registration_8cpp_source}{registration.\+cpp}} строка \mbox{\hyperlink{registration_8cpp_source_l00014}{14}}
+
+\Hypertarget{classregistration_a810017b2a89d603f4cf11a0beb9eac4b}\label{classregistration_a810017b2a89d603f4cf11a0beb9eac4b} 
+\index{registration@{registration}!````~registration@{\texorpdfstring{$\sim$}{\string~}registration}}
+\index{````~registration@{\texorpdfstring{$\sim$}{\string~}registration}!registration@{registration}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}registration()}{\string~registration()}}
+{\footnotesize\ttfamily registration\+::\texorpdfstring{$\sim$}{\string~}registration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле \mbox{\hyperlink{registration_8cpp_source}{registration.\+cpp}} строка \mbox{\hyperlink{registration_8cpp_source_l00021}{21}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classregistration_a1df7ac2d16ee73b3e59d442372408581}\label{classregistration_a1df7ac2d16ee73b3e59d442372408581} 
+\index{registration@{registration}!on\_lineEdit\_2\_textChanged@{on\_lineEdit\_2\_textChanged}}
+\index{on\_lineEdit\_2\_textChanged@{on\_lineEdit\_2\_textChanged}!registration@{registration}}
+\doxysubsubsection{\texorpdfstring{on\_lineEdit\_2\_textChanged}{on\_lineEdit\_2\_textChanged}}
+{\footnotesize\ttfamily void registration\+::on\+\_\+line\+Edit\+\_\+2\+\_\+text\+Changed (\begin{DoxyParamCaption}\item[{const QString \&}]{arg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Сохранение ввода электронной почты. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em arg1} & Введенная почта. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{registration_8cpp_source}{registration.\+cpp}} строка \mbox{\hyperlink{registration_8cpp_source_l00038}{38}}
+
+\Hypertarget{classregistration_aa08c91ee34889a27acca0cf31c9a8292}\label{classregistration_aa08c91ee34889a27acca0cf31c9a8292} 
+\index{registration@{registration}!on\_lineEdit\_3\_textChanged@{on\_lineEdit\_3\_textChanged}}
+\index{on\_lineEdit\_3\_textChanged@{on\_lineEdit\_3\_textChanged}!registration@{registration}}
+\doxysubsubsection{\texorpdfstring{on\_lineEdit\_3\_textChanged}{on\_lineEdit\_3\_textChanged}}
+{\footnotesize\ttfamily void registration\+::on\+\_\+line\+Edit\+\_\+3\+\_\+text\+Changed (\begin{DoxyParamCaption}\item[{const QString \&}]{arg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Сохранение ввода пароля. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em arg1} & Введенный пароль. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{registration_8cpp_source}{registration.\+cpp}} строка \mbox{\hyperlink{registration_8cpp_source_l00043}{43}}
+
+\Hypertarget{classregistration_a2c668dbe2be08dd568359f66571f52fb}\label{classregistration_a2c668dbe2be08dd568359f66571f52fb} 
+\index{registration@{registration}!on\_lineEdit\_textChanged@{on\_lineEdit\_textChanged}}
+\index{on\_lineEdit\_textChanged@{on\_lineEdit\_textChanged}!registration@{registration}}
+\doxysubsubsection{\texorpdfstring{on\_lineEdit\_textChanged}{on\_lineEdit\_textChanged}}
+{\footnotesize\ttfamily void registration\+::on\+\_\+line\+Edit\+\_\+text\+Changed (\begin{DoxyParamCaption}\item[{const QString \&}]{arg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Сохранение ввода имени пользователя. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em arg1} & Введенное имя. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{registration_8cpp_source}{registration.\+cpp}} строка \mbox{\hyperlink{registration_8cpp_source_l00033}{33}}
+
+\Hypertarget{classregistration_ae9474d88b3629a36af6be4f6309d5bf7}\label{classregistration_ae9474d88b3629a36af6be4f6309d5bf7} 
+\index{registration@{registration}!on\_pushButton\_2\_clicked@{on\_pushButton\_2\_clicked}}
+\index{on\_pushButton\_2\_clicked@{on\_pushButton\_2\_clicked}!registration@{registration}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_2\_clicked}{on\_pushButton\_2\_clicked}}
+{\footnotesize\ttfamily void registration\+::on\+\_\+push\+Button\+\_\+2\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Обработчик кнопки возврата к окну авторизации. 
+
+
+
+См. определение в файле \mbox{\hyperlink{registration_8cpp_source}{registration.\+cpp}} строка \mbox{\hyperlink{registration_8cpp_source_l00026}{26}}
+
+\Hypertarget{classregistration_a43a40ec5598f757d0163d5ffda0d3275}\label{classregistration_a43a40ec5598f757d0163d5ffda0d3275} 
+\index{registration@{registration}!on\_pushButton\_clicked@{on\_pushButton\_clicked}}
+\index{on\_pushButton\_clicked@{on\_pushButton\_clicked}!registration@{registration}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_clicked}{on\_pushButton\_clicked}}
+{\footnotesize\ttfamily void registration\+::on\+\_\+push\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Обработчик кнопки "{}Зарегистрироваться"{}. Инициирует отправку данных. 
+
+
+
+См. определение в файле \mbox{\hyperlink{registration_8cpp_source}{registration.\+cpp}} строка \mbox{\hyperlink{registration_8cpp_source_l00048}{48}}
+
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{classregistration_a233165f565b3f9ee665e8cdbdf145e13}\label{classregistration_a233165f565b3f9ee665e8cdbdf145e13} 
+\index{registration@{registration}!ui@{ui}}
+\index{ui@{ui}!registration@{registration}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::registration\texorpdfstring{$\ast$}{*} registration\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Указатель на интерфейс формы регистрации. 
+
+
+
+См. определение в файле \mbox{\hyperlink{registration_8h_source}{registration.\+h}} строка \mbox{\hyperlink{registration_8h_source_l00059}{59}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+ТиМП Исходники/\+Client/\mbox{\hyperlink{registration_8h}{registration.\+h}}\item 
+ТиМП Исходники/\+Client/\mbox{\hyperlink{registration_8cpp}{registration.\+cpp}}\end{DoxyCompactItemize}

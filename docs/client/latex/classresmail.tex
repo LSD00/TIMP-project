@@ -1,0 +1,156 @@
+\doxysection{Класс resmail}
+\hypertarget{classresmail}{}\label{classresmail}\index{resmail@{resmail}}
+
+
+Класс диалогового окна сброса пароля.  
+
+
+
+
+{\ttfamily \#include $<$resmail.\+h$>$}
+
+
+
+Граф наследования\+:resmail\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classresmail__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса resmail\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classresmail__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classresmail_ab7441255a717329dbeea6304fa187cfe}{resmail}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+\mbox{\hyperlink{classresmail_a068a66ea0f12a3a5130e04c9283f5cf9}{\texorpdfstring{$\sim$}{\string~}resmail}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые слоты}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classresmail_ae307b285fa9c459b59219e8cfe78d3af}{on\+\_\+push\+Button\+\_\+2\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Возврат в окно авторизации. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classresmail_a6147b77538d67c3b2eb6e4a2d9823d9d}{on\+\_\+line\+Edit\+\_\+text\+Changed}} (const QString \&arg1)
+\begin{DoxyCompactList}\small\item\em Захват вводимой почты. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classresmail_ac6e3624db2273ee02a5ce5413539340f}{on\+\_\+push\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em Отправка запроса на сброс пароля. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::resmail \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classresmail_a4082cd8ec34940d750d30ce4d41dba88}{ui}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс диалогового окна сброса пароля. 
+
+
+\begin{DoxyItemize}
+\item Отвечает за запрос электронной почты пользователя, на которую будет отправлена инструкция по восстановлению пароля. 
+\end{DoxyItemize}
+
+См. определение в файле \mbox{\hyperlink{resmail_8h_source}{resmail.\+h}} строка \mbox{\hyperlink{resmail_8h_source_l00021}{21}}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classresmail_ab7441255a717329dbeea6304fa187cfe}\label{classresmail_ab7441255a717329dbeea6304fa187cfe} 
+\index{resmail@{resmail}!resmail@{resmail}}
+\index{resmail@{resmail}!resmail@{resmail}}
+\doxysubsubsection{\texorpdfstring{resmail()}{resmail()}}
+{\footnotesize\ttfamily resmail\+::resmail (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{resmail_8cpp_source}{resmail.\+cpp}} строка \mbox{\hyperlink{resmail_8cpp_source_l00015}{15}}
+
+\Hypertarget{classresmail_a068a66ea0f12a3a5130e04c9283f5cf9}\label{classresmail_a068a66ea0f12a3a5130e04c9283f5cf9} 
+\index{resmail@{resmail}!````~resmail@{\texorpdfstring{$\sim$}{\string~}resmail}}
+\index{````~resmail@{\texorpdfstring{$\sim$}{\string~}resmail}!resmail@{resmail}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}resmail()}{\string~resmail()}}
+{\footnotesize\ttfamily resmail\+::\texorpdfstring{$\sim$}{\string~}resmail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+См. определение в файле \mbox{\hyperlink{resmail_8cpp_source}{resmail.\+cpp}} строка \mbox{\hyperlink{resmail_8cpp_source_l00022}{22}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classresmail_a6147b77538d67c3b2eb6e4a2d9823d9d}\label{classresmail_a6147b77538d67c3b2eb6e4a2d9823d9d} 
+\index{resmail@{resmail}!on\_lineEdit\_textChanged@{on\_lineEdit\_textChanged}}
+\index{on\_lineEdit\_textChanged@{on\_lineEdit\_textChanged}!resmail@{resmail}}
+\doxysubsubsection{\texorpdfstring{on\_lineEdit\_textChanged}{on\_lineEdit\_textChanged}}
+{\footnotesize\ttfamily void resmail\+::on\+\_\+line\+Edit\+\_\+text\+Changed (\begin{DoxyParamCaption}\item[{const QString \&}]{arg1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Захват вводимой почты. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em arg1} & Электронная почта. \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{resmail_8cpp_source}{resmail.\+cpp}} строка \mbox{\hyperlink{resmail_8cpp_source_l00034}{34}}
+
+\Hypertarget{classresmail_ae307b285fa9c459b59219e8cfe78d3af}\label{classresmail_ae307b285fa9c459b59219e8cfe78d3af} 
+\index{resmail@{resmail}!on\_pushButton\_2\_clicked@{on\_pushButton\_2\_clicked}}
+\index{on\_pushButton\_2\_clicked@{on\_pushButton\_2\_clicked}!resmail@{resmail}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_2\_clicked}{on\_pushButton\_2\_clicked}}
+{\footnotesize\ttfamily void resmail\+::on\+\_\+push\+Button\+\_\+2\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Возврат в окно авторизации. 
+
+
+
+См. определение в файле \mbox{\hyperlink{resmail_8cpp_source}{resmail.\+cpp}} строка \mbox{\hyperlink{resmail_8cpp_source_l00027}{27}}
+
+\Hypertarget{classresmail_ac6e3624db2273ee02a5ce5413539340f}\label{classresmail_ac6e3624db2273ee02a5ce5413539340f} 
+\index{resmail@{resmail}!on\_pushButton\_clicked@{on\_pushButton\_clicked}}
+\index{on\_pushButton\_clicked@{on\_pushButton\_clicked}!resmail@{resmail}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_clicked}{on\_pushButton\_clicked}}
+{\footnotesize\ttfamily void resmail\+::on\+\_\+push\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Отправка запроса на сброс пароля. 
+
+
+
+См. определение в файле \mbox{\hyperlink{resmail_8cpp_source}{resmail.\+cpp}} строка \mbox{\hyperlink{resmail_8cpp_source_l00039}{39}}
+
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{classresmail_a4082cd8ec34940d750d30ce4d41dba88}\label{classresmail_a4082cd8ec34940d750d30ce4d41dba88} 
+\index{resmail@{resmail}!ui@{ui}}
+\index{ui@{ui}!resmail@{resmail}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::resmail\texorpdfstring{$\ast$}{*} resmail\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{resmail_8h_source}{resmail.\+h}} строка \mbox{\hyperlink{resmail_8h_source_l00043}{43}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+ТиМП Исходники/\+Client/\mbox{\hyperlink{resmail_8h}{resmail.\+h}}\item 
+ТиМП Исходники/\+Client/\mbox{\hyperlink{resmail_8cpp}{resmail.\+cpp}}\end{DoxyCompactItemize}
