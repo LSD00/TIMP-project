@@ -1,0 +1,1353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ТиМП: Класс AuthManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ТиМП
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classAuthManager.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pri-slots">Закрытые слоты</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classAuthManager-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс AuthManager</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Главный класс-синглтон для управления процессом авторизации, регистрации и восстановления паролей.  
+ <a href="classAuthManager.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="AuthManager_8h_source.html">AuthManager.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:AuthManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAuthManager__inherit__graph.png" border="0" usemap="#aAuthManager_inherit__map" alt="Inheritance graph"/></div>
+<map name="aAuthManager_inherit__map" id="aAuthManager_inherit__map">
+<area shape="rect" title="Главный класс&#45;синглтон для управления процессом авторизации, регистрации и восстановления паролей." alt="" coords="5,119,256,1243"/>
+<area shape="rect" title=" " alt="" coords="97,5,164,71"/>
+<area shape="poly" title=" " alt="" coords="133,85,133,118,128,118,128,85"/>
+</map>
+</div>
+<div class="dynheader">
+Граф связей класса AuthManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAuthManager__coll__graph.png" border="0" usemap="#aAuthManager_coll__map" alt="Collaboration graph"/></div>
+<map name="aAuthManager_coll__map" id="aAuthManager_coll__map">
+<area shape="rect" title="Главный класс&#45;синглтон для управления процессом авторизации, регистрации и восстановления паролей." alt="" coords="5,119,256,1243"/>
+<area shape="rect" title=" " alt="" coords="97,5,164,71"/>
+<area shape="poly" title=" " alt="" coords="133,85,133,118,128,118,128,85"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aeae750570d1539539834e53b789e3de7" id="r_aeae750570d1539539834e53b789e3de7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#aeae750570d1539539834e53b789e3de7">AuthManager</a> (const <a class="el" href="classAuthManager.html">AuthManager</a> &amp;)=delete</td></tr>
+<tr class="separator:aeae750570d1539539834e53b789e3de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34e63862bc2617ca97f83cbfa2efdaa1" id="r_a34e63862bc2617ca97f83cbfa2efdaa1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAuthManager.html">AuthManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a34e63862bc2617ca97f83cbfa2efdaa1">operator=</a> (const <a class="el" href="classAuthManager.html">AuthManager</a> &amp;)=delete</td></tr>
+<tr class="separator:a34e63862bc2617ca97f83cbfa2efdaa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a000d618f8dbff5c2465629f7ebadf10f" id="r_a000d618f8dbff5c2465629f7ebadf10f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AuthManager_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a000d618f8dbff5c2465629f7ebadf10f">requestRegistrationCode</a> (const QString &amp;email, QString *errorMsg=nullptr)</td></tr>
+<tr class="memdesc:a000d618f8dbff5c2465629f7ebadf10f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициирует процесс регистрации, отправляя код подтверждения на email.  <br /></td></tr>
+<tr class="separator:a000d618f8dbff5c2465629f7ebadf10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a6d42e075c7ce5cf9172a3e700149c0" id="r_a5a6d42e075c7ce5cf9172a3e700149c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AuthManager_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a5a6d42e075c7ce5cf9172a3e700149c0">verifyRegistrationCode</a> (const QString &amp;email, const QString &amp;code, QString *errorMsg=nullptr)</td></tr>
+<tr class="memdesc:a5a6d42e075c7ce5cf9172a3e700149c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет правильность кода подтверждения, введенного при регистрации.  <br /></td></tr>
+<tr class="separator:a5a6d42e075c7ce5cf9172a3e700149c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e440167cb3e4edf550e786853e483ea" id="r_a1e440167cb3e4edf550e786853e483ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AuthManager_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a1e440167cb3e4edf550e786853e483ea">finalizeRegistration</a> (const QString &amp;email, const QString &amp;password, QString *errorMsg=nullptr)</td></tr>
+<tr class="memdesc:a1e440167cb3e4edf550e786853e483ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завершает регистрацию, сохраняя хеш пароля в базу данных (требует предварительной верификации).  <br /></td></tr>
+<tr class="separator:a1e440167cb3e4edf550e786853e483ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f5e14a740015d3c20fc123bbc71fec2" id="r_a1f5e14a740015d3c20fc123bbc71fec2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AuthManager_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a1f5e14a740015d3c20fc123bbc71fec2">authenticate</a> (const QString &amp;email, const QString &amp;password)</td></tr>
+<tr class="memdesc:a1f5e14a740015d3c20fc123bbc71fec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет учетные данные пользователя при входе в систему.  <br /></td></tr>
+<tr class="separator:a1f5e14a740015d3c20fc123bbc71fec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe6220841219ddb11d0b814da05564ed" id="r_abe6220841219ddb11d0b814da05564ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AuthManager_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#abe6220841219ddb11d0b814da05564ed">requestPasswordReset</a> (const QString &amp;email, QString *errorMsg=nullptr)</td></tr>
+<tr class="memdesc:abe6220841219ddb11d0b814da05564ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициирует процесс восстановления пароля, отправляя код на email.  <br /></td></tr>
+<tr class="separator:abe6220841219ddb11d0b814da05564ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad72a248216ec7e99aad56b8422808b99" id="r_ad72a248216ec7e99aad56b8422808b99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AuthManager_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#ad72a248216ec7e99aad56b8422808b99">verifyResetCode</a> (const QString &amp;email, const QString &amp;code, QString *errorMsg=nullptr)</td></tr>
+<tr class="memdesc:ad72a248216ec7e99aad56b8422808b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет код, отправленный для восстановления пароля.  <br /></td></tr>
+<tr class="separator:ad72a248216ec7e99aad56b8422808b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28d569d5c47d91b4a87465d26aa95067" id="r_a28d569d5c47d91b4a87465d26aa95067"><td class="memItemLeft" align="right" valign="top"><a class="el" href="AuthManager_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a28d569d5c47d91b4a87465d26aa95067">resetPassword</a> (const QString &amp;email, const QString &amp;password, const QString &amp;passwordConfirm, QString *errorMsg=nullptr)</td></tr>
+<tr class="memdesc:a28d569d5c47d91b4a87465d26aa95067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает новый пароль после успешного прохождения верификации при сбросе.  <br /></td></tr>
+<tr class="separator:a28d569d5c47d91b4a87465d26aa95067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83843cbea03c706dbb6552fbf436ee59" id="r_a83843cbea03c706dbb6552fbf436ee59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a83843cbea03c706dbb6552fbf436ee59">cancelRegistration</a> (const QString &amp;email)</td></tr>
+<tr class="memdesc:a83843cbea03c706dbb6552fbf436ee59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отменяет процесс регистрации и очищает временные данные пользователя.  <br /></td></tr>
+<tr class="separator:a83843cbea03c706dbb6552fbf436ee59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26189a83443a3d7ec18929fd98c2ee04" id="r_a26189a83443a3d7ec18929fd98c2ee04"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a26189a83443a3d7ec18929fd98c2ee04">getLastError</a> () const</td></tr>
+<tr class="memdesc:a26189a83443a3d7ec18929fd98c2ee04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает текст последней системной ошибки.  <br /></td></tr>
+<tr class="separator:a26189a83443a3d7ec18929fd98c2ee04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4770b856b1ddcd4e60983612345d0eff" id="r_a4770b856b1ddcd4e60983612345d0eff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a4770b856b1ddcd4e60983612345d0eff">validateEmail</a> (const QString &amp;email)</td></tr>
+<tr class="memdesc:a4770b856b1ddcd4e60983612345d0eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет строку на соответствие формату электронной почты (через регулярное выражение).  <br /></td></tr>
+<tr class="separator:a4770b856b1ddcd4e60983612345d0eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3dd36a283b1dcf0f5bad4090aac58ff" id="r_aa3dd36a283b1dcf0f5bad4090aac58ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#aa3dd36a283b1dcf0f5bad4090aac58ff">validatePassword</a> (const QString &amp;password, QString *errorMsg=nullptr)</td></tr>
+<tr class="memdesc:aa3dd36a283b1dcf0f5bad4090aac58ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет пароль на соответствие требованиям безопасности (длина и т.д.).  <br /></td></tr>
+<tr class="separator:aa3dd36a283b1dcf0f5bad4090aac58ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a3a33c4fac024a1a0a928cc027cb82484" id="r_a3a33c4fac024a1a0a928cc027cb82484"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classAuthManager.html">AuthManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a3a33c4fac024a1a0a928cc027cb82484">getInstance</a> ()</td></tr>
+<tr class="memdesc:a3a33c4fac024a1a0a928cc027cb82484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает единственный экземпляр класса <a class="el" href="classAuthManager.html" title="Главный класс-синглтон для управления процессом авторизации, регистрации и восстановления паролей.">AuthManager</a> (паттерн Singleton).  <br /></td></tr>
+<tr class="separator:a3a33c4fac024a1a0a928cc027cb82484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-slots" name="pri-slots"></a>
+Закрытые слоты</h2></td></tr>
+<tr class="memitem:a5ac7251eb8b0efb93f43ba7a1eb1999f" id="r_a5ac7251eb8b0efb93f43ba7a1eb1999f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a5ac7251eb8b0efb93f43ba7a1eb1999f">cleanExpiredCodes</a> ()</td></tr>
+<tr class="memdesc:a5ac7251eb8b0efb93f43ba7a1eb1999f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Слот для периодической очистки просроченных кодов верификации. Вызывается по таймеру.  <br /></td></tr>
+<tr class="separator:a5ac7251eb8b0efb93f43ba7a1eb1999f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:ac2bb200e13f45bee1f9adc689d33a2b1" id="r_ac2bb200e13f45bee1f9adc689d33a2b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#ac2bb200e13f45bee1f9adc689d33a2b1">AuthManager</a> ()</td></tr>
+<tr class="memdesc:ac2bb200e13f45bee1f9adc689d33a2b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Приватный конструктор. Настраивает подключение к БД и таймер сборки мусора.  <br /></td></tr>
+<tr class="separator:ac2bb200e13f45bee1f9adc689d33a2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f4077e05949041be8e030bc2caa84a9" id="r_a7f4077e05949041be8e030bc2caa84a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a7f4077e05949041be8e030bc2caa84a9">~AuthManager</a> ()</td></tr>
+<tr class="memdesc:a7f4077e05949041be8e030bc2caa84a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор. Закрывает соединение с БД.  <br /></td></tr>
+<tr class="separator:a7f4077e05949041be8e030bc2caa84a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cb68a675ac103d3b04846f09381a89e" id="r_a9cb68a675ac103d3b04846f09381a89e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a9cb68a675ac103d3b04846f09381a89e">initDatabase</a> ()</td></tr>
+<tr class="memdesc:a9cb68a675ac103d3b04846f09381a89e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализирует структуру базы данных (создает таблицы и расширения, если их нет).  <br /></td></tr>
+<tr class="separator:a9cb68a675ac103d3b04846f09381a89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53058aa0995bc53256d717128094d783" id="r_a53058aa0995bc53256d717128094d783"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a53058aa0995bc53256d717128094d783">sendEmailToUserAsync</a> (const QString &amp;email, const QString &amp;code)</td></tr>
+<tr class="memdesc:a53058aa0995bc53256d717128094d783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Асинхронно отправляет email с кодом верификации через внешний API (Brevo).  <br /></td></tr>
+<tr class="separator:a53058aa0995bc53256d717128094d783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83736668bcbf76a6868f3f465a0ec5c8" id="r_a83736668bcbf76a6868f3f465a0ec5c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a83736668bcbf76a6868f3f465a0ec5c8">userExists</a> (const QString &amp;email)</td></tr>
+<tr class="memdesc:a83736668bcbf76a6868f3f465a0ec5c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет наличие пользователя в базе данных.  <br /></td></tr>
+<tr class="separator:a83736668bcbf76a6868f3f465a0ec5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a83ec4a1f7f139f4364dff33c28654734" id="r_a83ec4a1f7f139f4364dff33c28654734"><td class="memItemLeft" align="right" valign="top">QSqlDatabase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a83ec4a1f7f139f4364dff33c28654734">db</a></td></tr>
+<tr class="memdesc:a83ec4a1f7f139f4364dff33c28654734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Объект соединения с базой данных.  <br /></td></tr>
+<tr class="separator:a83ec4a1f7f139f4364dff33c28654734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f899440c3ff4b08ffda743cbe7466e3" id="r_a1f899440c3ff4b08ffda743cbe7466e3"><td class="memItemLeft" align="right" valign="top">QMutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a1f899440c3ff4b08ffda743cbe7466e3">dbMutex</a></td></tr>
+<tr class="memdesc:a1f899440c3ff4b08ffda743cbe7466e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Мьютекс для потокобезопасной работы с БД.  <br /></td></tr>
+<tr class="separator:a1f899440c3ff4b08ffda743cbe7466e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa77cfef6974c66805733e232635e1219" id="r_aa77cfef6974c66805733e232635e1219"><td class="memItemLeft" align="right" valign="top">QMutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#aa77cfef6974c66805733e232635e1219">codesMutex</a></td></tr>
+<tr class="memdesc:aa77cfef6974c66805733e232635e1219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Мьютекс для потокобезопасной работы со словарями кодов.  <br /></td></tr>
+<tr class="separator:aa77cfef6974c66805733e232635e1219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb76305fb4f13759d75dcaf6f1dff1ab" id="r_adb76305fb4f13759d75dcaf6f1dff1ab"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#adb76305fb4f13759d75dcaf6f1dff1ab">lastError</a></td></tr>
+<tr class="memdesc:adb76305fb4f13759d75dcaf6f1dff1ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хранение последней текстовой ошибки.  <br /></td></tr>
+<tr class="separator:adb76305fb4f13759d75dcaf6f1dff1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca83cad52955f9f1ec5a4bef3776a433" id="r_aca83cad52955f9f1ec5a4bef3776a433"><td class="memItemLeft" align="right" valign="top">QTimer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#aca83cad52955f9f1ec5a4bef3776a433">gcTimer</a></td></tr>
+<tr class="memdesc:aca83cad52955f9f1ec5a4bef3776a433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Таймер для очистки устаревших кодов.  <br /></td></tr>
+<tr class="separator:aca83cad52955f9f1ec5a4bef3776a433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4af5925c1a95e2de1f304d17d2dd3b3d" id="r_a4af5925c1a95e2de1f304d17d2dd3b3d"><td class="memItemLeft" align="right" valign="top">QNetworkAccessManager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a4af5925c1a95e2de1f304d17d2dd3b3d">networkManager</a></td></tr>
+<tr class="memdesc:a4af5925c1a95e2de1f304d17d2dd3b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Менеджер для выполнения HTTP-запросов (отправка писем).  <br /></td></tr>
+<tr class="separator:a4af5925c1a95e2de1f304d17d2dd3b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a792f823760652fb72d290032f4f84a27" id="r_a792f823760652fb72d290032f4f84a27"><td class="memItemLeft" align="right" valign="top">QMap&lt; QString, <a class="el" href="structVerificationContext.html">VerificationContext</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a792f823760652fb72d290032f4f84a27">registrationCodes</a></td></tr>
+<tr class="memdesc:a792f823760652fb72d290032f4f84a27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хранилище кодов для регистрации.  <br /></td></tr>
+<tr class="separator:a792f823760652fb72d290032f4f84a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3face75f146a79fc3129c2a167505b0a" id="r_a3face75f146a79fc3129c2a167505b0a"><td class="memItemLeft" align="right" valign="top">QMap&lt; QString, <a class="el" href="structVerificationContext.html">VerificationContext</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a3face75f146a79fc3129c2a167505b0a">resetCodes</a></td></tr>
+<tr class="memdesc:a3face75f146a79fc3129c2a167505b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хранилище кодов для сброса пароля.  <br /></td></tr>
+<tr class="separator:a3face75f146a79fc3129c2a167505b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76001ea42ed95ff9feb4efe55e04586b" id="r_a76001ea42ed95ff9feb4efe55e04586b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#a76001ea42ed95ff9feb4efe55e04586b">MAX_ATTEMPTS</a> = 3</td></tr>
+<tr class="memdesc:a76001ea42ed95ff9feb4efe55e04586b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Максимальное количество попыток ввода кода.  <br /></td></tr>
+<tr class="separator:a76001ea42ed95ff9feb4efe55e04586b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6f16c7ba88ee6115b5ab72f6fac9548" id="r_ad6f16c7ba88ee6115b5ab72f6fac9548"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthManager.html#ad6f16c7ba88ee6115b5ab72f6fac9548">CODE_TTL_SECS</a> = 90</td></tr>
+<tr class="memdesc:ad6f16c7ba88ee6115b5ab72f6fac9548"><td class="mdescLeft">&#160;</td><td class="mdescRight">Время жизни кода подтверждения (в секундах).  <br /></td></tr>
+<tr class="separator:ad6f16c7ba88ee6115b5ab72f6fac9548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Главный класс-синглтон для управления процессом авторизации, регистрации и восстановления паролей. </p>
+<ul>
+<li>Класс инкапсулирует работу с базой данных PostgreSQL (сохранение и проверка хешей паролей), отправку писем с кодами подтверждения через внешний API, а также управление временем жизни сессий верификации. </li>
+</ul>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8h_source.html">AuthManager.h</a> строка <a class="el" href="AuthManager_8h_source.html#l00054">54</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aeae750570d1539539834e53b789e3de7" name="aeae750570d1539539834e53b789e3de7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeae750570d1539539834e53b789e3de7">&#9670;&#160;</a></span>AuthManager() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AuthManager::AuthManager </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAuthManager.html">AuthManager</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2bb200e13f45bee1f9adc689d33a2b1" name="ac2bb200e13f45bee1f9adc689d33a2b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2bb200e13f45bee1f9adc689d33a2b1">&#9670;&#160;</a></span>AuthManager() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AuthManager::AuthManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Приватный конструктор. Настраивает подключение к БД и таймер сборки мусора. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00027">27</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAuthManager_ac2bb200e13f45bee1f9adc689d33a2b1_cgraph.png" border="0" usemap="#aclassAuthManager_ac2bb200e13f45bee1f9adc689d33a2b1_cgraph" alt=""/></div>
+<map name="aclassAuthManager_ac2bb200e13f45bee1f9adc689d33a2b1_cgraph" id="aclassAuthManager_ac2bb200e13f45bee1f9adc689d33a2b1_cgraph">
+<area shape="rect" title="Приватный конструктор. Настраивает подключение к БД и таймер сборки мусора." alt="" coords="5,42,209,67"/>
+<area shape="rect" href="classAuthManager.html#a5ac7251eb8b0efb93f43ba7a1eb1999f" title="Слот для периодической очистки просроченных кодов верификации. Вызывается по таймеру." alt="" coords="257,5,459,45"/>
+<area shape="poly" title=" " alt="" coords="209,40,243,36,244,41,210,45"/>
+<area shape="rect" href="classAuthManager.html#a9cb68a675ac103d3b04846f09381a89e" title="Инициализирует структуру базы данных (создает таблицы и расширения, если их нет)." alt="" coords="258,70,458,95"/>
+<area shape="poly" title=" " alt="" coords="210,63,245,67,244,73,209,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7f4077e05949041be8e030bc2caa84a9" name="a7f4077e05949041be8e030bc2caa84a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f4077e05949041be8e030bc2caa84a9">&#9670;&#160;</a></span>~AuthManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AuthManager::~AuthManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Деструктор. Закрывает соединение с БД. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00051">51</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a1f5e14a740015d3c20fc123bbc71fec2" name="a1f5e14a740015d3c20fc123bbc71fec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f5e14a740015d3c20fc123bbc71fec2">&#9670;&#160;</a></span>authenticate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="AuthManager_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a> AuthManager::authenticate </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет учетные данные пользователя при входе в систему. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>Электронная почта пользователя. </td></tr>
+    <tr><td class="paramname">password</td><td>Введенный пароль. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Success при успешном входе, иначе ошибка (InvalidCredentials и т.д.). </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00174">174</a></p>
+
+</div>
+</div>
+<a id="a83843cbea03c706dbb6552fbf436ee59" name="a83843cbea03c706dbb6552fbf436ee59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83843cbea03c706dbb6552fbf436ee59">&#9670;&#160;</a></span>cancelRegistration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AuthManager::cancelRegistration </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>email</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отменяет процесс регистрации и очищает временные данные пользователя. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>Электронная почта, для которой нужно отменить регистрацию. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00233">233</a></p>
+
+</div>
+</div>
+<a id="a5ac7251eb8b0efb93f43ba7a1eb1999f" name="a5ac7251eb8b0efb93f43ba7a1eb1999f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ac7251eb8b0efb93f43ba7a1eb1999f">&#9670;&#160;</a></span>cleanExpiredCodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AuthManager::cleanExpiredCodes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Слот для периодической очистки просроченных кодов верификации. Вызывается по таймеру. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00071">71</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAuthManager_a5ac7251eb8b0efb93f43ba7a1eb1999f_icgraph.png" border="0" usemap="#aclassAuthManager_a5ac7251eb8b0efb93f43ba7a1eb1999f_icgraph" alt=""/></div>
+<map name="aclassAuthManager_a5ac7251eb8b0efb93f43ba7a1eb1999f_icgraph" id="aclassAuthManager_a5ac7251eb8b0efb93f43ba7a1eb1999f_icgraph">
+<area shape="rect" title="Слот для периодической очистки просроченных кодов верификации. Вызывается по таймеру." alt="" coords="257,5,459,45"/>
+<area shape="rect" href="classAuthManager.html#ac2bb200e13f45bee1f9adc689d33a2b1" title="Приватный конструктор. Настраивает подключение к БД и таймер сборки мусора." alt="" coords="5,13,209,38"/>
+<area shape="poly" title=" " alt="" coords="244,28,209,28,209,23,244,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1e440167cb3e4edf550e786853e483ea" name="a1e440167cb3e4edf550e786853e483ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e440167cb3e4edf550e786853e483ea">&#9670;&#160;</a></span>finalizeRegistration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="AuthManager_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a> AuthManager::finalizeRegistration </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>password</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>errorMsg</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Завершает регистрацию, сохраняя хеш пароля в базу данных (требует предварительной верификации). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>Электронная почта пользователя. </td></tr>
+    <tr><td class="paramname">password</td><td>Пароль пользователя. </td></tr>
+    <tr><td class="paramname">errorMsg</td><td>Указатель на строку для ошибки (опционально). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат операции. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00213">213</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAuthManager_a1e440167cb3e4edf550e786853e483ea_cgraph.png" border="0" usemap="#aclassAuthManager_a1e440167cb3e4edf550e786853e483ea_cgraph" alt=""/></div>
+<map name="aclassAuthManager_a1e440167cb3e4edf550e786853e483ea_cgraph" id="aclassAuthManager_a1e440167cb3e4edf550e786853e483ea_cgraph">
+<area shape="rect" title="Завершает регистрацию, сохраняя хеш пароля в базу данных (требует предварительной верификации)." alt="" coords="5,5,248,31"/>
+<area shape="rect" href="classAuthManager.html#aa3dd36a283b1dcf0f5bad4090aac58ff" title="Проверяет пароль на соответствие требованиям безопасности (длина и т.д.)." alt="" coords="296,5,527,31"/>
+<area shape="poly" title=" " alt="" coords="248,15,283,15,283,21,248,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3a33c4fac024a1a0a928cc027cb82484" name="a3a33c4fac024a1a0a928cc027cb82484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a33c4fac024a1a0a928cc027cb82484">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAuthManager.html">AuthManager</a> &amp; AuthManager::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает единственный экземпляр класса <a class="el" href="classAuthManager.html" title="Главный класс-синглтон для управления процессом авторизации, регистрации и восстановления паролей.">AuthManager</a> (паттерн Singleton). </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Ссылка на глобальный экземпляр <a class="el" href="classAuthManager.html" title="Главный класс-синглтон для управления процессом авторизации, регистрации и восстановления паролей.">AuthManager</a>. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00022">22</a></p>
+
+</div>
+</div>
+<a id="a26189a83443a3d7ec18929fd98c2ee04" name="a26189a83443a3d7ec18929fd98c2ee04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26189a83443a3d7ec18929fd98c2ee04">&#9670;&#160;</a></span>getLastError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString AuthManager::getLastError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает текст последней системной ошибки. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с описанием ошибки. </dd></dl>
+
+</div>
+</div>
+<a id="a9cb68a675ac103d3b04846f09381a89e" name="a9cb68a675ac103d3b04846f09381a89e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cb68a675ac103d3b04846f09381a89e">&#9670;&#160;</a></span>initDatabase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AuthManager::initDatabase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Инициализирует структуру базы данных (создает таблицы и расширения, если их нет). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00059">59</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAuthManager_a9cb68a675ac103d3b04846f09381a89e_icgraph.png" border="0" usemap="#aclassAuthManager_a9cb68a675ac103d3b04846f09381a89e_icgraph" alt=""/></div>
+<map name="aclassAuthManager_a9cb68a675ac103d3b04846f09381a89e_icgraph" id="aclassAuthManager_a9cb68a675ac103d3b04846f09381a89e_icgraph">
+<area shape="rect" title="Инициализирует структуру базы данных (создает таблицы и расширения, если их нет)." alt="" coords="257,5,457,31"/>
+<area shape="rect" href="classAuthManager.html#ac2bb200e13f45bee1f9adc689d33a2b1" title="Приватный конструктор. Настраивает подключение к БД и таймер сборки мусора." alt="" coords="5,5,209,31"/>
+<area shape="poly" title=" " alt="" coords="244,21,209,21,209,15,244,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a34e63862bc2617ca97f83cbfa2efdaa1" name="a34e63862bc2617ca97f83cbfa2efdaa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34e63862bc2617ca97f83cbfa2efdaa1">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAuthManager.html">AuthManager</a> &amp; AuthManager::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAuthManager.html">AuthManager</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe6220841219ddb11d0b814da05564ed" name="abe6220841219ddb11d0b814da05564ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe6220841219ddb11d0b814da05564ed">&#9670;&#160;</a></span>requestPasswordReset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="AuthManager_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a> AuthManager::requestPasswordReset </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>errorMsg</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Инициирует процесс восстановления пароля, отправляя код на email. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>Электронная почта пользователя. </td></tr>
+    <tr><td class="paramname">errorMsg</td><td>Указатель на строку для ошибки (опционально). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат запроса. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00245">245</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAuthManager_abe6220841219ddb11d0b814da05564ed_cgraph.png" border="0" usemap="#aclassAuthManager_abe6220841219ddb11d0b814da05564ed_cgraph" alt=""/></div>
+<map name="aclassAuthManager_abe6220841219ddb11d0b814da05564ed_cgraph" id="aclassAuthManager_abe6220841219ddb11d0b814da05564ed_cgraph">
+<area shape="rect" title="Инициирует процесс восстановления пароля, отправляя код на email." alt="" coords="5,35,232,75"/>
+<area shape="rect" href="classAuthManager.html#a53058aa0995bc53256d717128094d783" title="Асинхронно отправляет email с кодом верификации через внешний API (Brevo)." alt="" coords="280,5,479,45"/>
+<area shape="poly" title=" " alt="" coords="232,39,266,35,267,41,232,45"/>
+<area shape="rect" href="classAuthManager.html#a83736668bcbf76a6868f3f465a0ec5c8" title="Проверяет наличие пользователя в базе данных." alt="" coords="287,70,471,95"/>
+<area shape="poly" title=" " alt="" coords="232,64,274,69,273,74,232,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a000d618f8dbff5c2465629f7ebadf10f" name="a000d618f8dbff5c2465629f7ebadf10f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a000d618f8dbff5c2465629f7ebadf10f">&#9670;&#160;</a></span>requestRegistrationCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="AuthManager_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a> AuthManager::requestRegistrationCode </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>errorMsg</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Инициирует процесс регистрации, отправляя код подтверждения на email. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>Электронная почта нового пользователя. </td></tr>
+    <tr><td class="paramname">errorMsg</td><td>Указатель на строку для записи текста ошибки (опционально). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат операции (AuthResult). </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00087">87</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAuthManager_a000d618f8dbff5c2465629f7ebadf10f_cgraph.png" border="0" usemap="#aclassAuthManager_a000d618f8dbff5c2465629f7ebadf10f_cgraph" alt=""/></div>
+<map name="aclassAuthManager_a000d618f8dbff5c2465629f7ebadf10f_cgraph" id="aclassAuthManager_a000d618f8dbff5c2465629f7ebadf10f_cgraph">
+<area shape="rect" title="Инициирует процесс регистрации, отправляя код подтверждения на email." alt="" coords="5,70,284,95"/>
+<area shape="rect" href="classAuthManager.html#a53058aa0995bc53256d717128094d783" title="Асинхронно отправляет email с кодом верификации через внешний API (Brevo)." alt="" coords="336,5,535,45"/>
+<area shape="poly" title=" " alt="" coords="209,67,322,45,323,50,210,73"/>
+<area shape="rect" href="classAuthManager.html#a83736668bcbf76a6868f3f465a0ec5c8" title="Проверяет наличие пользователя в базе данных." alt="" coords="343,70,527,95"/>
+<area shape="poly" title=" " alt="" coords="284,80,330,80,330,85,284,85"/>
+<area shape="rect" href="classAuthManager.html#a4770b856b1ddcd4e60983612345d0eff" title="Проверяет строку на соответствие формату электронной почты (через регулярное выражение)." alt="" coords="332,119,539,145"/>
+<area shape="poly" title=" " alt="" coords="221,93,347,114,346,120,220,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a28d569d5c47d91b4a87465d26aa95067" name="a28d569d5c47d91b4a87465d26aa95067"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28d569d5c47d91b4a87465d26aa95067">&#9670;&#160;</a></span>resetPassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="AuthManager_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a> AuthManager::resetPassword </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>password</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>passwordConfirm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>errorMsg</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Устанавливает новый пароль после успешного прохождения верификации при сбросе. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>Электронная почта. </td></tr>
+    <tr><td class="paramname">password</td><td>Новый пароль. </td></tr>
+    <tr><td class="paramname">passwordConfirm</td><td>Подтверждение нового пароля. </td></tr>
+    <tr><td class="paramname">errorMsg</td><td>Указатель на строку для ошибки (опционально). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат изменения пароля. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00288">288</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAuthManager_a28d569d5c47d91b4a87465d26aa95067_cgraph.png" border="0" usemap="#aclassAuthManager_a28d569d5c47d91b4a87465d26aa95067_cgraph" alt=""/></div>
+<map name="aclassAuthManager_a28d569d5c47d91b4a87465d26aa95067_cgraph" id="aclassAuthManager_a28d569d5c47d91b4a87465d26aa95067_cgraph">
+<area shape="rect" title="Устанавливает новый пароль после успешного прохождения верификации при сбросе." alt="" coords="5,5,216,31"/>
+<area shape="rect" href="classAuthManager.html#aa3dd36a283b1dcf0f5bad4090aac58ff" title="Проверяет пароль на соответствие требованиям безопасности (длина и т.д.)." alt="" coords="264,5,495,31"/>
+<area shape="poly" title=" " alt="" coords="216,15,250,15,250,21,216,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a53058aa0995bc53256d717128094d783" name="a53058aa0995bc53256d717128094d783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53058aa0995bc53256d717128094d783">&#9670;&#160;</a></span>sendEmailToUserAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AuthManager::sendEmailToUserAsync </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>code</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Асинхронно отправляет email с кодом верификации через внешний API (Brevo). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>Адрес получателя. </td></tr>
+    <tr><td class="paramname">code</td><td>Сгенерированный код. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00140">140</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAuthManager_a53058aa0995bc53256d717128094d783_icgraph.png" border="0" usemap="#aclassAuthManager_a53058aa0995bc53256d717128094d783_icgraph" alt=""/></div>
+<map name="aclassAuthManager_a53058aa0995bc53256d717128094d783_icgraph" id="aclassAuthManager_a53058aa0995bc53256d717128094d783_icgraph">
+<area shape="rect" title="Асинхронно отправляет email с кодом верификации через внешний API (Brevo)." alt="" coords="332,35,531,75"/>
+<area shape="rect" href="classAuthManager.html#abe6220841219ddb11d0b814da05564ed" title="Инициирует процесс восстановления пароля, отправляя код на email." alt="" coords="31,5,258,45"/>
+<area shape="poly" title=" " alt="" coords="318,46,258,40,259,34,319,40"/>
+<area shape="rect" href="classAuthManager.html#a000d618f8dbff5c2465629f7ebadf10f" title="Инициирует процесс регистрации, отправляя код подтверждения на email." alt="" coords="5,70,284,95"/>
+<area shape="poly" title=" " alt="" coords="319,68,275,73,274,67,318,63"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a83736668bcbf76a6868f3f465a0ec5c8" name="a83736668bcbf76a6868f3f465a0ec5c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83736668bcbf76a6868f3f465a0ec5c8">&#9670;&#160;</a></span>userExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AuthManager::userExists </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>email</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверяет наличие пользователя в базе данных. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>Искомый email. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если пользователь найден. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00188">188</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAuthManager_a83736668bcbf76a6868f3f465a0ec5c8_icgraph.png" border="0" usemap="#aclassAuthManager_a83736668bcbf76a6868f3f465a0ec5c8_icgraph" alt=""/></div>
+<map name="aclassAuthManager_a83736668bcbf76a6868f3f465a0ec5c8_icgraph" id="aclassAuthManager_a83736668bcbf76a6868f3f465a0ec5c8_icgraph">
+<area shape="rect" title="Проверяет наличие пользователя в базе данных." alt="" coords="332,42,516,67"/>
+<area shape="rect" href="classAuthManager.html#abe6220841219ddb11d0b814da05564ed" title="Инициирует процесс восстановления пароля, отправляя код на email." alt="" coords="31,5,258,45"/>
+<area shape="poly" title=" " alt="" coords="318,46,258,40,259,35,319,41"/>
+<area shape="rect" href="classAuthManager.html#a000d618f8dbff5c2465629f7ebadf10f" title="Инициирует процесс регистрации, отправляя код подтверждения на email." alt="" coords="5,70,284,95"/>
+<area shape="poly" title=" " alt="" coords="318,68,272,73,271,67,318,63"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4770b856b1ddcd4e60983612345d0eff" name="a4770b856b1ddcd4e60983612345d0eff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4770b856b1ddcd4e60983612345d0eff">&#9670;&#160;</a></span>validateEmail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AuthManager::validateEmail </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>email</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет строку на соответствие формату электронной почты (через регулярное выражение). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>Проверяемая строка. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если формат валиден. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00196">196</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAuthManager_a4770b856b1ddcd4e60983612345d0eff_icgraph.png" border="0" usemap="#aclassAuthManager_a4770b856b1ddcd4e60983612345d0eff_icgraph" alt=""/></div>
+<map name="aclassAuthManager_a4770b856b1ddcd4e60983612345d0eff_icgraph" id="aclassAuthManager_a4770b856b1ddcd4e60983612345d0eff_icgraph">
+<area shape="rect" title="Проверяет строку на соответствие формату электронной почты (через регулярное выражение)." alt="" coords="332,5,539,31"/>
+<area shape="rect" href="classAuthManager.html#a000d618f8dbff5c2465629f7ebadf10f" title="Инициирует процесс регистрации, отправляя код подтверждения на email." alt="" coords="5,5,284,31"/>
+<area shape="poly" title=" " alt="" coords="318,21,284,21,284,15,318,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa3dd36a283b1dcf0f5bad4090aac58ff" name="aa3dd36a283b1dcf0f5bad4090aac58ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3dd36a283b1dcf0f5bad4090aac58ff">&#9670;&#160;</a></span>validatePassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AuthManager::validatePassword </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>password</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>errorMsg</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет пароль на соответствие требованиям безопасности (длина и т.д.). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">password</td><td>Проверяемый пароль. </td></tr>
+    <tr><td class="paramname">errorMsg</td><td>Указатель на строку для записи причины несоответствия (опционально). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если пароль подходит. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00201">201</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAuthManager_aa3dd36a283b1dcf0f5bad4090aac58ff_icgraph.png" border="0" usemap="#aclassAuthManager_aa3dd36a283b1dcf0f5bad4090aac58ff_icgraph" alt=""/></div>
+<map name="aclassAuthManager_aa3dd36a283b1dcf0f5bad4090aac58ff_icgraph" id="aclassAuthManager_aa3dd36a283b1dcf0f5bad4090aac58ff_icgraph">
+<area shape="rect" title="Проверяет пароль на соответствие требованиям безопасности (длина и т.д.)." alt="" coords="296,31,527,56"/>
+<area shape="rect" href="classAuthManager.html#a1e440167cb3e4edf550e786853e483ea" title="Завершает регистрацию, сохраняя хеш пароля в базу данных (требует предварительной верификации)." alt="" coords="5,5,248,31"/>
+<area shape="poly" title=" " alt="" coords="282,35,248,31,249,26,282,29"/>
+<area shape="rect" href="classAuthManager.html#a28d569d5c47d91b4a87465d26aa95067" title="Устанавливает новый пароль после успешного прохождения верификации при сбросе." alt="" coords="21,55,232,80"/>
+<area shape="poly" title=" " alt="" coords="283,57,233,61,232,56,282,52"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5a6d42e075c7ce5cf9172a3e700149c0" name="a5a6d42e075c7ce5cf9172a3e700149c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a6d42e075c7ce5cf9172a3e700149c0">&#9670;&#160;</a></span>verifyRegistrationCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="AuthManager_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a> AuthManager::verifyRegistrationCode </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>errorMsg</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет правильность кода подтверждения, введенного при регистрации. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>Электронная почта пользователя. </td></tr>
+    <tr><td class="paramname">code</td><td>Введенный пользователем код. </td></tr>
+    <tr><td class="paramname">errorMsg</td><td>Указатель на строку для ошибки (опционально). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат проверки (Success, InvalidCode, CodeExpired и т.д.). </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00107">107</a></p>
+
+</div>
+</div>
+<a id="ad72a248216ec7e99aad56b8422808b99" name="ad72a248216ec7e99aad56b8422808b99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad72a248216ec7e99aad56b8422808b99">&#9670;&#160;</a></span>verifyResetCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="AuthManager_8h.html#a87ba9bd5edfd749f4729620dbadd5fce">AuthResult</a> AuthManager::verifyResetCode </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>errorMsg</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверяет код, отправленный для восстановления пароля. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>Электронная почта. </td></tr>
+    <tr><td class="paramname">code</td><td>Введенный код. </td></tr>
+    <tr><td class="paramname">errorMsg</td><td>Указатель на строку для ошибки (опционально). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Результат проверки. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a> строка <a class="el" href="AuthManager_8cpp_source.html#l00263">263</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ad6f16c7ba88ee6115b5ab72f6fac9548" name="ad6f16c7ba88ee6115b5ab72f6fac9548"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6f16c7ba88ee6115b5ab72f6fac9548">&#9670;&#160;</a></span>CODE_TTL_SECS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int AuthManager::CODE_TTL_SECS = 90</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Время жизни кода подтверждения (в секундах). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8h_source.html">AuthManager.h</a> строка <a class="el" href="AuthManager_8h_source.html#l00204">204</a></p>
+
+</div>
+</div>
+<a id="aa77cfef6974c66805733e232635e1219" name="aa77cfef6974c66805733e232635e1219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa77cfef6974c66805733e232635e1219">&#9670;&#160;</a></span>codesMutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMutex AuthManager::codesMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Мьютекс для потокобезопасной работы со словарями кодов. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8h_source.html">AuthManager.h</a> строка <a class="el" href="AuthManager_8h_source.html#l00194">194</a></p>
+
+</div>
+</div>
+<a id="a83ec4a1f7f139f4364dff33c28654734" name="a83ec4a1f7f139f4364dff33c28654734"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83ec4a1f7f139f4364dff33c28654734">&#9670;&#160;</a></span>db</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QSqlDatabase AuthManager::db</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Объект соединения с базой данных. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8h_source.html">AuthManager.h</a> строка <a class="el" href="AuthManager_8h_source.html#l00192">192</a></p>
+
+</div>
+</div>
+<a id="a1f899440c3ff4b08ffda743cbe7466e3" name="a1f899440c3ff4b08ffda743cbe7466e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f899440c3ff4b08ffda743cbe7466e3">&#9670;&#160;</a></span>dbMutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMutex AuthManager::dbMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Мьютекс для потокобезопасной работы с БД. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8h_source.html">AuthManager.h</a> строка <a class="el" href="AuthManager_8h_source.html#l00193">193</a></p>
+
+</div>
+</div>
+<a id="aca83cad52955f9f1ec5a4bef3776a433" name="aca83cad52955f9f1ec5a4bef3776a433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca83cad52955f9f1ec5a4bef3776a433">&#9670;&#160;</a></span>gcTimer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTimer* AuthManager::gcTimer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Таймер для очистки устаревших кодов. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8h_source.html">AuthManager.h</a> строка <a class="el" href="AuthManager_8h_source.html#l00197">197</a></p>
+
+</div>
+</div>
+<a id="adb76305fb4f13759d75dcaf6f1dff1ab" name="adb76305fb4f13759d75dcaf6f1dff1ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb76305fb4f13759d75dcaf6f1dff1ab">&#9670;&#160;</a></span>lastError</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString AuthManager::lastError</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Хранение последней текстовой ошибки. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8h_source.html">AuthManager.h</a> строка <a class="el" href="AuthManager_8h_source.html#l00196">196</a></p>
+
+</div>
+</div>
+<a id="a76001ea42ed95ff9feb4efe55e04586b" name="a76001ea42ed95ff9feb4efe55e04586b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76001ea42ed95ff9feb4efe55e04586b">&#9670;&#160;</a></span>MAX_ATTEMPTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int AuthManager::MAX_ATTEMPTS = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Максимальное количество попыток ввода кода. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8h_source.html">AuthManager.h</a> строка <a class="el" href="AuthManager_8h_source.html#l00203">203</a></p>
+
+</div>
+</div>
+<a id="a4af5925c1a95e2de1f304d17d2dd3b3d" name="a4af5925c1a95e2de1f304d17d2dd3b3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4af5925c1a95e2de1f304d17d2dd3b3d">&#9670;&#160;</a></span>networkManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QNetworkAccessManager* AuthManager::networkManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Менеджер для выполнения HTTP-запросов (отправка писем). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8h_source.html">AuthManager.h</a> строка <a class="el" href="AuthManager_8h_source.html#l00198">198</a></p>
+
+</div>
+</div>
+<a id="a792f823760652fb72d290032f4f84a27" name="a792f823760652fb72d290032f4f84a27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a792f823760652fb72d290032f4f84a27">&#9670;&#160;</a></span>registrationCodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMap&lt;QString, <a class="el" href="structVerificationContext.html">VerificationContext</a>&gt; AuthManager::registrationCodes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Хранилище кодов для регистрации. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8h_source.html">AuthManager.h</a> строка <a class="el" href="AuthManager_8h_source.html#l00200">200</a></p>
+
+</div>
+</div>
+<a id="a3face75f146a79fc3129c2a167505b0a" name="a3face75f146a79fc3129c2a167505b0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3face75f146a79fc3129c2a167505b0a">&#9670;&#160;</a></span>resetCodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMap&lt;QString, <a class="el" href="structVerificationContext.html">VerificationContext</a>&gt; AuthManager::resetCodes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Хранилище кодов для сброса пароля. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="AuthManager_8h_source.html">AuthManager.h</a> строка <a class="el" href="AuthManager_8h_source.html#l00201">201</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>ТиМП Исходники/DB/<a class="el" href="AuthManager_8h_source.html">AuthManager.h</a></li>
+<li>ТиМП Исходники/DB/<a class="el" href="AuthManager_8cpp_source.html">AuthManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAuthManager.html">AuthManager</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

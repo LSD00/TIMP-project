@@ -1,0 +1,7 @@
+<map id="AuthManager::sendEmailToUserAsync" name="AuthManager::sendEmailToUserAsync">
+<area shape="rect" id="Node000001" title="Асинхронно отправляет email с кодом верификации через внешний API (Brevo)." alt="" coords="332,35,531,75"/>
+<area shape="rect" id="Node000002" href="$classAuthManager.html#abe6220841219ddb11d0b814da05564ed" title="Инициирует процесс восстановления пароля, отправляя код на email." alt="" coords="31,5,258,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="318,46,258,40,259,34,319,40"/>
+<area shape="rect" id="Node000003" href="$classAuthManager.html#a000d618f8dbff5c2465629f7ebadf10f" title="Инициирует процесс регистрации, отправляя код подтверждения на email." alt="" coords="5,70,284,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="319,68,275,73,274,67,318,63"/>
+</map>

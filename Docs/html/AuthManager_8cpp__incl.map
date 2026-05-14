@@ -1,0 +1,41 @@
+<map id="ТиМП Исходники/DB/AuthManager.cpp" name="ТиМП Исходники/DB/AuthManager.cpp">
+<area shape="rect" id="Node000001" title="Реализация логики класса AuthManager." alt="" coords="1038,5,1201,45"/>
+<area shape="rect" id="Node000002" href="$AuthManager_8h.html" title="Заголовочный файл менеджера аутентификации и работы с пользователями." alt="" coords="307,93,427,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1038,36,776,59,441,96,440,91,776,54,1037,30"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="451,93,537,119"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1038,37,822,59,551,96,550,91,821,54,1037,31"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="561,93,651,119"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1038,40,870,64,665,96,665,91,870,58,1037,35"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="675,93,758,119"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="1038,45,772,96,771,91,1037,39"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="783,93,936,119"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="1058,48,911,92,910,87,1056,43"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="960,93,1111,119"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="1101,48,1060,86,1056,82,1097,44"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="1135,93,1275,119"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="1142,44,1184,82,1180,86,1138,48"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="1299,93,1423,119"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="1178,43,1313,86,1311,92,1176,48"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1447,93,1549,119"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="1202,41,1435,89,1434,94,1200,46"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="1573,93,1700,119"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="1201,36,1560,90,1559,96,1200,42"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="1724,93,1819,119"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="1201,31,1427,54,1710,90,1709,96,1426,59,1200,36"/>
+<area shape="rect" id="Node000020" title=" " alt="" coords="1843,93,1918,119"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="1201,28,1476,48,1651,66,1830,91,1829,96,1650,72,1476,54,1201,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,167,76,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="313,121,90,169,89,164,312,116"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="101,167,215,192"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="335,121,206,165,204,160,333,116"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="240,167,313,192"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="354,121,304,160,301,156,351,117"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="337,167,397,192"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="370,119,370,153,365,153,365,119"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="422,167,518,192"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="385,116,443,156,440,161,382,121"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="543,167,613,192"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="402,116,532,160,530,165,400,121"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="638,167,827,192"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="427,116,661,161,660,167,426,121"/>
+</map>

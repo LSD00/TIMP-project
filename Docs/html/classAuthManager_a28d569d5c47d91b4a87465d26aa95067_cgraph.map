@@ -1,0 +1,5 @@
+<map id="AuthManager::resetPassword" name="AuthManager::resetPassword">
+<area shape="rect" id="Node000001" title="Устанавливает новый пароль после успешного прохождения верификации при сбросе." alt="" coords="5,5,216,31"/>
+<area shape="rect" id="Node000002" href="$classAuthManager.html#aa3dd36a283b1dcf0f5bad4090aac58ff" title="Проверяет пароль на соответствие требованиям безопасности (длина и т.д.)." alt="" coords="264,5,495,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,15,250,15,250,21,216,21"/>
+</map>
