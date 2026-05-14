@@ -9,22 +9,8 @@
 #include <QJsonObject>
 #include <QJsonDocument>
 #include <QJsonArray>
-#include <QEventLoop>
 #include <QDebug>
 
-#include "AuthManager.h"
-#include <QSettings>
-#include <QSqlQuery>
-#include <QSqlError>
-#include <QRegularExpression>
-#include <QRandomGenerator>
-#include <QNetworkRequest>
-#include <QNetworkReply>
-#include <QJsonObject>
-#include <QJsonDocument>
-#include <QJsonArray>
-#include <QEventLoop>
-#include <QDebug>
 
 AuthManager& AuthManager::getInstance() {
     static AuthManager instance;
@@ -33,6 +19,7 @@ AuthManager& AuthManager::getInstance() {
 
 AuthManager::AuthManager() {
     db = QSqlDatabase::addDatabase("QPSQL", "AuthConnection");
+
     QSettings settings("config.ini", QSettings::IniFormat);
     db.setHostName(settings.value("Database/host", "localhost").toString());
     db.setDatabaseName(settings.value("Database/name").toString());
@@ -45,13 +32,18 @@ AuthManager::AuthManager() {
         initDatabase();
     }
 
+    networkManager = new QNetworkAccessManager(this);
+
     gcTimer = new QTimer(this);
     connect(gcTimer, &QTimer::timeout, this, &AuthManager::cleanExpiredCodes);
     gcTimer->start(60000);
 }
 
 AuthManager::~AuthManager() {
-    { QMutexLocker locker(&dbMutex); if (db.isOpen()) db.close(); }
+    {
+        QMutexLocker locker(&dbMutex);
+        if (db.isOpen()) db.close();
+    }
     QSqlDatabase::removeDatabase("AuthConnection");
 }
 
@@ -59,7 +51,11 @@ void AuthManager::initDatabase() {
     QMutexLocker locker(&dbMutex);
     QSqlQuery query(db);
     query.exec("CREATE EXTENSION IF NOT EXISTS pgcrypto;");
-    query.exec("CREATE TABLE IF NOT EXISTS users (id SERIAL PRIMARY KEY, email TEXT UNIQUE NOT NULL, password_hash CHAR(64), created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);");
+    query.exec("CREATE TABLE IF NOT EXISTS users ("
+    "id SERIAL PRIMARY KEY, "
+    "email TEXT UNIQUE NOT NULL, "
+    "password_hash CHAR(64), "
+    "created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);");
 }
 
 void AuthManager::cleanExpiredCodes() {
@@ -93,7 +89,7 @@ AuthResult AuthManager::requestRegistrationCode(const QString& email, QString* e
         registrationCodes.insert(email, ctx);
     }
 
-    if (!sendEmailToUser(email, code)) return AuthResult::ConnectionError;
+    sendEmailToUserAsync(email, code);
     return AuthResult::Success;
 }
 
@@ -129,16 +125,15 @@ AuthResult AuthManager::verifyRegistrationCode(const QString& email, const QStri
     return AuthResult::Success;
 }
 
-bool AuthManager::sendEmailToUser(const QString& email, const QString& code) {
+void AuthManager::sendEmailToUserAsync(const QString& email, const QString& code) {
     QSettings settings("config.ini", QSettings::IniFormat);
     QString apiKey = settings.value("Email/api_key").toString();
 
     if (apiKey.isEmpty()) {
         qCritical() << "API Key is missing in config.ini!";
-        return false;
+        return;
     }
 
-    QNetworkAccessManager manager;
     QNetworkRequest request(QUrl("https://api.brevo.com/v3/smtp/email"));
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
     request.setRawHeader("api-key", apiKey.toUtf8());
@@ -149,21 +144,18 @@ bool AuthManager::sendEmailToUser(const QString& email, const QString& code) {
     body["subject"] = "Verification Code";
     body["htmlContent"] = QString("Your code: <b>%1</b>").arg(code);
 
-    QEventLoop loop;
-    QNetworkReply* reply = manager.post(request, QJsonDocument(body).toJson());
-    connect(reply, &QNetworkReply::finished, &loop, &QEventLoop::quit);
-    loop.exec();
+    QNetworkReply* reply = networkManager->post(request, QJsonDocument(body).toJson());
 
-    bool ok = (reply->error() == QNetworkReply::NoError);
-    qDebug() << "Sending email to:" << email << "code:" << code;
-
-    if (!ok) qWarning() << "Email error:" << reply->errorString();
-    qDebug() << "HTTP status:" << reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
-    qDebug() << "Response:" << reply->readAll();
-
-
-    reply->deleteLater();
-    return ok;
+    connect(reply, &QNetworkReply::finished, this, [reply, email]() {
+        if (reply->error() == QNetworkReply::NoError) {
+            qDebug() << "Email successfully sent to:" << email;
+        } else {
+            qWarning() << "Email error for" << email << ":" << reply->errorString();
+            qDebug() << "HTTP status:" << reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+            qDebug() << "Response:" << reply->readAll();
+        }
+        reply->deleteLater();
+    });
 }
 
 
@@ -249,7 +241,7 @@ AuthResult AuthManager::requestPasswordReset(const QString& email, QString* erro
         resetCodes.insert(email, ctx);
     }
 
-    if (!sendEmailToUser(email, code)) return AuthResult::ConnectionError;
+    sendEmailToUserAsync(email, code);
     return AuthResult::Success;
 }
 
@@ -303,6 +295,3 @@ AuthResult AuthManager::resetPassword(const QString& email, const QString& passw
     resetCodes.remove(email);
     return AuthResult::Success;
 }
-
-
-
