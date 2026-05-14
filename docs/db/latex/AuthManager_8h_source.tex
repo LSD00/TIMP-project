@@ -1,0 +1,101 @@
+\doxysection{Auth\+Manager.\+h}
+\hypertarget{AuthManager_8h_source}{}\label{AuthManager_8h_source}\index{ТиМП Исходники/DB/AuthManager.h@{ТиМП Исходники/DB/AuthManager.h}}
+\mbox{\hyperlink{AuthManager_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ AUTHMANAGER\_H}}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ AUTHMANAGER\_H}}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <QSqlDatabase>}}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <QMutex>}}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <QDateTime>}}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <QNetworkAccessManager>}}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00022}\mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fce}{00022}}\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fce}{AuthResult}}\ \{}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fcea505a83f220c02df2f85c3810cd9ceb38}{Success}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fcea094a6f6b0868122a9dd008cb91c083e4}{ConnectionError}},\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fcea45d3c76b79a4795dae38fb5d5b48ad45}{InvalidEmail}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fcea460899c942673a93b86a81ca6297cd36}{WeakPassword}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fcea28ec83712271c6d109f6eac45c04fc71}{UserAlreadyExists}},\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00028}00028\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fcea5e349b2189e271e32f633c077d4ff028}{UserNotFound}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fceaa31437013b94ae5b39a818c6defac7ea}{DatabaseError}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fcea3121e825c13ba377fb5adb741201c401}{InvalidCredentials}},\ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fcea8efc205b664814d3458d9457a330ee78}{CodeExpired}},\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fcea54811ceb822294b83e9ded0838e73c02}{InvalidCode}},\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fceaa7ef31aab8d88f6735da209bb411fd40}{TooManyAttempts}},\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00034}00034\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fcea3da277f7b49fb7aca46d67a5600011f2}{CodeNotVerified}}\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00035}00035\ \};}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00040}\mbox{\hyperlink{structVerificationContext}{00040}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structVerificationContext}{VerificationContext}}\ \{}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00041}\mbox{\hyperlink{structVerificationContext_a58b0df7ea3df092cc1c8142b730036bb}{00041}}\ \ \ \ \ QString\ \mbox{\hyperlink{structVerificationContext_a58b0df7ea3df092cc1c8142b730036bb}{code}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00042}\mbox{\hyperlink{structVerificationContext_a1b4631d5864451459a3014a59040ae98}{00042}}\ \ \ \ \ QDateTime\ \mbox{\hyperlink{structVerificationContext_a1b4631d5864451459a3014a59040ae98}{expiresAt}};\ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00043}\mbox{\hyperlink{structVerificationContext_a6134b5c5808f092850ef8c2c0d803e85}{00043}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structVerificationContext_a6134b5c5808f092850ef8c2c0d803e85}{attempts}}\ =\ 0;\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00044}\mbox{\hyperlink{structVerificationContext_a871bde05deb61ac3f7ce6328df614b68}{00044}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structVerificationContext_a871bde05deb61ac3f7ce6328df614b68}{isVerified}}\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00045}00045\ \};}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00054}\mbox{\hyperlink{classAuthManager}{00054}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classAuthManager}{AuthManager}}\ :\ \textcolor{keyword}{public}\ QObject\ \{}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00055}00055\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00056}00056\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00061}00061\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classAuthManager}{AuthManager}}\&\ \mbox{\hyperlink{classAuthManager_a3a33c4fac024a1a0a928cc027cb82484}{getInstance}}();}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00063}00063\ \ \ \ \ \textcolor{comment}{//\ Запрет\ копирования\ и\ присваивания\ для\ синглтона}}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00064}\mbox{\hyperlink{classAuthManager_aeae750570d1539539834e53b789e3de7}{00064}}\ \ \ \ \ \mbox{\hyperlink{classAuthManager_aeae750570d1539539834e53b789e3de7}{AuthManager}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAuthManager}{AuthManager}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00065}\mbox{\hyperlink{classAuthManager_a34e63862bc2617ca97f83cbfa2efdaa1}{00065}}\ \ \ \ \ \mbox{\hyperlink{classAuthManager}{AuthManager}}\&\ \mbox{\hyperlink{classAuthManager_a34e63862bc2617ca97f83cbfa2efdaa1}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAuthManager}{AuthManager}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00073}00073\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fce}{AuthResult}}\ \mbox{\hyperlink{classAuthManager_a000d618f8dbff5c2465629f7ebadf10f}{requestRegistrationCode}}(\textcolor{keyword}{const}\ QString\&\ email,\ QString*\ errorMsg\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00082}00082\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fce}{AuthResult}}\ \mbox{\hyperlink{classAuthManager_a5a6d42e075c7ce5cf9172a3e700149c0}{verifyRegistrationCode}}(\textcolor{keyword}{const}\ QString\&\ email,\ \textcolor{keyword}{const}\ QString\&\ code,\ QString*\ errorMsg\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00091}00091\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fce}{AuthResult}}\ \mbox{\hyperlink{classAuthManager_a1e440167cb3e4edf550e786853e483ea}{finalizeRegistration}}(\textcolor{keyword}{const}\ QString\&\ email,\ \textcolor{keyword}{const}\ QString\&\ password,\ QString*\ errorMsg\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00099}00099\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fce}{AuthResult}}\ \mbox{\hyperlink{classAuthManager_a1f5e14a740015d3c20fc123bbc71fec2}{authenticate}}(\textcolor{keyword}{const}\ QString\&\ email,\ \textcolor{keyword}{const}\ QString\&\ password);}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00107}00107\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fce}{AuthResult}}\ \mbox{\hyperlink{classAuthManager_abe6220841219ddb11d0b814da05564ed}{requestPasswordReset}}(\textcolor{keyword}{const}\ QString\&\ email,\ QString*\ errorMsg\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00116}00116\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fce}{AuthResult}}\ \mbox{\hyperlink{classAuthManager_ad72a248216ec7e99aad56b8422808b99}{verifyResetCode}}(\textcolor{keyword}{const}\ QString\&\ email,\ \textcolor{keyword}{const}\ QString\&\ code,\ QString*\ errorMsg\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00126}00126\ \ \ \ \ \mbox{\hyperlink{AuthManager_8h_a87ba9bd5edfd749f4729620dbadd5fce}{AuthResult}}\ \mbox{\hyperlink{classAuthManager_a28d569d5c47d91b4a87465d26aa95067}{resetPassword}}(\textcolor{keyword}{const}\ QString\&\ email,\ \textcolor{keyword}{const}\ QString\&\ password,\ \textcolor{keyword}{const}\ QString\&\ passwordConfirm,\ QString*\ errorMsg\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00132}00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAuthManager_a83843cbea03c706dbb6552fbf436ee59}{cancelRegistration}}(\textcolor{keyword}{const}\ QString\&\ email);}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00138}\mbox{\hyperlink{classAuthManager_a26189a83443a3d7ec18929fd98c2ee04}{00138}}\ \ \ \ \ QString\ \mbox{\hyperlink{classAuthManager_a26189a83443a3d7ec18929fd98c2ee04}{getLastError}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00145}00145\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classAuthManager_a4770b856b1ddcd4e60983612345d0eff}{validateEmail}}(\textcolor{keyword}{const}\ QString\&\ email);}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00153}00153\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classAuthManager_aa3dd36a283b1dcf0f5bad4090aac58ff}{validatePassword}}(\textcolor{keyword}{const}\ QString\&\ password,\ QString*\ errorMsg\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00155}00155\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00160}00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAuthManager_a5ac7251eb8b0efb93f43ba7a1eb1999f}{cleanExpiredCodes}}();}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00162}00162\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00166}00166\ \ \ \ \ \mbox{\hyperlink{classAuthManager_ac2bb200e13f45bee1f9adc689d33a2b1}{AuthManager}}();}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00171}00171\ \ \ \ \ \mbox{\hyperlink{classAuthManager_a7f4077e05949041be8e030bc2caa84a9}{\string~AuthManager}}();}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00176}00176\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAuthManager_a9cb68a675ac103d3b04846f09381a89e}{initDatabase}}();}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00183}00183\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAuthManager_a53058aa0995bc53256d717128094d783}{sendEmailToUserAsync}}(\textcolor{keyword}{const}\ QString\&\ email,\ \textcolor{keyword}{const}\ QString\&\ code);}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00190}00190\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classAuthManager_a83736668bcbf76a6868f3f465a0ec5c8}{userExists}}(\textcolor{keyword}{const}\ QString\&\ email);}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00191}00191\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00192}\mbox{\hyperlink{classAuthManager_a83ec4a1f7f139f4364dff33c28654734}{00192}}\ \ \ \ \ QSqlDatabase\ \mbox{\hyperlink{classAuthManager_a83ec4a1f7f139f4364dff33c28654734}{db}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00193}\mbox{\hyperlink{classAuthManager_a1f899440c3ff4b08ffda743cbe7466e3}{00193}}\ \ \ \ \ \textcolor{keyword}{mutable}\ QMutex\ \mbox{\hyperlink{classAuthManager_a1f899440c3ff4b08ffda743cbe7466e3}{dbMutex}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00194}\mbox{\hyperlink{classAuthManager_aa77cfef6974c66805733e232635e1219}{00194}}\ \ \ \ \ \textcolor{keyword}{mutable}\ QMutex\ \mbox{\hyperlink{classAuthManager_aa77cfef6974c66805733e232635e1219}{codesMutex}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00196}\mbox{\hyperlink{classAuthManager_adb76305fb4f13759d75dcaf6f1dff1ab}{00196}}\ \ \ \ \ QString\ \mbox{\hyperlink{classAuthManager_adb76305fb4f13759d75dcaf6f1dff1ab}{lastError}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00197}\mbox{\hyperlink{classAuthManager_aca83cad52955f9f1ec5a4bef3776a433}{00197}}\ \ \ \ \ QTimer*\ \mbox{\hyperlink{classAuthManager_aca83cad52955f9f1ec5a4bef3776a433}{gcTimer}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00198}\mbox{\hyperlink{classAuthManager_a4af5925c1a95e2de1f304d17d2dd3b3d}{00198}}\ \ \ \ \ QNetworkAccessManager*\ \mbox{\hyperlink{classAuthManager_a4af5925c1a95e2de1f304d17d2dd3b3d}{networkManager}};\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00200}\mbox{\hyperlink{classAuthManager_a792f823760652fb72d290032f4f84a27}{00200}}\ \ \ \ \ QMap<QString,\ VerificationContext>\ \mbox{\hyperlink{classAuthManager_a792f823760652fb72d290032f4f84a27}{registrationCodes}};\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00201}\mbox{\hyperlink{classAuthManager_a3face75f146a79fc3129c2a167505b0a}{00201}}\ \ \ \ \ QMap<QString,\ VerificationContext>\ \mbox{\hyperlink{classAuthManager_a3face75f146a79fc3129c2a167505b0a}{resetCodes}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00203}\mbox{\hyperlink{classAuthManager_a76001ea42ed95ff9feb4efe55e04586b}{00203}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classAuthManager_a76001ea42ed95ff9feb4efe55e04586b}{MAX\_ATTEMPTS}}\ =\ 3;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00204}\mbox{\hyperlink{classAuthManager_ad6f16c7ba88ee6115b5ab72f6fac9548}{00204}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classAuthManager_ad6f16c7ba88ee6115b5ab72f6fac9548}{CODE\_TTL\_SECS}}\ =\ 90;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00205}00205\ \};}
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{AuthManager_8h_source_l00207}00207\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

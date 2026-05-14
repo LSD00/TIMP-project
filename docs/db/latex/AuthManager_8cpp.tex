@@ -1,0 +1,39 @@
+\doxysection{Файл ТиМП Исходники/\+DB/\+Auth\+Manager.cpp}
+\hypertarget{AuthManager_8cpp}{}\label{AuthManager_8cpp}\index{ТиМП Исходники/DB/AuthManager.cpp@{ТиМП Исходники/DB/AuthManager.cpp}}
+
+
+Реализация логики класса \doxylink{classAuthManager}{Auth\+Manager}.  
+
+
+{\ttfamily \#include "{}Auth\+Manager.\+h"{}}\newline
+{\ttfamily \#include $<$QSettings$>$}\newline
+{\ttfamily \#include $<$QSql\+Query$>$}\newline
+{\ttfamily \#include $<$QSql\+Error$>$}\newline
+{\ttfamily \#include $<$QRegular\+Expression$>$}\newline
+{\ttfamily \#include $<$QRandom\+Generator$>$}\newline
+{\ttfamily \#include $<$QNetwork\+Request$>$}\newline
+{\ttfamily \#include $<$QNetwork\+Reply$>$}\newline
+{\ttfamily \#include $<$QJson\+Object$>$}\newline
+{\ttfamily \#include $<$QJson\+Document$>$}\newline
+{\ttfamily \#include $<$QJson\+Array$>$}\newline
+{\ttfamily \#include $<$QDebug$>$}\newline
+Граф включаемых заголовочных файлов для Auth\+Manager.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AuthManager_8cpp__incl}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Подробное описание}
+Реализация логики класса \doxylink{classAuthManager}{Auth\+Manager}. 
+
+
+\begin{DoxyItemize}
+\item Файл содержит реализацию взаимодействия с Postgre\+SQL (проверка паролей с помощью crypt/gen\+\_\+salt), отправки почты через HTTP-\/запросы (Brevo API) и потокобезопасной обработки временных кодов. 
+\end{DoxyItemize}
+
+См. определение в файле \mbox{\hyperlink{AuthManager_8cpp_source}{Auth\+Manager.\+cpp}}
+
