@@ -1,0 +1,16 @@
+<map id="Server::onReadyRead" name="Server::onReadyRead">
+<area shape="rect" id="Node000001" title="Слот, вызываемый при поступлении новых данных от клиента." alt="" coords="5,104,168,129"/>
+<area shape="rect" id="Node000002" href="$classServer.html#a765e4ffe32ffff676ba9e523ab7fcdaa" title="Главный маршрутизатор (роутер) входящих запросов." alt="" coords="216,104,385,129"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,114,202,114,202,119,168,119"/>
+<area shape="rect" id="Node000003" href="$classAuthManager.html#a1f5e14a740015d3c20fc123bbc71fec2" title="Проверяет учетные данные пользователя при входе в систему." alt="" coords="433,5,632,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="319,102,369,71,432,40,454,32,456,37,434,44,372,75,322,106"/>
+<area shape="rect" id="Node000004" href="$classAuthManager.html#a3a33c4fac024a1a0a928cc027cb82484" title="Возвращает единственный экземпляр класса AuthManager (паттерн Singleton)." alt="" coords="436,55,629,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="360,101,458,80,459,86,362,107"/>
+<area shape="rect" id="Node000005" href="$CalcDocs_8cpp.html#a1ec60e354c0c14fe35b2e385b36d747b" title="Безопасное вычисление кусочной функции с шагом 0.5." alt="" coords="477,104,588,129"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="385,114,464,114,464,119,385,119"/>
+<area shape="rect" id="Node000006" href="$classServer.html#ad0a7ffb50db36752ca6d4d43eb574562" title="Отправка стандартизированного ответа на запросы аутентификации." alt="" coords="435,153,631,179"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="362,127,459,148,458,153,360,132"/>
+<area shape="rect" id="Node000007" href="$classServer.html#a5c38927d999bbb4155872da0974d8717" title="Отправка произвольного JSON&#45;ответа клиенту." alt="" coords="680,179,847,204"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="320,127,369,160,401,176,434,187,493,199,554,204,666,201,667,206,554,209,492,204,433,193,399,180,366,164,317,132"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="631,174,667,178,666,183,630,179"/>
+</map>
