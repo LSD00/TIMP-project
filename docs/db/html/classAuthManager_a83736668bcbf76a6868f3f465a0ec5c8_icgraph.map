@@ -1,0 +1,7 @@
+<map id="AuthManager::userExists" name="AuthManager::userExists">
+<area shape="rect" id="Node000001" title="Проверяет наличие пользователя в базе данных." alt="" coords="332,42,516,67"/>
+<area shape="rect" id="Node000002" href="$classAuthManager.html#abe6220841219ddb11d0b814da05564ed" title="Инициирует процесс восстановления пароля, отправляя код на email." alt="" coords="31,5,258,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="318,46,258,40,259,35,319,41"/>
+<area shape="rect" id="Node000003" href="$classAuthManager.html#a000d618f8dbff5c2465629f7ebadf10f" title="Инициирует процесс регистрации, отправляя код подтверждения на email." alt="" coords="5,70,284,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="318,68,272,73,271,67,318,63"/>
+</map>

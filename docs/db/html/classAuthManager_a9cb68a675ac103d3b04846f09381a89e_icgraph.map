@@ -1,0 +1,5 @@
+<map id="AuthManager::initDatabase" name="AuthManager::initDatabase">
+<area shape="rect" id="Node000001" title="Инициализирует структуру базы данных (создает таблицы и расширения, если их нет)." alt="" coords="257,5,457,31"/>
+<area shape="rect" id="Node000002" href="$classAuthManager.html#ac2bb200e13f45bee1f9adc689d33a2b1" title="Приватный конструктор. Настраивает подключение к БД и таймер сборки мусора." alt="" coords="5,5,209,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,21,209,21,209,15,244,15"/>
+</map>
