@@ -18,8 +18,8 @@ inpnwpass::~inpnwpass()
 
 void inpnwpass::on_pushButton_clicked()
 {
-    if (strnwpass.length()>3){
-    nwpass(strnwpass);
+    nwpass(strnwpass, [this](bool success) {
+    if (success){
     avtorisation *e=new avtorisation;
     e->show();
     close();
@@ -27,6 +27,7 @@ void inpnwpass::on_pushButton_clicked()
         no_format_input *e=new no_format_input;
         e->show();
     }
+    });
 }
 
 

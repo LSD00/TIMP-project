@@ -33,10 +33,15 @@ void resmail::on_lineEdit_textChanged(const QString &arg1)
 
 void resmail::on_pushButton_clicked()
 {
-    if (respas(mall)){
+    respas(mall, [this](bool success) {
+    if (success){
     codereset *e=new codereset;
     e->show();
     close();
+    } else {
+        wrong_mail *e=new wrong_mail;
+        e->show();
     }
+    });
 }
 

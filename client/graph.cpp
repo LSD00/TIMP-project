@@ -3,6 +3,7 @@
 #include "ui_graph.h"
 #include "net.h"
 #include <QTableWidgetItem>
+#include <cmath>
 int a=1,b=0,c=1;
 
 graph::graph(QWidget *parent)
@@ -24,7 +25,9 @@ graph::graph(QWidget *parent)
         std::string st=std::to_string(i);
         ui->tableWidget->setItem(i+10, 0, new QTableWidgetItem(QString::fromStdString(st)));
     }
-    printgraph(crgrap(a,b,c));
+    crgrap(a, b, c, [this](QVector<double> result) {
+        printgraph(result);
+    });
     ui->widget->replot();
     this->setStyleSheet("QMainWindow { background-color: #f0f0f0; }");
 }
@@ -41,20 +44,23 @@ void graph::on_pushButton_clicked()
     close();
 }
 
-void graph::printgraph(QVector<double> y){
+void graph::printgraph(QVector<double> p){
     QVector<double> x;
-    for (double i = -10; i < 10; i=i+0.067) {
-        x.push_back(i);
+    QVector<double> y;
+    for (int i = 0; i < p.size(); i=i+2) {
+        x.push_back(p[i]);
     }
-
+    for (int i = 1; i < p.size(); i=i+2) {
+        y.push_back(p[i]);
+    }
     ui->widget->addGraph();
     ui->widget->addGraph();
     ui->widget->addGraph();
     ui->widget->addGraph();
-    ui->widget->graph(0)->setData(x.mid(0, 135),y.mid(0, 135));
-    ui->widget->graph(1)->setData(x.mid(135, 15),y.mid(135, 15));
-    ui->widget->graph(2)->setData(x.mid(150, 15),y.mid(150, 15));
-    ui->widget->graph(3)->setData(x.mid(165, 135),y.mid(165, 135));
+    ui->widget->graph(0)->setData(x.mid(0, static_cast<int>(std::round(x.size()*9/20))),y.mid(0, static_cast<int>(std::round(x.size()*9/20))));
+    ui->widget->graph(1)->setData(x.mid(static_cast<int>(std::round(x.size()*9/20)), static_cast<int>(std::round(x.size()/20))),y.mid(static_cast<int>(std::round(x.size()*9/20)), static_cast<int>(std::round(x.size()/20))));
+    ui->widget->graph(1)->setData(x.mid(static_cast<int>(std::round(x.size()/2)), static_cast<int>(std::round(x.size()/20))),y.mid(static_cast<int>(std::round(x.size()/2)), static_cast<int>(std::round(x.size()/20))));
+    ui->widget->graph(3)->setData(x.mid(static_cast<int>(std::round(x.size()*11/20)), static_cast<int>(std::round(x.size()*9/20))),y.mid(static_cast<int>(std::round(x.size()*11/20)), static_cast<int>(std::round(x.size()*9/20))));
     ui->widget->graph(0)->setPen(QPen(Qt::red, 2));
     ui->widget->graph(1)->setPen(QPen(Qt::red, 2));
     ui->widget->graph(2)->setPen(QPen(Qt::green, 2));
@@ -72,20 +78,26 @@ void graph::printgraph(QVector<double> y){
 void graph::on_horizontalSlider_sliderMoved(int position)
 {
     a=position;
-    printgraph(crgrap(a,b,c));
+    crgrap(a, b, c, [this](QVector<double> result) {
+        printgraph(result);
+    });
 }
 
 
 void graph::on_horizontalSlider_2_sliderMoved(int position)
 {
     b=position;
-    printgraph(crgrap(a,b,c));
+    crgrap(a, b, c, [this](QVector<double> result) {
+        printgraph(result);
+    });
 }
 
 
 void graph::on_horizontalSlider_3_sliderMoved(int position)
 {
     c=position;
-    printgraph(crgrap(a,b,c));
+    crgrap(a, b, c, [this](QVector<double> result) {
+        printgraph(result);
+    });
 }
 

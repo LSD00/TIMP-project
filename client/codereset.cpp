@@ -17,8 +17,8 @@ codereset::~codereset()
 
 void codereset::on_pushButton_clicked()
 {
-    if (code.length()==6){
-    if (code==std::to_string(code_for_pass)){
+    for_codereset(code, [this](bool success) {
+    if (success){
     inpnwpass *e=new inpnwpass;
     e->show();
     close();
@@ -26,10 +26,7 @@ void codereset::on_pushButton_clicked()
         wrong_code *e=new wrong_code;
         e->show();
     }
-    } else {
-        no_format_input *e=new no_format_input;
-        e->show();
-    }
+    });
 }
 
 
